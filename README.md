@@ -27,3 +27,9 @@ This is an unofficial fan project. GTA V underlying artwork belongs to Rockstar 
 
 ## Data caution
 The map's JSON backup is **separate** from the Hunt HQ backup. Export both before replacing versions or clearing browser storage. Browser localStorage persistence depends on the same site origin.
+
+## Leonida display fix
+Previous versions requested `maps.gtadb.org` image tiles directly; these failed on the user's iPhone.
+This build displays the working `https://map.gtadb.org/` source site in the GTA VI tab instead, with an explicit **Open full Leonida map** link if iframe embedding is disallowed by the source server.
+The source site is third-party and may prevent iframe embedding; the direct link remains available. GTA VI research pins mode remains as a separate fallback.
+This is not a claim of permission to redistribute GTADB artwork or Rockstar game assets.
