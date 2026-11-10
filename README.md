@@ -1,35 +1,25 @@
-# GTA Map Explorer — One-upload package (GTA V + GTA VI)
+# Team Jura GTA Discovery Platform v2 — Thanksgiving Command Center
 
-## Install on iPhone (GitHub Pages)
-1. Save and extract `gta-map-explorer-final-upload.zip` in Files.
-2. Open https://github.com/jyates0125/leonida-explorer and navigate to the repository root on `main`.
-3. Upload **index.html** and **hunt-hq.html** together, and commit to `main`. `legacy-explorer.html` is optional, and `README.md` may also be uploaded.
-4. Wait for GitHub Pages to publish, then visit https://jyates0125.github.io/leonida-explorer/ and test **both GTA V and GTA VI** on your iPhone.
-5. If a map doesn't load, check network access and tile host availability. GitHub Pages does not need a build step.
+## Installation
+Upload all six files from this ZIP to the root of `jyates0125/leonida-explorer` on the `main` branch, replacing files with matching names. Do not upload the enclosing folder. Wait for GitHub Pages deployment, then hard-refresh.
 
-## Included
-- Map-first mobile homepage, GTA V / GTA VI switch, compass, zoom, style switching, and reset view.
-- GTA V: Atlas / Satellite / Grid from external VIRUXE community tile host.
-- GTA VI: GTADB Yanis V17 / V15 speculative community reconstruction map tiles.
-- 34 clearly labeled **community research** GTA VI landmarks (not collectibles).
-- Coordinate finder (GTA V: image coordinates; GTA VI: community research coordinates), search, personal pins, reviewed status, JSON backup **export and import**.
-- Separate `hunt-hq.html` 100-piece collectible checklists, notes, hunt management, CSV export/import (manual; no verified GTA V collectible pins bundled).
-- Credits and permission caveats; no donation button or payments.
+## Implemented
+- Existing GTA V tile map and GTA VI GTADB embedded source map retained
+- Autumn home menu and command launcher retained
+- New Discover All page with searchable, categorized research checklist and browser-local completion status
+- Discover page export/import/reset backup
+- On-map Layers & Routes panel for **user-saved pins**: category filter, hide completed, completed checkbox, approximate nearest-neighbor straight-line waypoint route, clear route
+- Map popup completion control for user pins
+- Categorized new pins placed by tapping the GTA V map; imported backups retain category
+- Credits and outbound reference links
 
-## Important rights and accuracy notes
-This is an unofficial fan project. GTA V underlying artwork belongs to Rockstar Games. VIRUXE's public tiles do **not** establish the right to redistribute copyrighted game artwork; obtain rights clarification before broad promotion or monetization. GTADB's repository declares CC BY 4.0, but third-party assets and Rockstar intellectual property may require separate permission. GTA VI reconstruction is unofficial and may be inaccurate. Map artwork loads over the internet; if a remote provider changes its access rules, it may stop working. No map service was verified on a physical iPhone in this build.
+## Not implemented / limitations
+- Full licensed location database is NOT included: coordinates must be sourced, normalized, attributed, and validated before showing pins. Catalog entries are topic checklists, not individual location records.
+- GTA VI uses an embedded third-party GTADB map. Its controls and locations cannot be programmatically manipulated from our site due to cross-origin isolation. Use Research pins mode for custom pins and route overlay.
+- Route is approximate straight-line ordering of user pins, not drivable road navigation.
+- No verified current-week events or Simeon requests are bundled.
+- GTA V image tiles are hosted by VIRUXE and Rockstar retains game-art rights. External source availability may change.
+- No browser-based test on user's iPhone was performed; do not replace working live site until tested in a preview branch if possible.
 
-## Sources
-- https://github.com/rolux/gtadb.org
-- https://github.com/VIRUXE/gtav-map-tiles
-- https://leafletjs.com/ (BSD-2-Clause)
-- https://creativecommons.org/licenses/by/4.0/
-
-## Data caution
-The map's JSON backup is **separate** from the Hunt HQ backup. Export both before replacing versions or clearing browser storage. Browser localStorage persistence depends on the same site origin.
-
-## Leonida display fix
-Previous versions requested `maps.gtadb.org` image tiles directly; these failed on the user's iPhone.
-This build displays the working `https://map.gtadb.org/` source site in the GTA VI tab instead, with an explicit **Open full Leonida map** link if iframe embedding is disallowed by the source server.
-The source site is third-party and may prevent iframe embedding; the direct link remains available. GTA VI research pins mode remains as a separate fallback.
-This is not a claim of permission to redistribute GTADB artwork or Rockstar game assets.
+## Licensing
+Original new site UI and data model: Team Jura. GTADB code MIT and data CC BY 4.0 per upstream repo; no GTADB landmark bulk dataset is bundled in this release. Map source attribution retained. Rockstar/Take-Two trademarks and game imagery remain theirs. No endorsement implied.
