@@ -1,25 +1,24 @@
-# Team Jura GTA Discovery Platform v2 — Thanksgiving Command Center
+# Team Jura Explorer 3.0 — Integrated Live Maps
 
-## Installation
-Upload all six files from this ZIP to the root of `jyates0125/leonida-explorer` on the `main` branch, replacing files with matching names. Do not upload the enclosing folder. Wait for GitHub Pages deployment, then hard-refresh.
+## Open
+Upload all files to the repository root, replacing older files. Open `explorer.html` for the new map and tracker. The original `index.html` remains as a compatible welcome screen and includes a new prominent link to Explorer 3.0.
 
-## Implemented
-- Existing GTA V tile map and GTA VI GTADB embedded source map retained
-- Autumn home menu and command launcher retained
-- New Discover All page with searchable, categorized research checklist and browser-local completion status
-- Discover page export/import/reset backup
-- On-map Layers & Routes panel for **user-saved pins**: category filter, hide completed, completed checkbox, approximate nearest-neighbor straight-line waypoint route, clear route
-- Map popup completion control for user pins
-- Categorized new pins placed by tapping the GTA V map; imported backups retain category
-- Credits and outbound reference links
+## Verified features
+- GTA V bounded Leaflet map requests, on-demand pins and map list
+- GTA VI independently controlled research map, with original GTADB map fallback
+- 46 real, named, source-backed GTA VI landmarks from GTADB (CC BY 4.0)
+- Collection category filters, local custom pins, completion state, progress backup
+- Approximate straight-line waypoint routes, not drivable roads
+- No Activate All Pins at startup; optional map pins start hidden
 
-## Not implemented / limitations
-- Full licensed location database is NOT included: coordinates must be sourced, normalized, attributed, and validated before showing pins. Catalog entries are topic checklists, not individual location records.
-- GTA VI uses an embedded third-party GTADB map. Its controls and locations cannot be programmatically manipulated from our site due to cross-origin isolation. Use Research pins mode for custom pins and route overlay.
-- Route is approximate straight-line ordering of user pins, not drivable road navigation.
-- No verified current-week events or Simeon requests are bundled.
-- GTA V image tiles are hosted by VIRUXE and Rockstar retains game-art rights. External source availability may change.
-- No browser-based test on user's iPhone was performed; do not replace working live site until tested in a preview branch if possible.
+## Important limitations
+- GTADB tile server may reject direct tile requests; use the original source-map view. Our own overlays cannot be drawn inside their iframe.
+- GTA V map tile artwork belongs to Rockstar; VIRUXE's hosting does not grant unlimited republication rights.
+- GTA V collectible coordinates are not imported because licensing and coordinate validation are not yet completed. Do not confuse a catalog of activity names with verified map pins.
+- This release includes a curated subset, NOT the entire GTADB database (3,307 records). Data source is a snapshot, not automatically refreshed.
+- No automatic weekly GTA Online event data and no claims of confirmed GTA VI gameplay locations.
+- Browser syntax and ZIP integrity can be tested here; actual external tiles and mobile browser performance must be tested after upload.
 
-## Licensing
-Original new site UI and data model: Team Jura. GTADB code MIT and data CC BY 4.0 per upstream repo; no GTADB landmark bulk dataset is bundled in this release. Map source attribution retained. Rockstar/Take-Two trademarks and game imagery remain theirs. No endorsement implied.
+## Credits
+GTA VI landmark data: gtadb.org and all contributors — CC BY 4.0 — https://github.com/rolux/gtadb.org
+Map artwork: respective artists / contributors and Rockstar Games, as applicable. Leaflet BSD 2-Clause.

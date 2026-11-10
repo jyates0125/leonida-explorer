@@ -1,0 +1,469 @@
+{
+  "version": "2026-11-09",
+  "license": "CC BY 4.0",
+  "attribution": "gtadb.org and all contributors",
+  "source": "https://github.com/rolux/gtadb.org/blob/main/map/data/6/landmarks.json",
+  "note": "Curated subset of community-reconstructed GTA VI landmark positions. Not confirmed gameplay locations. GTA V user pins are local and are not claimed as verified collectible coordinates.",
+  "locations": [
+    {
+      "id": "gtadb-L13",
+      "game": "6",
+      "name": "Albany Hotel, Washington Beach, Vice Beach",
+      "x": 1965,
+      "y": 1815,
+      "category": "hotel",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L36",
+      "game": "6",
+      "name": "Ocean View Hotel, Shore Dr, Ocean Beach",
+      "x": 1960,
+      "y": 639,
+      "category": "hotel",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L49",
+      "game": "6",
+      "name": "Atlantis Hotel, Shore Dr, Ocean Beach",
+      "x": 1922,
+      "y": 386,
+      "category": "hotel",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L120",
+      "game": "6",
+      "name": "Vice Beach Marina, Ocean Beach",
+      "x": 1357,
+      "y": -112,
+      "category": "transport",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L187",
+      "game": "6",
+      "name": "Sahara Arena, Shoreline, Vice City",
+      "x": -303,
+      "y": 430,
+      "category": "leisure",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L197",
+      "game": "6",
+      "name": "Fleeca Field Metro Station, Rockridge",
+      "x": -1532,
+      "y": 1178,
+      "category": "transport",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L221",
+      "game": "6",
+      "name": "Heath Tower, Downtown Vice City",
+      "x": -805,
+      "y": -441,
+      "category": "landmark",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L256",
+      "game": "6",
+      "name": "Fuzzard Power Station, Peregrine Bay",
+      "x": -1569,
+      "y": -3478,
+      "category": "landmark",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L266",
+      "game": "6",
+      "name": "Jason\u2019s House, Key Lento",
+      "x": -2354,
+      "y": -5532,
+      "category": "landmark",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L281",
+      "game": "6",
+      "name": "Gellhorn International Raceway, Port Gellhorn",
+      "x": -6733,
+      "y": 2325,
+      "category": "leisure",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L305",
+      "game": "6",
+      "name": "Radio Mast, Kelly County",
+      "x": -5120,
+      "y": 3382,
+      "category": "landmark",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L328",
+      "game": "6",
+      "name": "Key Lento Marina Club",
+      "x": -2582,
+      "y": -5782,
+      "category": "leisure",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L357",
+      "game": "6",
+      "name": "Mexican Restaurant, Hamlet",
+      "x": -2558,
+      "y": -3460,
+      "category": "service",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L393",
+      "game": "6",
+      "name": "Bite House, Watson Bay",
+      "x": -5255,
+      "y": -3390,
+      "category": "service",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L419",
+      "game": "6",
+      "name": "Simon\u2019s Tires, La Perle",
+      "x": -1119,
+      "y": 1176,
+      "category": "service",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L456",
+      "game": "6",
+      "name": "Vice City Sign, International Airport",
+      "x": -3771,
+      "y": -458,
+      "category": "landmark",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L564",
+      "game": "6",
+      "name": "Bridge, Rialto Islands",
+      "x": 1226,
+      "y": 1440,
+      "category": "transport",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L613",
+      "game": "6",
+      "name": "Metro Station, Crosstown",
+      "x": -699,
+      "y": 992,
+      "category": "transport",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L651",
+      "game": "6",
+      "name": "Bridge, Mariana County",
+      "x": -881,
+      "y": -3824,
+      "category": "transport",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L694",
+      "game": "6",
+      "name": "Container Crane 4, Port Vice City",
+      "x": 1364,
+      "y": -743,
+      "category": "landmark",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L708",
+      "game": "6",
+      "name": "Autograph Hangar, Vice City Airport",
+      "x": -2604,
+      "y": -75,
+      "category": "transport",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L747",
+      "game": "6",
+      "name": "Temple Park, Tequesta",
+      "x": -962,
+      "y": -841,
+      "category": "leisure",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L843",
+      "game": "6",
+      "name": "Bridge, Leonard County",
+      "x": 363,
+      "y": 2985,
+      "category": "transport",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L919",
+      "game": "6",
+      "name": "Prison Tower, Hamlet",
+      "x": -3014,
+      "y": -2827,
+      "category": "landmark",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L1018",
+      "game": "6",
+      "name": "Blue House, Key Lento",
+      "x": -2210,
+      "y": -5458,
+      "category": "landmark",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L1064",
+      "game": "6",
+      "name": "Capri City Jackals Stadium",
+      "x": -6409,
+      "y": -211,
+      "category": "leisure",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L1098",
+      "game": "6",
+      "name": "Bite, Rockridge",
+      "x": -1377,
+      "y": 782,
+      "category": "service",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L1293",
+      "game": "6",
+      "name": "Vice Beach Police Department",
+      "x": 1495,
+      "y": 400,
+      "category": "service",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L1369",
+      "game": "6",
+      "name": "Euroform Automotive, Little Cuba",
+      "x": -1155,
+      "y": -126,
+      "category": "service",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L1417",
+      "game": "6",
+      "name": "Bus Stop, Rockridge",
+      "x": -1326,
+      "y": 748,
+      "category": "transport",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L1495",
+      "game": "6",
+      "name": "Paradise Garage, Watson Bay",
+      "x": -4088,
+      "y": -2424,
+      "category": "service",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L1550",
+      "game": "6",
+      "name": "Mount Leonida, Lummox County",
+      "x": -2561,
+      "y": 6297,
+      "category": "nature",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L1589",
+      "game": "6",
+      "name": "Gas Station, Southside",
+      "x": -1673,
+      "y": -2188,
+      "category": "service",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L1646",
+      "game": "6",
+      "name": "Vice City Shopping Plaza",
+      "x": -424,
+      "y": 1593,
+      "category": "service",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L1789",
+      "game": "6",
+      "name": "Eye & Dry, Vice Beach",
+      "x": 1495,
+      "y": 1762,
+      "category": "service",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L2027",
+      "game": "6",
+      "name": "Vice City Oceanarium, Catalan Key",
+      "x": 83,
+      "y": -1752,
+      "category": "leisure",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L2187",
+      "game": "6",
+      "name": "Train Tunnel, Kelly County",
+      "x": -4026,
+      "y": 4339,
+      "category": "transport",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L2375",
+      "game": "6",
+      "name": "Rideout Customs, Crosstown",
+      "x": -866,
+      "y": 975,
+      "category": "service",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L2608",
+      "game": "6",
+      "name": "Park, Ocean Beach",
+      "x": 1565,
+      "y": 457,
+      "category": "nature",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L2731",
+      "game": "6",
+      "name": "Vercetti Estate, Starfish Island",
+      "x": 906,
+      "y": 661,
+      "category": "landmark",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L2785",
+      "game": "6",
+      "name": "Fire Station, La Perle",
+      "x": -783,
+      "y": 1740,
+      "category": "service",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L2899",
+      "game": "6",
+      "name": "Cave, Emerald Springs",
+      "x": -4532,
+      "y": 2679,
+      "category": "nature",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L3102",
+      "game": "6",
+      "name": "Construction Site, Downtown Vice City",
+      "x": -1106,
+      "y": -502,
+      "category": "landmark",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L3145",
+      "game": "6",
+      "name": "Metro Station, Peacock Bay",
+      "x": -1253,
+      "y": -1506,
+      "category": "transport",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L3228",
+      "game": "6",
+      "name": "Mammacita\u2019s, Downtown Vice City",
+      "x": -515,
+      "y": -470,
+      "category": "service",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    },
+    {
+      "id": "gtadb-L3287",
+      "game": "6",
+      "name": "Gas Station, Waning Sands",
+      "x": -303,
+      "y": 4239,
+      "category": "service",
+      "source": "GTADB",
+      "confidence": "community reconstruction"
+    }
+  ]
+}
