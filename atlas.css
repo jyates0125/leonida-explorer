@@ -10,3 +10,13 @@
 @media(max-width:1070px){.season{display:none}.topbar nav{font-size:11px}.shell{height:calc(100dvh - 74px)}}
 @media(max-width:800px){.world b{font-size:12px}.world small{font-size:7.5px}.topbar nav{gap:7px}}
 @media(max-width:700px){.topbar{min-height:65px;height:auto}.brand b{font-size:14px}.topbar nav{width:100%;justify-content:space-between}.topbar nav a{font-size:10px}.shell{min-height:calc(100dvh - 100px)}.world b{font-size:14px}.map-wrap{height:60dvh}.maptop{top:7px}.maptitle{max-width:43%}.mapcontrols{max-width:55%}.mapcontrols select{min-width:100px}.tabs button{min-height:41px;font-size:11px}.legend{max-height:290px}}
+
+/* Atlas 5.3 mapped service search and provenance labels */
+#serviceSearch,#serviceType{width:100%;box-sizing:border-box;background:#17333e;color:#f2eadb;border:1px solid #7795a0;border-radius:9px;padding:11px;margin:6px 0 9px}
+#panelServices .hint{line-height:1.5}
+#selectedInfo{display:block;line-height:1.5;overflow-wrap:anywhere}
+
+/* 5.3 show-and-share refinements */
+.topbar nav a:hover{text-decoration:underline;color:#ffe3b2}
+.selected-actions{flex-wrap:wrap}.selected-actions button{min-width:70px}
+@media(max-width:700px){.topbar nav{justify-content:flex-start;gap:6px 12px}.topbar nav a{min-height:23px;display:inline-flex;align-items:center}.shell{min-height:calc(100dvh - 110px)}}

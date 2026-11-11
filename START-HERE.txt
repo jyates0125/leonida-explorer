@@ -1,0 +1,82 @@
+TEAM JURA ATLAS 4.0 — SAFE GITHUB TEST PACKAGE
+11 November 2026
+
+WHAT YOU ARE UPLOADING
+======================
+This package is an ADD-ON to the existing live Team Jura GTA maps site.
+It does NOT replace index.html, explorer.html, jura-refresh.js, or either working map.
+
+FOR THE FIRST TEST (using a Windows laptop)
+===========================================
+1. Unzip this archive.
+2. Open https://github.com/jyates0125/leonida-explorer
+3. Select branch: GTA-maps (the branch currently used by GitHub Pages).
+4. Choose Add file -> Upload files.
+5. Upload these EIGHT files from the extracted folder, into the repository root:
+     atlas.html
+     atlas.css
+     atlas.js
+     atlas-sw.js
+     atlas-credits.html
+     gtadb-v5.json
+     gtadb-v6.json
+     START-HERE.txt
+6. Commit the uploaded files.
+7. Open https://jyates0125.github.io/leonida-explorer/atlas.html
+8. Test search, GTA V/GTA VI switching, marker categories, and saved pins.
+9. DO NOT replace your current homepage until both maps and buttons work live.
+
+EXACTLY WHAT IS INCLUDED
+========================
+- Original standalone Team Jura interface, responsive styling, season theme
+- Search across GTADB licensed landmarks for both games, category legend
+- GTA V atlas / satellite / coordinate-grid tile layer selection (remote provider)
+- GTA VI community tile display (remote provider), link to original map
+- Filter results with pagination, found/unfound states, favorite locations
+- Personal pins, coordinate finder, waypoint route builder and reordering
+- Nearest-neighbor route sorting (straight-line only, NOT driveable streets)
+- Local progress retention, backup export/import, refresh data
+- Browser local cache of GTADB licensed data and website-owned code/files
+- Attribution and rights review
+- Optional updater script + GitHub Actions workflow in technical folder
+
+DATA, OFFLINE AND LICENSE LIMITS — IMPORTANT
+===========================================
+The 18-record bundled snapshot per world is a fallback sample, NOT the full database.
+On an online first visit, Atlas will try fetching both full landmark datasets from
+GTADB's *GitHub source repository*, then stores snapshots in the browser cache.
+GTADB's 2026 GitHub repository has 2,335 GTA V and 3,401 GTA VI landmark records
+at the time of the license review. These are landmark-research records, NOT verified
+complete collectible-checklists. GTADB asks that website owners obtain updates
+via git, rather than continuously fetching its live site. The technical/ updater
+is designed to generate full site-owned JSON files from a sparse git checkout.
+For production, deploy those generated full files into the root of your site.
+
+GTADB LICENSES: MIT code, CC BY 4.0 source-repository data and images. Credit is
+required (included in UI/credits). Its separate map imagery may include content
+owned by others, including Rockstar. Check each asset's upstream origin.
+GTAWEB: feature reference only; no license for copying its site code/data verified.
+VIRUXE GTA V tiles: referenced on their host, NOT copied or pre-cached in ZIP;
+GTA V underlying map artwork is owned by Rockstar.
+
+The cache only stores Team Jura owned/supplied site files and landmark datasets.
+There is NO full offline artwork package in this release. Remote tile display
+remains internet-dependent. The full website was not end-to-end verified against
+live map providers in this environment; the code, importer, and UI got offline
+checks, but a user must check map tiles after deployment.
+
+OPTIONAL FULL DATA IMPORT (technical)
+====================================
+The optional technical/sync_gtadb.py imports the upstream GTADB files and writes
+site-owned full gtadb-v5.json and gtadb-v6.json. The optional GitHub Actions file
+.github/workflows/refresh-gtadb.yml can run it weekly. The workflow must be
+committed to the DEFAULT branch (main) before manual dispatch works. It writes to
+GTA-maps, so DO NOT enable it until both branch protections and the workflow
+permissions are reviewed. No automation is currently installed or running.
+
+SUPPORT / RESOURCES
+===================
+Team Jura live: https://jyates0125.github.io/leonida-explorer/
+Atlas after upload: https://jyates0125.github.io/leonida-explorer/atlas.html
+Project code: https://github.com/jyates0125/leonida-explorer
+Source credits and legal references: atlas-credits.html
