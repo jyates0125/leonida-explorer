@@ -1,0 +1,11 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Team Jura Data Pack Format</title><style>body{max-width:850px;margin:auto;padding:30px 18px;background:#101e28;color:#f3ede3;font:15px/1.7 system-ui}a{color:#9de6e7}code,pre{display:block;white-space:pre-wrap;overflow-wrap:anywhere;background:#193640;padding:14px;border-radius:10px}h1,h2{color:#ffd69b}</style></head><body><a href="./atlas.html">← Map Explorer</a><h1>🗂 Team Jura · Data pack rules</h1><p>Atlas 5.0 accepts additional location sets. They must contain real coordinates with documented permission or a license allowing reuse. GTADB already supplies both games’ landmark data. Game-specific collectibles and vehicle spawns need separate verified data.</p><h2>Supported fields</h2><pre>{
+ "id": "my-unique-dataset",
+ "license": "CC BY 4.0",
+ "attribution": "Creator name and contributors",
+ "sourceUrl": "https://source.example/credits",
+ "records": [
+   {"id":"location-1","game":"5","scope":"online",
+    "category":"collectible","name":"Actual verified location",
+    "x":1234,"y":-432,"uncertain":false}
+ ]
+}</pre><p>Accepted licenses: CC BY 4.0, CC0, MIT, Public Domain, or Original / authorized. <b>The importer checks format, not whether a third party really gave you permission.</b> Check the source before importing/publishing. The supplied example pack uses the already-available Mount Josiah landmark from GTADB with proper attribution and verified source coordinates. Importing it is for testing the pack mechanism only and will duplicate a landmark already in the base dataset. It does not include vehicle spawns or collectibles.</p><p>Game <code>"5"</code> is Los Santos, with scope <code>"story"</code>, <code>"online"</code>, or <code>"both"</code>. Game <code>"6"</code> is Leonida research. Category values include <code>"collectible"</code>, <code>"vehicle"</code>, <code>"property"</code>, <code>"weapon"</code>, <code>"activity"</code> and ordinary landmark categories. Vehicle means a verified spawn, not a dealership.</p><p><a href="./atlas-location-pack-example.json" download>Download example JSON</a>. Packs are installed only in the current browser and kept in local storage. Publish authorized packages with clear attributions when ready.</p></body></html>
