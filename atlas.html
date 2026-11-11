@@ -1,38 +1,66 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#102a34"><meta name="description" content="Team Jura's unofficial GTA V and GTA VI map research explorer, with filters, collections, routes, and saved progress.">
-<title>Team Jura Atlas 4 · Los Santos & Leonida</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRcOMTjJ5Ldb6dMeiQXKSI2Z8=" crossorigin="anonymous">
-<link rel="stylesheet" href="./atlas.css">
-<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
-<script defer src="./atlas.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#142b37">
+<meta name="description" content="Team Jura's unofficial GTA V and GTA VI map explorer. Separate licensed maps and landmarks, markers, routes and offline overview downloads.">
+<title>Team Jura Atlas 4.1 | Los Santos + Leonida</title>
+<link rel="stylesheet" href="./atlas.css?v=41">
+<script defer src="./atlas.js?v=41"></script>
 </head>
 <body>
-<header class="top"><a class="brand" href="./index.html" aria-label="Team Jura homepage"><span class="brand-art">🍁❄️</span><span><b>TEAM JURA</b><small>ATLAS 4.0 · MAP EXPLORER</small></span></a><div class="tagline">Thanksgiving × Christmas <span>•</span> Unofficial fan project</div><div class="top-links"><a href="./index.html">⌂ Home</a><a href="./explorer.html">↗ Classic explorer</a></div></header>
-<div class="workspace">
- <aside class="sidebar" id="sidebar" aria-label="Map tools">
- <div class="world-tabs" role="group" aria-label="Choose game"><button type="button" class="world active" id="world5" data-world="5" aria-pressed="true"><span>LOS SANTOS</span><b>GTA V</b></button><button type="button" class="world" id="world6" data-world="6" aria-pressed="false"><span>LEONIDA</span><b>GTA VI</b></button></div>
- <div class="status-bar"><span class="status-dot" id="dataDot"></span><span id="dataStatus" role="status">Preparing map data…</span></div>
- <div class="search-wrap"><label for="search">Search every available location</label><input id="search" type="search" placeholder="Try beach, station, mountain, hotel…" spellcheck="false" autocomplete="off"><kbd>/</kbd></div>
- <div class="switch-line"><label for="category">Legend & categories</label><button type="button" class="text-btn" id="clearFilters">Clear</button></div>
- <select id="category" aria-label="Category filter"><option value="all">All categories</option></select>
- <div id="legend" class="legend" aria-label="Category legend"></div>
- <div class="filters"><label class="check"><input id="unfound" type="checkbox"> Hide completed</label><label class="check"><input id="favoritesOnly" type="checkbox"> Favorites only</label></div>
- <div class="tool-tabs" role="tablist" aria-label="Explorer sections"><button role="tab" aria-selected="true" id="tabExplore" data-tab="explore">Explore</button><button role="tab" aria-selected="false" id="tabRoute" data-tab="route">My route <span id="routeCount">0</span></button><button role="tab" aria-selected="false" id="tabSaved" data-tab="saved">My pins</button></div>
- <section id="panelExplore" class="tool-panel" role="tabpanel"><div class="section-head"><strong id="resultCount">Searching…</strong><span class="muted" id="foundCount"></span></div><div id="results" class="result-list"></div><div class="pager"><button id="prev" type="button">← Back</button><span id="pageLabel">Page 1</span><button id="next" type="button">Next →</button></div></section>
- <section id="panelRoute" class="tool-panel hidden" role="tabpanel"><p class="small">Add locations using the <b>＋ Route</b> button. Reorder them here. The drawn line connects waypoints; it is not road-by-road navigation.</p><div id="routeList" class="result-list"></div><div class="action-grid"><button id="optimize" type="button">⇄ Optimize order</button><button id="fitRoute" type="button">⌖ Fit route</button><button id="copyRoute" type="button">⧉ Copy route</button><button id="clearRoute" type="button" class="danger">Clear route</button></div></section>
- <section id="panelSaved" class="tool-panel hidden" role="tabpanel"><p class="small">Your pins and progress stay on this device until you export a backup. Add a pin by clicking the map.</p><button type="button" class="wide primary" id="addPin">＋ Add pin on map</button><div id="savedList" class="result-list"></div><div class="action-grid"><button type="button" id="exportData">↓ Export backup</button><button type="button" id="importData">↑ Import backup</button></div><input id="importFile" type="file" accept="application/json,.json" class="hidden"></section>
- <div class="sidebar-bottom"><button id="refresh" type="button">↻ Refresh landmark data</button><small id="sourceLine">GTADB landmarks · MIT code / CC BY 4.0 data</small></div>
- </aside>
- <main class="map-area" aria-label="Interactive game map"><div id="map" aria-label="Pan and zoom game map"></div>
- <div class="map-header"><div><strong id="mapTitle">Los Santos & Blaine County</strong><small id="mapSubtitle">Choose layers, search, and plan a route</small></div><div class="layer-actions"><label class="sr-only" for="layerSelect">Map layer</label><select id="layerSelect" aria-label="Map layer"><option value="atlas">Atlas</option><option value="satelite">Satellite</option><option value="grid">Grid</option></select><button type="button" id="fitMap" title="Fit whole map">⌖ Fit</button></div></div>
- <div class="map-actions"><button type="button" id="togglePins" aria-pressed="true">📍 Hide pins</button><button type="button" id="coordinates">⌖ Coordinates</button><button type="button" id="sourceMap">↗ Original map</button><button type="button" id="mobileTools">☷ Tools</button></div>
- <div class="map-message" id="mapMessage" role="status">Map loading…</div><div class="coord-pop hidden" id="coordPanel"><strong>Coordinate finder</strong><div id="coordText">Tap anywhere on the map.</div><div class="coord-buttons"><button id="copyCoords" type="button">Copy</button><button id="closeCoords" type="button">Close</button></div></div>
- <iframe class="original-map hidden" id="originalMap" title="GTADB original GTA VI map" loading="lazy"></iframe>
- <div class="map-attribution">GTADB.org and contributors <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a> · GTA V artwork © Rockstar Games · <a href="./atlas-credits.html">Credits & licenses</a></div>
- </main>
+<header class="topbar">
+  <a href="./index.html" class="brand"><span class="emblem">🍁❄️</span><span><b>TEAM JURA</b><small>ATLAS 4.1 · GTA MAP EXPLORER</small></span></a>
+  <span class="season">Thanksgiving × Christmas · Unofficial fan project</span>
+  <nav><a href="./index.html">Home</a><a href="./atlas-credits.html">Sources & licenses</a></nav>
+</header>
+<div class="shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="worlds" role="group" aria-label="Choose your game">
+      <button class="world active" type="button" id="game5" aria-pressed="true"><small>LOS SANTOS + BLAINE</small><b>GTA V</b></button>
+      <button class="world" type="button" id="game6" aria-pressed="false"><small>LEONIDA + VICE CITY</small><b>GTA VI</b></button>
+    </div>
+    <div class="dataset"><span class="dot" id="dataDot"></span><span id="dataStatus" role="status">Loading local locations…</span></div>
+    <label class="field-label" for="search">Search locations</label>
+    <input id="search" type="search" placeholder="Type a place, shop, bridge, hotel…" autocomplete="off">
+    <div class="sectionrow"><strong>Show categories on map</strong><div><button id="allOn" class="link-btn" type="button">All on</button><button id="allOff" class="link-btn" type="button">All off</button></div></div>
+    <div class="legend" id="legend" aria-label="Toggle marker groups"></div>
+    <div class="filters"><label><input type="checkbox" id="hideFound"> Hide found</label><label><input type="checkbox" id="favoritesOnly"> Favorites only</label></div>
+    <div class="tabs" role="tablist" aria-label="Map tools">
+      <button type="button" class="selected" id="tabFind" role="tab" aria-selected="true">Find places</button>
+      <button type="button" id="tabRoute" role="tab" aria-selected="false">My route <span id="routeCount">0</span></button>
+      <button type="button" id="tabPins" role="tab" aria-selected="false">My pins</button>
+    </div>
+    <section class="tab-panel" id="panelFind" role="tabpanel">
+      <div class="counts"><strong id="resultCount">Loading…</strong><span id="foundCount"></span></div>
+      <div id="results" class="results"></div>
+      <div class="pagination"><button type="button" id="prev">← Previous</button><span id="pageStatus">1 / 1</span><button type="button" id="next">Next →</button></div>
+    </section>
+    <section class="tab-panel hidden" id="panelRoute" role="tabpanel">
+      <p class="hint">Tap <b>+ Route</b> beside locations to build a route. The line shows waypoint order—not actual road directions.</p>
+      <div id="routeList" class="results"></div>
+      <div class="gridbuttons"><button id="optimize" type="button">Order nearest</button><button id="fitRoute" type="button">See route on map</button><button id="clearRoute" type="button">Clear route</button><button id="copyRoute" type="button">Copy stops</button></div>
+    </section>
+    <section class="tab-panel hidden" id="panelPins" role="tabpanel">
+      <p class="hint">Choose Add pin, then tap the map. Saved pins stay in their own game.</p><button type="button" id="addPin" class="wide accent">+ Add pin on map</button>
+      <div class="results" id="pinsList"></div><div class="gridbuttons"><button id="exportData" type="button">Export backup</button><button id="importData" type="button">Import backup</button></div><input type="file" id="importFile" class="hidden" accept=".json,application/json">
+    </section>
+    <section class="offline"><strong>📦 Offline maps</strong><p class="hint">The complete GTADB location database is saved after its first successful download. Save the current map's overview tiles for offline use. Zoomed-in areas need their own downloaded tiles for full detail.</p>
+      <button id="saveOffline" type="button" class="wide">Save this map's overview (z0–2)</button><p id="offlineStatus" role="status" class="hint">Choose a map style first. You can stop at any time.</p>
+      <button id="stopOffline" type="button" class="hidden">Stop download</button>
+    </section>
+    <div class="bottomlinks"><button type="button" id="refresh">↻ Check for newer landmark data</button><small>GTADB licensed landmarks & maps · See <a href="./atlas-credits.html">credits</a>. GTA VI positions are community research, not official gameplay data.</small></div>
+  </aside>
+  <main class="map-wrap">
+    <canvas id="atlasCanvas" tabindex="0" aria-label="GTA game map. Drag to move. Scroll or use plus and minus to zoom."></canvas>
+    <div class="maptop"><div class="maptitle"><strong id="mapTitle">GTA V · Los Santos</strong><small id="mapSubtitle">GTADB map and pins, all together</small></div><div class="mapcontrols"><label for="layer">Map view</label><select id="layer"><option>Loading views…</option></select><button id="resetView" type="button" title="Show whole map">⌖ Fit</button></div></div>
+    <div class="zoom" aria-label="Map zoom controls"><button id="zoomIn" type="button" aria-label="Zoom in">+</button><button id="zoomOut" type="button" aria-label="Zoom out">−</button></div>
+    <div class="map-actions"><button id="togglePins" type="button" aria-pressed="true">📍 Pins on</button><button id="mobileTools" type="button">☰ Find places</button><button id="original" type="button">Source ↗</button></div>
+    <div class="selected-card hidden" id="selectedCard" role="region" aria-label="Selected map location"><button class="close" id="closeSelected" type="button" aria-label="Close marker detail">×</button><b id="selectedName"></b><small id="selectedInfo"></small><div class="selected-actions"><button type="button" id="selectedFound">Mark found</button><button type="button" id="selectedRoute">+ Route</button></div></div>
+    <div class="map-status" id="mapStatus" role="status">Preparing licensed map…</div>
+    <div class="credits-line">Map tiles & landmarks: <a href="https://github.com/rolux/gtadb.org" target="_blank" rel="noopener noreferrer">GTADB.org</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> · Game worlds © Rockstar Games · Unofficial</div>
+  </main>
 </div>
-<script>document.documentElement.classList.add('js');</script>
-</body></html>
+</body>
+</html>
