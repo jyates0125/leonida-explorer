@@ -1,0 +1,22 @@
+{
+  "id": "gtadb-mount-josiah-format-demo",
+  "license": "CC BY 4.0",
+  "attribution": "GTADB.ORG and contributors",
+  "sourceUrl": "https://github.com/rolux/gtadb.org/blob/main/map/data/5/landmarks.json",
+  "records": [
+    {
+      "id": "GTADB-L1-format-demo",
+      "game": "5",
+      "scope": "story",
+      "category": "landmark",
+      "name": "Mount Josiah (import format demo \u2014 duplicates base GTADB landmark)",
+      "x": -1163.819,
+      "y": 3833.289,
+      "uncertain": false,
+      "tags": [
+        "natural",
+        "landmark"
+      ]
+    }
+  ]
+}

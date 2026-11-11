@@ -1,0 +1,200 @@
+[
+  {
+    "id": "L1",
+    "name": "Mount Josiah",
+    "x": -1164,
+    "y": 3833,
+    "tags": [
+      "natural"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": false
+  },
+  {
+    "id": "L7",
+    "name": "Del Perro Pier Surf & Stuff",
+    "x": -1516,
+    "y": -910,
+    "tags": [
+      "retail"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": false
+  },
+  {
+    "id": "L8",
+    "name": "Del Perro Pier, Del Perro",
+    "x": -1768,
+    "y": -1153,
+    "tags": [
+      "landmark"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": false
+  },
+  {
+    "id": "L11",
+    "name": "Little Seoul Subway Station",
+    "x": -489,
+    "y": -713,
+    "tags": [
+      "transportation"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": false
+  },
+  {
+    "id": "L16",
+    "name": "Los Santos Aqueduct",
+    "x": 1739,
+    "y": 691,
+    "tags": [
+      "industrial"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": false
+  },
+  {
+    "id": "L27",
+    "name": "Lombank, Little Seoul",
+    "x": -693,
+    "y": -613,
+    "tags": [
+      "office"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": false
+  },
+  {
+    "id": "L30",
+    "name": "Union Depository Building, Downtown",
+    "x": -1,
+    "y": -697,
+    "tags": [
+      "office"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": false
+  },
+  {
+    "id": "L35",
+    "name": "Sandy Shores Cellphone Tower",
+    "x": 1874,
+    "y": 3705,
+    "tags": [
+      "landmark"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": false
+  },
+  {
+    "id": "L37",
+    "name": "Sandy Shores Beachfront Sign",
+    "x": 2020,
+    "y": 3819,
+    "tags": [
+      "landmark"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": false
+  },
+  {
+    "id": "L38",
+    "name": "Welcome to Sandy Shores Sign",
+    "x": 2039,
+    "y": 3721,
+    "tags": [
+      "landmark"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": false
+  },
+  {
+    "id": "L40",
+    "name": "Del Perro Pier Office",
+    "x": -1810,
+    "y": -1210,
+    "tags": [
+      "office"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": false
+  },
+  {
+    "id": "L41",
+    "name": "Hung Drawn & Quarters, Del Perro Pier",
+    "x": -1660,
+    "y": -1066,
+    "tags": [
+      "entertainment"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": false
+  },
+  {
+    "id": "L42",
+    "name": "Out of Towners, Del Perro Pier",
+    "x": -1660,
+    "y": -992,
+    "tags": [
+      "restaurant"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": false
+  },
+  {
+    "id": "L43",
+    "name": "Pleasure Pier Gift Shop",
+    "x": -1569,
+    "y": -964,
+    "tags": [
+      "retail"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": false
+  },
+  {
+    "id": "L45",
+    "name": "LSPD Station, Vespucci Beach",
+    "x": -1318,
+    "y": -1523,
+    "tags": [
+      "government"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": false
+  },
+  {
+    "id": "L46",
+    "name": "Chumash Pier Cafe",
+    "x": -3423,
+    "y": 955,
+    "tags": [
+      "restaurant"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": false
+  },
+  {
+    "id": "L51",
+    "name": "Lombank, Downtown",
+    "x": 26,
+    "y": -924,
+    "tags": [
+      "office"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": false
+  },
+  {
+    "id": "L52",
+    "name": "Hotel Wisdahl, Downtown",
+    "x": 60,
+    "y": -1025,
+    "tags": [
+      "hotel"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": false
+  }
+]

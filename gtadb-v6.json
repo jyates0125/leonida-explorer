@@ -1,0 +1,209 @@
+[
+  {
+    "id": "L13",
+    "name": "Albany Hotel, Vice Beach",
+    "x": 1965,
+    "y": 1815,
+    "tags": [
+      "hotel"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": true
+  },
+  {
+    "id": "L25",
+    "name": "Dominion Hotel, Ocean Beach",
+    "x": 2008,
+    "y": 912,
+    "tags": [
+      "hotel"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": true
+  },
+  {
+    "id": "L32",
+    "name": "Hotel Dixon, Ocean Beach",
+    "x": 1974,
+    "y": 737,
+    "tags": [
+      "hotel"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": true
+  },
+  {
+    "id": "L35",
+    "name": "Paramour Hotel, Ocean Beach",
+    "x": 1963,
+    "y": 678,
+    "tags": [
+      "hotel"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": true
+  },
+  {
+    "id": "L36",
+    "name": "Ocean View Hotel, Ocean Beach",
+    "x": 1960,
+    "y": 639,
+    "tags": [
+      "hotel",
+      "enterable"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": true
+  },
+  {
+    "id": "L41",
+    "name": "Hotel Neptune, Ocean Beach",
+    "x": 1935,
+    "y": 541,
+    "tags": [
+      "hotel"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": true
+  },
+  {
+    "id": "L42",
+    "name": "Parsons Hotel?, Ocean Beach",
+    "x": 1933,
+    "y": 527,
+    "tags": [
+      "hotel"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": true
+  },
+  {
+    "id": "L45",
+    "name": "Seashell Hotel, Ocean Beach",
+    "x": 1931,
+    "y": 446,
+    "tags": [
+      "hotel"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": true
+  },
+  {
+    "id": "L47",
+    "name": "Cortez Hotel, Ocean Beach",
+    "x": 1928,
+    "y": 412,
+    "tags": [
+      "hotel"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": true
+  },
+  {
+    "id": "L49",
+    "name": "Atlantis Hotel, Ocean Beach",
+    "x": 1922,
+    "y": 386,
+    "tags": [
+      "hotel"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": true
+  },
+  {
+    "id": "L120",
+    "name": "Vice Beach Marina",
+    "x": 1357,
+    "y": -112,
+    "tags": [
+      "#marina",
+      "transportation"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": true
+  },
+  {
+    "id": "L127",
+    "name": "Tennis Stadium, Catalan Key",
+    "x": -309,
+    "y": -1866,
+    "tags": [
+      "#tennis",
+      "leisure"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": true
+  },
+  {
+    "id": "L130",
+    "name": "Pegassi Residences South Tower",
+    "x": 48,
+    "y": -1081,
+    "tags": [
+      "residential",
+      "unconfirmed"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": true
+  },
+  {
+    "id": "L131",
+    "name": "Pegassi Residences North Tower",
+    "x": 2,
+    "y": -956,
+    "tags": [
+      "residential",
+      "unconfirmed"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": true
+  },
+  {
+    "id": "L161",
+    "name": "Gas Station, Waning Sands",
+    "x": -304,
+    "y": 4202,
+    "tags": [
+      "#gas",
+      "retail"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": true
+  },
+  {
+    "id": "L162",
+    "name": "Water Tower, Waning Sands",
+    "x": 398,
+    "y": 4164,
+    "tags": [
+      "utilities",
+      "//may-not-exist"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": true
+  },
+  {
+    "id": "L164",
+    "name": "Water Tower, Leonard County",
+    "x": -948,
+    "y": 3205,
+    "tags": [
+      "utilities"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": true
+  },
+  {
+    "id": "L165",
+    "name": "Arrow Gas Station, Belville",
+    "x": -772,
+    "y": 2841,
+    "tags": [
+      "#gas",
+      "retail",
+      "unconfirmed"
+    ],
+    "source": "GTADB · curated starter sample",
+    "uncertain": true
+  }
+]
