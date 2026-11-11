@@ -1,0 +1,72 @@
+/* Team Jura GTA Explorer · desktop navigation refinement · 2026-11-11 */
+:root{--jura-ink:#0d0918;--jura-panel:#171026;--jura-line:#43315a;--jura-pink:#ef2c9a;--jura-cyan:#00cbe8;--jura-gold:#f8bb68}
+body{background:#0b0715;color:#f1ebf9}
+.app>header{height:66px;background:#0b0715;border-bottom:2px solid #bd278d;gap:13px;box-shadow:0 2px 22px #170d2b;}
+.app>header .brand span{color:#dc55f6}
+.app>header .topbtn,.app>header #juraMenuButton{background:#1c1530!important;border:1px solid #4d346b!important;color:#f6ebff!important}
+.app>header .switch button.active{background:linear-gradient(120deg,#db2b90,#7846d4);color:white}
+.stage{background:#0b0715}
+#map,.leaflet-container{background:#142538}
+.maptitle{background:#100a1edf;border:1px solid #77529f;border-radius:13px;backdrop-filter:blur(8px)}
+.tools select,.tools button,.bottom,.bottom button{background:#1b1431e8;border:1px solid #4b356e;color:#f6edff}
+.bottom{box-shadow:0 10px 32px #0008}.bottom button.active{background:#7a318b}
+#juraLayers{background:#120c22eb!important;border:1px solid #744699!important;max-width:260px!important;top:12px!important}
+#juraLayersToggle{background:#402358!important}
+#juraLayersPanel select{background:#23183a!important;color:white}
+#juraLayersPanel button{cursor:pointer}
+.compass{border-color:#eb64c9;color:#ffb0e4;background:#1b1232ed}
+#mapStatus{background:#130e24e8!important;border-color:#644681!important;color:#efe2ff!important}
+.drawer{background:#120d21;border-left:1px solid #694889}
+.drawer header{background:#1b1330}
+#juraWelcome{background:radial-gradient(ellipse at 80% 8%,#4a235f 0%,transparent 45%),radial-gradient(ellipse at 4% 92%,#583821 0%,transparent 45%),#0e0a1c}
+.juraCard{background:linear-gradient(135deg,#42233f,#132b36);border-color:#9657a0}
+.juraCard.vi{background:linear-gradient(135deg,#2d1d53,#113e52)}
+.juraAction{background:linear-gradient(100deg,#f5ae69,#ffcf8c)}
+.juraCommands{background:#1b122c;border-color:#6d478c}
+.juraLogo{color:#f0bdfc}.juraTag{color:#e0c1f1}.juraTitle em{color:#fb9bd2}
+.juraQuick button{background:#2b1b43;border-color:#8052a3}
+/* Reference-inspired navigation: persistent laptop search, map remains largest pane. */
+@media(min-width:1024px){
+ .stage{padding-left:276px}
+ #map,#leonidaView{left:276px!important}
+ .maptitle{left:292px;top:14px}
+ #mapStatus{left:292px!important}
+ .stage>.tools{right:16px;top:77px;z-index:675}
+ .stage>.compass{right:26px;bottom:110px}
+ #juraLayers{right:16px!important}
+ .bottom{left:calc(50% + 138px)}
+ #juraDesktop{display:flex!important}
+ .drawer{z-index:900}
+}
+#juraDesktop{display:none;position:absolute;z-index:660;left:0;top:0;bottom:0;width:276px;padding:20px 14px;background:linear-gradient(180deg,#120c21,#090712);border-right:1px solid #513766;flex-direction:column;gap:14px;overflow:auto}
+#juraDesktop h2{margin:2px 0 0;font-size:17px;color:#faf3ff}
+#juraDesktop input,#juraDesktop select{width:100%;border-radius:22px;padding:12px 14px;background:#1a122b;border:1px solid #654581;color:white;outline-offset:2px;font:inherit}
+#juraDesktop input:focus{border-color:#e950b5;outline:2px solid #8b4487}
+#juraDesktop .jura-sidebar-btn{display:block;width:100%;text-align:left;padding:12px 13px;border-radius:10px;background:#211632;border:1px solid #573b70;color:#f9edff;cursor:pointer}
+#juraDesktop .jura-sidebar-btn:hover{background:#372049}
+#juraDesktop .jura-legend{margin-top:auto;border:1px solid #4b3362;padding:14px;border-radius:12px;color:#c4b5d3;font-size:12px;line-height:1.8}
+#juraDesktop .jura-legend b{color:white;font-size:13px}
+#juraDesktop .jura-dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px}
+#juraDesktop .jura-note{font-size:12px;line-height:1.5;color:#b4a4c6}
+#juraDesktopResults{display:grid;gap:5px;max-height:30vh;overflow:auto}
+#juraDesktopResults button{font:inherit;text-align:left;color:#eddefa;background:#211732;border:1px solid #46305f;padding:9px;border-radius:9px;cursor:pointer}
+#juraDesktopResults small{display:block;color:#c5b7d2;margin-top:3px}
+#juraDesktopResults button:hover{border-color:#da65c5}
+@media(max-width:1023px){.stage{padding-left:0!important}#map,#leonidaView{left:0!important}}
+@media(max-width:650px){.app>header{gap:5px;padding:0 7px}.app>header .brand{font-size:11px}.app>header .topbtn{font-size:11px;padding:7px}.maptitle{max-width:58vw}}
+/* RC1 refinements: discovery sidebar, map controls and holiday palette */
+#juraDesktop .jura-side-head{padding:3px 0 10px;border-bottom:1px solid #493453;display:grid;gap:4px}
+#juraDesktop .jura-side-head>b{font-size:16px;letter-spacing:.03em}
+#juraDesktop .jura-side-head span{color:#b868f5}
+#juraDesktop .jura-side-head small{color:#eac7b1}
+#juraDesktop label{font-size:12px;font-weight:700;color:#d4bfdc}
+#juraDesktopResults{min-height:32px;max-height:33vh}
+#juraDesktopResults>small{color:#c4b5d3}
+#juraDesktop .jura-sidebar-actions{display:grid;gap:6px}
+#juraDesktop .jura-legend{margin-top:12px}
+#juraDesktop .jura-legend small{display:block;margin-top:8px;line-height:1.5;color:#b0a0bf}
+#juraFull{white-space:nowrap}
+#juraLeonidaTip{position:absolute;top:12px;left:12px;z-index:800;max-width:330px;background:#100b1eea;color:#f2dffa;border:1px solid #735191;padding:9px 11px;border-radius:10px;font-size:11px;pointer-events:none}
+#juraDesktop button:focus-visible,#juraDesktop select:focus-visible,#juraDesktop input:focus-visible{outline:2px solid #fa7fce;outline-offset:2px}
+@media(max-width:1023px){#juraTopExplorer{display:none}}
+@media(min-width:1024px){.stage>.tools{top:120px;display:flex;flex-wrap:wrap;justify-content:end;max-width:255px}.maptitle{max-width:min(360px,42vw)}}

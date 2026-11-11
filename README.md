@@ -1,25 +1,25 @@
-# Team Jura GTA Discovery Platform v2 — Thanksgiving Command Center
+# Team Jura Explorer 3.2 — Live landmark feeds (testing branch only)
 
-## Installation
-Upload all six files from this ZIP to the root of `jyates0125/leonida-explorer` on the `main` branch, replacing files with matching names. Do not upload the enclosing folder. Wait for GitHub Pages deployment, then hard-refresh.
+## What is included
+- Original Halloween/Thanksgiving Command Center and existing pages retained.
+- New explorer.html searches GTA V and GTA VI GTADB landmark feeds from their public, CC BY 4.0 GitHub data files, when network/CORS permits. Source snapshot is refreshed by pressing Refresh data.
+- Source GTA V: https://github.com/rolux/gtadb.org/blob/main/map/data/5/landmarks.json (2,335 records at inspection).
+- Source GTA VI: https://github.com/rolux/gtadb.org/blob/main/map/data/6/landmarks.json (3,307 records at inspection).
+- The existing 46-item locations.json remains as GTA VI offline/fetch-failure fallback. GTA V has no offline fallback.
+- Custom pointed category-colored pins, search, category filters, paginated results, marked found, personal pins, backup, straight-line waypoint routes, separate GTADB original map.
+- Pins only render after selecting a category or entering a search; cap 120 per view.
 
-## Implemented
-- Existing GTA V tile map and GTA VI GTADB embedded source map retained
-- Autumn home menu and command launcher retained
-- New Discover All page with searchable, categorized research checklist and browser-local completion status
-- Discover page export/import/reset backup
-- On-map Layers & Routes panel for **user-saved pins**: category filter, hide completed, completed checkbox, approximate nearest-neighbor straight-line waypoint route, clear route
-- Map popup completion control for user pins
-- Categorized new pins placed by tapping the GTA V map; imported backups retain category
-- Credits and outbound reference links
+## Important limitations
+- These are GTADB LANDMARK datasets, not GTA Online collectible sets, events, or verified gameplay spawns. No collectible coordinates are fabricated. GTA VI entries are community reconstructions.
+- The full data is fetched at runtime; the ZIP does NOT contain the full databases. Browser must reach raw.githubusercontent.com. Check status counts before publishing.
+- GTA V landmark coordinates are transformed from GTADB world positions to VIRUXE map positions (4096 offset), requiring visual alignment verification on a real device before publication.
+- The GTA VI direct tile host can fail or change. GTADB source map is separate and its markers cannot be controlled by this app.
+- This is not a commercial license for Rockstar artwork. Respect upstream source and attribution requirements.
+- No road-aware routing, automatic seasonal event ingestion, or complete GTA Online collectibles yet.
 
-## Not implemented / limitations
-- Full licensed location database is NOT included: coordinates must be sourced, normalized, attributed, and validated before showing pins. Catalog entries are topic checklists, not individual location records.
-- GTA VI uses an embedded third-party GTADB map. Its controls and locations cannot be programmatically manipulated from our site due to cross-origin isolation. Use Research pins mode for custom pins and route overlay.
-- Route is approximate straight-line ordering of user pins, not drivable road navigation.
-- No verified current-week events or Simeon requests are bundled.
-- GTA V image tiles are hosted by VIRUXE and Rockstar retains game-art rights. External source availability may change.
-- No browser-based test on user's iPhone was performed; do not replace working live site until tested in a preview branch if possible.
+## Licenses
+GTADB landmark data copyright GTADB.org and contributors, CC BY 4.0. Data modified: categories normalized and GTA V coordinate offset added. https://github.com/rolux/gtadb.org/blob/main/LICENSE-DATA and https://creativecommons.org/licenses/by/4.0/
+GTADB software MIT. Leaflet BSD-2-Clause. GTA V/VI artwork rights remain with respective owners.
 
-## Licensing
-Original new site UI and data model: Team Jura. GTADB code MIT and data CC BY 4.0 per upstream repo; no GTADB landmark bulk dataset is bundled in this release. Map source attribution retained. Rockstar/Take-Two trademarks and game imagery remain theirs. No endorsement implied.
+## Upload / test
+On GTA-maps branch, upload ONLY explorer.html and README.md from this ZIP. Keep existing locations.json. Test the two counters and marker alignment on your iPhone before any merge to main. Do not upload the ZIP itself.
