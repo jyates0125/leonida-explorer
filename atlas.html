@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#102a34"><meta name="description" content="Team Jura's unofficial GTA V and GTA VI map research explorer, with filters, collections, routes, and saved progress.">
+<title>Team Jura Atlas 4 · Los Santos & Leonida</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRcOMTjJ5Ldb6dMeiQXKSI2Z8=" crossorigin="anonymous">
+<link rel="stylesheet" href="./atlas.css">
+<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
+<script defer src="./atlas.js"></script>
+</head>
+<body>
+<header class="top"><a class="brand" href="./index.html" aria-label="Team Jura homepage"><span class="brand-art">🍁❄️</span><span><b>TEAM JURA</b><small>ATLAS 4.0 · MAP EXPLORER</small></span></a><div class="tagline">Thanksgiving × Christmas <span>•</span> Unofficial fan project</div><div class="top-links"><a href="./index.html">⌂ Home</a><a href="./explorer.html">↗ Classic explorer</a></div></header>
+<div class="workspace">
+ <aside class="sidebar" id="sidebar" aria-label="Map tools">
+ <div class="world-tabs" role="group" aria-label="Choose game"><button type="button" class="world active" id="world5" data-world="5" aria-pressed="true"><span>LOS SANTOS</span><b>GTA V</b></button><button type="button" class="world" id="world6" data-world="6" aria-pressed="false"><span>LEONIDA</span><b>GTA VI</b></button></div>
+ <div class="status-bar"><span class="status-dot" id="dataDot"></span><span id="dataStatus" role="status">Preparing map data…</span></div>
+ <div class="search-wrap"><label for="search">Search every available location</label><input id="search" type="search" placeholder="Try beach, station, mountain, hotel…" spellcheck="false" autocomplete="off"><kbd>/</kbd></div>
+ <div class="switch-line"><label for="category">Legend & categories</label><button type="button" class="text-btn" id="clearFilters">Clear</button></div>
+ <select id="category" aria-label="Category filter"><option value="all">All categories</option></select>
+ <div id="legend" class="legend" aria-label="Category legend"></div>
+ <div class="filters"><label class="check"><input id="unfound" type="checkbox"> Hide completed</label><label class="check"><input id="favoritesOnly" type="checkbox"> Favorites only</label></div>
+ <div class="tool-tabs" role="tablist" aria-label="Explorer sections"><button role="tab" aria-selected="true" id="tabExplore" data-tab="explore">Explore</button><button role="tab" aria-selected="false" id="tabRoute" data-tab="route">My route <span id="routeCount">0</span></button><button role="tab" aria-selected="false" id="tabSaved" data-tab="saved">My pins</button></div>
+ <section id="panelExplore" class="tool-panel" role="tabpanel"><div class="section-head"><strong id="resultCount">Searching…</strong><span class="muted" id="foundCount"></span></div><div id="results" class="result-list"></div><div class="pager"><button id="prev" type="button">← Back</button><span id="pageLabel">Page 1</span><button id="next" type="button">Next →</button></div></section>
+ <section id="panelRoute" class="tool-panel hidden" role="tabpanel"><p class="small">Add locations using the <b>＋ Route</b> button. Reorder them here. The drawn line connects waypoints; it is not road-by-road navigation.</p><div id="routeList" class="result-list"></div><div class="action-grid"><button id="optimize" type="button">⇄ Optimize order</button><button id="fitRoute" type="button">⌖ Fit route</button><button id="copyRoute" type="button">⧉ Copy route</button><button id="clearRoute" type="button" class="danger">Clear route</button></div></section>
+ <section id="panelSaved" class="tool-panel hidden" role="tabpanel"><p class="small">Your pins and progress stay on this device until you export a backup. Add a pin by clicking the map.</p><button type="button" class="wide primary" id="addPin">＋ Add pin on map</button><div id="savedList" class="result-list"></div><div class="action-grid"><button type="button" id="exportData">↓ Export backup</button><button type="button" id="importData">↑ Import backup</button></div><input id="importFile" type="file" accept="application/json,.json" class="hidden"></section>
+ <div class="sidebar-bottom"><button id="refresh" type="button">↻ Refresh landmark data</button><small id="sourceLine">GTADB landmarks · MIT code / CC BY 4.0 data</small></div>
+ </aside>
+ <main class="map-area" aria-label="Interactive game map"><div id="map" aria-label="Pan and zoom game map"></div>
+ <div class="map-header"><div><strong id="mapTitle">Los Santos & Blaine County</strong><small id="mapSubtitle">Choose layers, search, and plan a route</small></div><div class="layer-actions"><label class="sr-only" for="layerSelect">Map layer</label><select id="layerSelect" aria-label="Map layer"><option value="atlas">Atlas</option><option value="satelite">Satellite</option><option value="grid">Grid</option></select><button type="button" id="fitMap" title="Fit whole map">⌖ Fit</button></div></div>
+ <div class="map-actions"><button type="button" id="togglePins" aria-pressed="true">📍 Hide pins</button><button type="button" id="coordinates">⌖ Coordinates</button><button type="button" id="sourceMap">↗ Original map</button><button type="button" id="mobileTools">☷ Tools</button></div>
+ <div class="map-message" id="mapMessage" role="status">Map loading…</div><div class="coord-pop hidden" id="coordPanel"><strong>Coordinate finder</strong><div id="coordText">Tap anywhere on the map.</div><div class="coord-buttons"><button id="copyCoords" type="button">Copy</button><button id="closeCoords" type="button">Close</button></div></div>
+ <iframe class="original-map hidden" id="originalMap" title="GTADB original GTA VI map" loading="lazy"></iframe>
+ <div class="map-attribution">GTADB.org and contributors <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a> · GTA V artwork © Rockstar Games · <a href="./atlas-credits.html">Credits & licenses</a></div>
+ </main>
+</div>
+<script>document.documentElement.classList.add('js');</script>
+</body></html>
