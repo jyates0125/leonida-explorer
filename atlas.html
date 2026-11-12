@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#142b37">
 <meta name="description" content="Team Jura's unofficial GTA V and GTA VI map explorer. Separate licensed maps and landmarks, markers, routes and offline overview downloads.">
-<title>Team Jura Atlas 5.5 | GTA V · GTA Online · Leonida</title>
-<link rel="stylesheet" href="./atlas.css?v=55">
+<title>Team Jura Atlas 5.7 | GTA V · GTA Online · Leonida</title>
+<link rel="stylesheet" href="./atlas.css?v=571">
 <script defer src="./atlas-intelligence.js?v=55"></script>
-<script defer src="./atlas-sources.js?v=55"></script>
-<script defer src="./atlas.js?v=55"></script>
+<script defer src="./atlas-sources.js?v=57"></script>
+<script defer src="./atlas.js?v=571"></script>
 </head>
 <body data-start-world="5">
 <header class="topbar">
-  <a href="./index.html" class="brand"><span class="emblem">🍁❄️</span><span><b>TEAM JURA</b><small>ATLAS 5.5 · GTA MAP EXPLORER</small></span></a>
+  <a href="./index.html" class="brand"><span class="emblem">🍁❄️</span><span><b>TEAM JURA</b><small>ATLAS 5.7 · LOCATION EDITION</small></span></a>
   <span class="season">Thanksgiving × Christmas · Unofficial fan project</span>
   <nav aria-label="Atlas pages"><a href="./atlas.html" class="navmap">GTA V</a><a href="./atlas-online.html" class="navmap">GTA Online</a><a href="./atlas-vi.html" class="navmap">GTA VI</a><a href="./atlas-checklist.html">Collectibles</a><a href="./atlas-verification.html">Verify Data</a><a href="./atlas-toolkit.html">Toolkit</a><a href="./atlas-catalog.html">Database</a><a href="./atlas-credits.html">Credits</a><a href="./project.html">Showcase</a><a href="./elario.html">Elario Studios</a></nav>
 </header>
@@ -27,6 +27,8 @@
     <div class="dataset"><span class="dot" id="dataDot"></span><span id="dataStatus" role="status">Loading local locations…</span></div>
     <label class="field-label" for="search">Search locations</label>
     <input id="search" type="search" placeholder="Find landmarks, vehicles, collections…" autocomplete="off">
+    <label class="field-label" for="districtFilter">Area / neighborhood (optional)</label>
+    <input id="districtFilter" type="search" placeholder="Sandy Shores, Vespucci, Pillbox Hill…" autocomplete="off">
     <div class="sectionrow"><strong>LOCATION LEGEND · ON / OFF</strong><div><button id="allOn" class="link-btn" type="button">All on</button><button id="allOff" class="link-btn" type="button">All off</button></div></div>
     <div class="legend" id="legend" aria-label="Toggle marker groups"></div>
     <div class="filters"><label><input type="checkbox" id="showUnverified" checked> Include unverified / provisional</label><label><input type="checkbox" id="hideFound"> Hide found</label><label><input type="checkbox" id="favoritesOnly"> Favorites only</label></div>
@@ -79,15 +81,24 @@
       <a class="small-link" href="./atlas-pack-format.html">Data pack format & source rules</a>
     </section>
     <section class="offline source-panel"><strong>🧭 Open-source map layers · calibrated</strong>
-      <p class="hint">GTA V Story collectible and challenge points are transformed to actual world coordinates using independently cross-checked anchors. GTA VI research remains provisional. GTA V objects are real base-world props, not guaranteed GTA Online interactions. Turn sources off to simplify the map.</p>
+      <p class="hint">GTA V Story collectible and challenge points are transformed to actual world coordinates using independently cross-checked anchors. GTA VI research remains provisional. GTA V objects are real base-world props, not guaranteed GTA Online interactions. All 22 object datasets (33,912 published positions) are available individually. They are world props, NOT collectibles. Heavy layers start OFF to protect phone performance. Turn layers on to download them.</p>
       <div id="sourceToggles" aria-label="Enable or disable source overlays"></div>
       <p id="sourceStatus" role="status" class="hint">Checking licensed source feeds…</p>
-      <div class="gridbuttons"><button type="button" id="enableSources">Show all overlays</button><button type="button" id="refreshSources">Refresh sources</button></div>
-      <p class="hint">Feed errors do not disable the main map. External files require an internet connection and source-permitted cross-origin access. <a href="./atlas-calibration.html">Calibration & source report</a>.</p>
+      <div class="gridbuttons"><button type="button" id="enableSources">Show loaded overlays</button><button type="button" id="refreshSources">Refresh sources</button></div>
+      <p class="hint">Feed errors do not disable the main map. External files require an internet connection and source-permitted cross-origin access. <a href="./atlas-calibration.html">Calibration & source report</a> · <a href="./atlas-test-center.html">Run test center</a>.</p>
     </section>
     <section class="offline source-panel"><strong>⌖ Coordinate finder</strong>
       <p class="hint">Enter GTA game-world X and Y coordinates. The crosshair will be placed directly on the current map.</p>
       <div class="coordinate-controls"><label>X <input id="coordinateX" type="number" step="any" placeholder="e.g. 405" aria-label="GTA world X"></label><label>Y <input id="coordinateY" type="number" step="any" placeholder="e.g. 6488" aria-label="GTA world Y"></label><button type="button" id="goCoords">Go to X,Y</button></div>
+      <div class="gridbuttons"><button type="button" id="useMapCenter">Use map center X/Y</button><button type="button" id="shareCoords">Copy exact map link</button></div>
+    </section>
+    <section class="offline nearby-panel"><strong>📍 Find locations nearby</strong>
+      <p class="hint">Search around a selected pin, a coordinate target, or the center of the map. Distances are GTA world units, not road travel distances. Respects active pin categories, area filters and game mode.</p>
+      <div class="nearby-controls"><label>Starting point<select id="nearbyOrigin"><option value="selected">Selected pin (or map center)</option><option value="crosshair">Coordinate finder (or map center)</option><option value="center">Map center</option></select></label>
+      <label>Radius<select id="nearbyRadius"><option value="250">250 units</option><option value="500" selected>500 units</option><option value="1000">1,000 units</option><option value="2500">2,500 units</option><option value="5000">5,000 units</option></select></label></div>
+      <div class="gridbuttons"><button id="findNearby" type="button">Find nearby</button><button id="nearbyToRoute" type="button">Route nearest 12</button></div>
+      <p id="nearbyStatus" class="hint" role="status">Choose a starting point and radius.</p>
+      <div id="nearbyResults" class="nearby-results"></div>
     </section>
     <section class="offline"><strong>📦 Offline maps</strong><p class="hint">The complete GTADB location database is saved after its first successful download. Save the current map's overview tiles for offline use. Zoomed-in areas need their own downloaded tiles for full detail.</p>
       <button id="saveOffline" type="button" class="wide">Save this map's overview (z0–2)</button><p id="offlineStatus" role="status" class="hint">Choose a map style first. You can stop at any time.</p>

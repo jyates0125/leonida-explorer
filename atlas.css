@@ -33,3 +33,15 @@
 .selected-actions a{border:1px solid #a6bbc0;border-radius:6px;padding:7px 10px;text-decoration:none;color:#dbf2f1;font-size:12px}
 .mapcontrols select#density{max-width:120px}
 @media(max-width:760px){.mapcontrols select#density{max-width:100px}.mapcontrols{gap:5px}}
+
+/* Atlas 5.7 location discovery panel */
+.nearby-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin:12px 0}
+.nearby-controls label{display:grid;gap:5px;color:#d6e4e8;font-size:12px}
+.nearby-controls select{width:100%;min-width:0;max-width:100%;padding:9px;border-radius:8px;background:#183646;border:1px solid #426276;color:#fff}
+.nearby-results{display:grid;gap:8px;max-height:470px;overflow-y:auto;overscroll-behavior:contain}
+.nearby-result{padding:10px;border-radius:10px;background:#0f2c39;border:1px solid #345463;display:grid;gap:6px}
+.nearby-result strong{font-size:13px;overflow-wrap:anywhere}
+.nearby-result small{color:#b6cbd2;font-size:11px}
+.nearby-result .result-actions{display:flex;flex-wrap:wrap;gap:7px}
+.nearby-result .result-actions button{padding:7px 10px;font-size:12px}
+@media(max-width:420px){.nearby-controls{grid-template-columns:1fr}}
