@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "game": "6",
+  "units": "gta-world",
+  "source": "SYNTHETIC EXAMPLE ONLY - NOT GAME ROADS",
+  "license": "Original / authorized",
+  "nodes": [
+    {
+      "id": "demo-a",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "demo-b",
+      "x": 500,
+      "y": 0
+    },
+    {
+      "id": "demo-c",
+      "x": 500,
+      "y": 500
+    }
+  ],
+  "edges": [
+    {
+      "from": "demo-a",
+      "to": "demo-b",
+      "name": "DEMO only"
+    },
+    {
+      "from": "demo-b",
+      "to": "demo-c",
+      "name": "DEMO only"
+    }
+  ]
+}

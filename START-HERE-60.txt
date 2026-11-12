@@ -1,0 +1,15 @@
+TEAM JURA ATLAS 6.0 — UPLOAD INSTRUCTIONS
+
+This supersedes the 5.9 update; do NOT also upload 5.8.1 (overlay removal).
+
+1. Export your current site pin backup first.
+2. Unzip Team_Jura_Atlas_6_0_2D_3D_NAV_QUICK_UPDATE.zip.
+3. GitHub > jyates0125/leonida-explorer > Add file > Upload files.
+4. Upload ALL files INSIDE extracted QUICK_UPDATE folder to root. Replace same-named files. Do not upload the ZIP itself or delete remaining repo files.
+5. Commit: Atlas 6.0 - 2D 3D Navigation and Elario Branding
+6. Check your GitHub Pages address: https://jyates0125.github.io/leonida-explorer/
+7. On GTA VI: click Directions, search by names, add multiple stops, generate, switch 3D, rotate; use 2D to return.
+8. Watch 3D status: If elevation fetch failed, 3D uses a flat surface rather than real terrain. Routes require a licensed road graph for road-following preview. No passwords or account login.
+9. If old site persists, private tab / site data refresh. If you find a bug, send screenshot and view name.
+
+Tests: JS syntax, HTML asset/ID, JSON parse, 8 graph routing checks, zip CRC. Chromium visual test blocked in environment. Not deployed by Aura; user must upload to GitHub.

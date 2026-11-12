@@ -1,4 +1,4 @@
-# Team Jura Atlas 5.8 — Smart routes, current GTADB tile layers, guest-only access
+# Team Jura Atlas 6.0 — Multi-stop navigation, 2D/3D maps and guest-only access
 
 ## Atlas 5.7 — Combined collectibles & optional world-object overlays
 
@@ -87,3 +87,20 @@ There is no claim that GTA V is a 100% complete database. We have checked the se
 
 - Use **Use map center X/Y** to turn the current viewport center into a persistent crosshair, then Copy exact map link. No coordinate typing is necessary.
 - Wrecked vehicles from object dumps are **static props**, not vehicle-spawn locations; their layer is classified as world objects, separate from collectible and vehicle-spawn records.
+
+
+## Atlas 5.9 navigation additions
+- GTA VI retains YANIS, DUPZOR, CYBER and licensed community patch map selections; GTA VI UV and UV II options are removed. GTA V and Online UV views remain.
+- Quick **Directions** shortcut opens the existing route builder. Its distances are straight-line estimates, not turn-by-turn road navigation.
+- **Source photos** displays GTADB licensed in-game images for a selected landmark where available; it is not a complete photo/satellite map.
+- **2D overview** resets the map view. **3D reference** opens GTADB externally; Atlas does **not** implement native 3D rendering yet.
+- This release does not import new landmark data or modify saved progress. Community patch art remains mixed-style as designed.
+
+
+## Atlas 6.0: GTADB-inspired navigation and 3D
+
+[Read the 6.0 release notes](RELEASE-ATLAS-6-0.md). This update supersedes 5.9, retains saved-game progress, and adds an original Elario Studios 2D/3D WebGL interface, named-location multi-stop routes, optional licensed roads and optional local terrain elevation. **Without verified road data, directions remain direct-line previews. Without supplied elevation binary, the 3D view is an interactive flat-perspective plane.**
+
+
+## Team Jura Atlas 6.0 · Navigation and WebGL 3D
+An in-app GTADB-style 2D/3D explorer, named-landmark search and multi-stop route planning. 3D uses GTADB elevation **when fetchable**; flat perspective otherwise. Routes are straight-line previews unless a independently validated, properly licensed game-coordinate road graph is supplied. See [release guide](RELEASE-ATLAS-6-0.md). Elario Studios is the creator of this unofficial fan tool, not the owner of GTA game assets.
