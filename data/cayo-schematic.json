@@ -1,0 +1,193 @@
+{
+  "schema": 1,
+  "game": "GTA Online",
+  "region": "Cayo Perico",
+  "coordinateSystem": "illustrative SVG canvas 1000\u00d71080, NOT GTA world coordinates",
+  "sourceNotes": [
+    "https://gtalens.com/map/cayo-infiltration-points",
+    "https://gtalens.com/map/cayo-compound-entry-points",
+    "https://thegtamap.com/map?g=gta5&r=cayo"
+  ],
+  "locations": [
+    {
+      "id": "airstrip",
+      "name": "Airstrip",
+      "category": "infiltration",
+      "x": 230,
+      "y": 225,
+      "description": "Arrival point and escape option; airport area in northwest Cayo Perico.",
+      "positionQuality": "schematic"
+    },
+    {
+      "id": "control-tower",
+      "name": "Control Tower",
+      "category": "intel",
+      "x": 324,
+      "y": 175,
+      "description": "Scope to help disable island air defenses during the finale.",
+      "positionQuality": "schematic"
+    },
+    {
+      "id": "power-station",
+      "name": "Power Station",
+      "category": "intel",
+      "x": 295,
+      "y": 320,
+      "description": "Optional disruption target; scope during Gather Intel.",
+      "positionQuality": "schematic"
+    },
+    {
+      "id": "west-beach",
+      "name": "West Beach",
+      "category": "infiltration",
+      "x": 150,
+      "y": 405,
+      "description": "Approach available after initial island arrival.",
+      "positionQuality": "schematic"
+    },
+    {
+      "id": "north-dock",
+      "name": "North Dock",
+      "category": "infiltration",
+      "x": 635,
+      "y": 244,
+      "description": "Dock approach and escape area.",
+      "positionQuality": "schematic"
+    },
+    {
+      "id": "north-drop",
+      "name": "North Drop Zone",
+      "category": "infiltration",
+      "x": 482,
+      "y": 150,
+      "description": "Parachute infiltration choice; scope before planning.",
+      "positionQuality": "schematic"
+    },
+    {
+      "id": "main-dock",
+      "name": "Main Dock",
+      "category": "infiltration",
+      "x": 490,
+      "y": 528,
+      "description": "Dock approach and escape area.",
+      "positionQuality": "schematic"
+    },
+    {
+      "id": "south-drop",
+      "name": "South Drop Zone",
+      "category": "infiltration",
+      "x": 580,
+      "y": 658,
+      "description": "Parachute infiltration choice; scope before planning.",
+      "positionQuality": "schematic"
+    },
+    {
+      "id": "compound",
+      "name": "El Rubio Compound",
+      "category": "compound",
+      "x": 690,
+      "y": 840,
+      "description": "Southern compound. Primary objective; entry method depends on scope and preparation.",
+      "positionQuality": "schematic"
+    },
+    {
+      "id": "main-gate",
+      "name": "Compound Main Gate",
+      "category": "compound",
+      "x": 657,
+      "y": 779,
+      "description": "Loud approach or supply-truck and disguise approach, depending on equipment.",
+      "positionQuality": "schematic"
+    },
+    {
+      "id": "north-gate",
+      "name": "Compound North Gate",
+      "category": "compound",
+      "x": 715,
+      "y": 775,
+      "description": "Keycode-controlled compound entrance.",
+      "positionQuality": "schematic"
+    },
+    {
+      "id": "south-gate",
+      "name": "Compound South Gate",
+      "category": "compound",
+      "x": 744,
+      "y": 891,
+      "description": "Keycode-controlled compound entrance.",
+      "positionQuality": "schematic"
+    },
+    {
+      "id": "north-wall",
+      "name": "Compound North Wall",
+      "category": "compound",
+      "x": 748,
+      "y": 808,
+      "description": "Climbing-gear entry possibility; verify required prep.",
+      "positionQuality": "schematic"
+    },
+    {
+      "id": "south-wall",
+      "name": "Compound South Wall",
+      "category": "compound",
+      "x": 764,
+      "y": 870,
+      "description": "Climbing-gear entry possibility; verify required prep.",
+      "positionQuality": "schematic"
+    },
+    {
+      "id": "drainage",
+      "name": "Drainage Tunnel",
+      "category": "infiltration",
+      "x": 696,
+      "y": 948,
+      "description": "Underwater entrance; unlock via inspection and prepare Cutting Torch.",
+      "positionQuality": "schematic"
+    },
+    {
+      "id": "kosatka",
+      "name": "Kosatka Escape Area",
+      "category": "escape",
+      "x": 300,
+      "y": 130,
+      "description": "Submarine escape option when available to the heist setup.",
+      "positionQuality": "schematic"
+    },
+    {
+      "id": "treasure",
+      "name": "Treasure Chests \u00b7 daily",
+      "category": "research",
+      "x": 377,
+      "y": 450,
+      "description": "Daily locations vary. Use only independently confirmed current spawn coordinates.",
+      "positionQuality": "schematic"
+    },
+    {
+      "id": "stash",
+      "name": "Buried Stashes \u00b7 daily",
+      "category": "research",
+      "x": 598,
+      "y": 421,
+      "description": "Requires Metal Detector; daily active locations vary.",
+      "positionQuality": "schematic"
+    },
+    {
+      "id": "secondary",
+      "name": "Secondary Loot \u00b7 scoping",
+      "category": "research",
+      "x": 388,
+      "y": 611,
+      "description": "Actual loot positions and types vary by heist. No fabricated exact pins.",
+      "positionQuality": "schematic"
+    },
+    {
+      "id": "equipment",
+      "name": "Equipment \u00b7 scoping",
+      "category": "research",
+      "x": 580,
+      "y": 720,
+      "description": "Guard clothes, bolt cutters and grappling gear are session-dependent.",
+      "positionQuality": "schematic"
+    }
+  ]
+}
