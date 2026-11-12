@@ -1,0 +1,63 @@
+
+name: Atlas development preview
+
+on:
+  push:
+    branches:
+      - GTA-maps
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preview:
+    name: Package Atlas preview
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout development branch
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate JavaScript
+        shell: bash
+        run: |
+          shopt -s nullglob
+          for file in *.js; do
+            node --check "$file"
+          done
+
+      - name: Run Atlas tests
+        run: |
+          python scripts/test_atlas_static.py
+          python scripts/test_sync_gtadb_vi.py
+
+      - name: Package development website
+        shell: bash
+        run: |
+          mkdir -p preview
+          tar -cf - \
+            --exclude=.git \
+            --exclude=.github \
+            --exclude=preview \
+            --exclude='*.pyc' \
+            . | tar -xf - -C preview
+
+      - name: Upload preview ZIP artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Team-Jura-Atlas-Preview
+          path: preview/
+          if-no-files-found: error
+          retention-days: 14
