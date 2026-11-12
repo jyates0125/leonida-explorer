@@ -1,0 +1,28 @@
+name: Atlas validation
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - develop
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check all JavaScript files
+        run: |
+          for f in *.js; do node --check "$f"; done
+      - name: Validate website structure, source and sample records
+        run: |
+          python scripts/test_atlas_static.py
+          python scripts/test_sync_gtadb_vi.py
