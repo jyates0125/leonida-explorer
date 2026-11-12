@@ -1,4 +1,4 @@
-/* Team Jura Atlas 5.7 - documented community source adapters.
+/* Team Jura Atlas 5.8 - documented community source adapters.
  * Maps source coordinates into the EXACT 32768-unit GTADB Atlas world used by atlas.js.
  * Source downloads use their published JSON files, never scrape GTAWeb or GTADB production.
  */
@@ -66,9 +66,10 @@ function objectRows(data,id){if(!data||!Array.isArray(data.rows))throw Error(id+
 function parse(id,data){if(id==='story')return storyRows(data);if(id==='vi')return viRows(data);if(SOURCES[id]?.kind==='objects')return objectRows(data,id);throw Error('Unknown data source');}
 async function getJSON(id,refresh=false){const src=SOURCES[id];if(!src)throw Error('Unknown data source');
  const KEY='team-jura-atlas-57-source-data';let cached=null;
- try{if(typeof caches!=='undefined'){const cache=await caches.open(KEY);const saved=await cache.match(src.url);if(saved)cached=await saved.json();}}catch{}
- if(cached&&!refresh)return{data:cached,cache:true};
- try{const resp=await fetch(src.url,{mode:'cors',cache:refresh?'reload':'default'});if(!resp.ok)throw Error('HTTP '+resp.status);const data=await resp.json();parse(id,data);try{if(typeof caches!=='undefined'){const c=await caches.open(KEY);await c.put(src.url,new Response(JSON.stringify(data),{headers:{'Content-Type':'application/json'}}));}}catch{}return{data,cache:false};}
+ let savedAt=0;
+ try{if(typeof caches!=='undefined'){const cache=await caches.open(KEY);const saved=await cache.match(src.url);if(saved){cached=await saved.json();savedAt=Number(saved.headers.get('X-Jura-Cached-At'))||0;}}}catch{}
+ if(cached&&!refresh&&Date.now()-savedAt<24*60*60*1000)return{data:cached,cache:true};
+ try{const resp=await fetch(src.url,{mode:'cors',cache:refresh?'reload':'default'});if(!resp.ok)throw Error('HTTP '+resp.status);const data=await resp.json();parse(id,data);try{if(typeof caches!=='undefined'){const c=await caches.open(KEY);await c.put(src.url,new Response(JSON.stringify(data),{headers:{'Content-Type':'application/json','X-Jura-Cached-At':String(Date.now())}}));}}catch{}return{data,cache:false};}
  catch(err){if(cached)return{data:cached,cache:true,warning:String(err?.message||err)};throw err;}
 }
 async function load(id,refresh=false){const {data,cache,warning}=await getJSON(id,refresh);return{records:parse(id,data),cache,warning:warning||''};}

@@ -1,6 +1,26 @@
-# Team Jura Atlas 5.5 — GTA Map Explorer
+# Team Jura Atlas 5.8 — Smart routes, current GTADB tile layers, guest-only access
+
+## Atlas 5.7 — Combined collectibles & optional world-object overlays
+
+This package **includes the 5.6 Collectibles Completion Edition** (no separate 5.6 upload required). Core world data and source overlays are loaded from the publishers' JSON files on demand; datasets are not embedded or republished in this ZIP. Published 22 world-object reference lists total **33,912 coordinates**, from MiniMaps for FiveM (derived from DurtyFree). They are **not collectible pickups**. All 22 are optional, and all high-volume layers are off by default. Calibrated community Story Mode sources cover 276 positions; those positions are not all individually verified in gameplay. GTA VI points are community/provisional.
+
+- Story collectible tracker: [atlas-completion.html](./atlas-completion.html). Progress now shares `jura3-progress` with the GTA V map. Existing set-slot checklists remain supported; numbering may differ between guides.
+- 22 optional base-world object layers: source selectors on the GTA V / Online map. Toggle a category to fetch it. District and model names are searchable in the main search bar. Source counts are *published*, not verified live loaded counts.
+- Map route transfer: Select category, plan unfinished route on completion page, then choose **Open this entire route on GTA V map**. This is straight-line waypoint ordering, **not** road or air navigation.
+- Site checks: [atlas-test-center.html](./atlas-test-center.html) includes offline structural and fixture checks and optional live endpoint checks. Real-world map artwork and third-party feeds require post-deployment browser verification.
+- Source license references: [MiniMaps locations](https://fivem-minimaps.com/locations) explicitly permit reuse of JSON/CSV in resources; [danharper/GTAV](https://github.com/danharper/GTAV) WTFPL; [GTADB](https://github.com/rolux/gtadb.org) CC BY 4.0; [Mapheist](https://mapheist.com/) CC BY 4.0. Attribute underlying contributors.
+- Not included without further rights verification: MapGenie images, GTAWeb's proprietary database, third-party unlicensed collectible dumps. Rockstar/Take-Two retain game IP rights.
+
+## Atlas 5.6 — Collectibles Completion Edition
+
+- [Mapped collectible tracker](./atlas-completion.html): 276 GTA V Story Mode source records loaded via the Atlas 5.5 calibrated adapter; searchable, checkable, with nearest-neighbor route ordering, deep links to map search and exportable progress.
+- The mapped tracker shares the existing `team-jura-checklist-v54` storage key. Matching collection categories synchronize using source order, **which is not guaranteed to match the in-game or guide numbering**. Back up progress before relying on cross-view numbering.
+- Source data loads at runtime from the original publicly licensed repository. If offline and not cached, the tracker cannot display the records.
+- GTA Online collections and GTA VI are not claimed as fully mapped. GTAWeb is research inspiration only, not a copied database.
 
 **Unofficial, free, noncommercial fan project** by Team Jura / Elario Studios. Not affiliated with, endorsed by, or sponsored by Rockstar Games, Take-Two Interactive, GTADB.org, or GTAWeb.eu.
+
+See [Release 5.8 notes](RELEASE-ATLAS-5-8.md) for all map views, current tile overlays, cache refresh, original UV styles, original markers, guest progress and passwordless-only account policy.
 
 ## Explore
 - [Homepage](https://jyates0125.github.io/leonida-explorer/)
@@ -57,3 +77,13 @@ The bundled GTA V/VI GTADB JSON files contain only small offline starter subsets
 
 ## Correctness / coverage policy
 There is no claim that GTA V is a 100% complete database. We have checked the selected collection counts against linked guides. Full GTA V/VI community landmarks can load from licensed GTADB GitHub at runtime; GTA V Story community locations now load from the independently licensed source at runtime; complete GTA Online coordinate coverage and a comprehensive ~800+ vehicle catalog are not yet verified. On the 6 map, community landmarks and all 18 starter research records are **UNVERIFIED** until gameplay confirmation. See `atlas-verification.html`.
+
+## Atlas 5.7 Location Edition enhancements
+
+- Search any published name, coordinates, source, or object model, with an optional **area/neighborhood** text filter; district names come from MiniMaps' game zone mapping when object layers are enabled.
+- **Nearby discovery** can search around the selected pin, coordinate target, or map center; choose a 250–5,000 GTA world-unit radius and add up to 12 unfinished nearby pins to a route. Straight-line distances are not travel times or road-network distances.
+- **Share exact coordinates** using portable `?x=...&y=...&zoom=...` links, even for areas without verified pins. Source-backed map pins continue to use `?place=` links.
+- All location discovery is game-mode aware. GTA V Story Mode and Online progress remain distinct. Heavy object overlays default off; selecting an overlay opts in to loading its published feed.
+
+- Use **Use map center X/Y** to turn the current viewport center into a persistent crosshair, then Copy exact map link. No coordinate typing is necessary.
+- Wrecked vehicles from object dumps are **static props**, not vehicle-spawn locations; their layer is classified as world objects, separate from collectible and vehicle-spawn records.

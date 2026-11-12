@@ -1,0 +1,18 @@
+TEAM JURA ATLAS 5.8 — TEST REPORT
+Validated locally on the build at /mnt/data/team_jura_atlas_58_build
+
+PASS — JavaScript parse checks: 11 .js files (node --check)
+PASS — JSON parse checks: 6 .json files
+PASS — All local HTML src/href references resolve to package files
+PASS — Browser smoke test for GTA VI / GTA V Story / GTA Online mode switches, region guide, markers, location card, category legend, route start, smart route, local progress saving; desktop + mobile viewports
+PASS — Browser test of all 7 GTA V styles and all 9 GTA VI styles with simulated PNG tile responses
+PASS — GTADB composite boundary tiles, inner overlay patches, base tile fallback, CYBER legacy fallback, UV & UV II tile source paths
+PASS — Latest-landmark fetch and daily check timestamp with simulated GitHub JSON payload
+PASS — GTADB in-game photo detail with simulated image payload
+PASS — Route core geometric algorithm with 8 assertion groups
+PASS — No uncaught JS errors in tested scenarios
+
+NOT LIVE VERIFIED — Real image payload rendering from GitHub raw tile host in a production browser, Rockstar map-coordinate accuracy, all optional source hosts' CORS, GitHub Pages after deployment, iPhone Safari. These require user testing after site upload.
+
+Security: homepage guest-only and disabled sign-in; no password field or cloud login endpoints. Future accounts must use passwordless authentication and HTTPS.
+Licensing: map tiles/photos are requested only from CC BY 4.0 GTADB public repository with attribution; not GTAWeb screenshot assets.

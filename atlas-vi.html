@@ -5,15 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#142b37">
 <meta name="description" content="Team Jura's unofficial GTA V and GTA VI map explorer. Separate licensed maps and landmarks, markers, routes and offline overview downloads.">
-<title>Team Jura Atlas 5.7 | GTA V · GTA Online · Leonida</title>
-<link rel="stylesheet" href="./atlas.css?v=571">
+<title>Team Jura Atlas 5.8 | GTA V · GTA Online · Leonida</title>
+<link rel="stylesheet" href="./atlas.css?v=58tiles1">
 <script defer src="./atlas-intelligence.js?v=55"></script>
-<script defer src="./atlas-sources.js?v=57"></script>
-<script defer src="./atlas.js?v=571"></script>
+<script defer src="./atlas-sources.js?v=58tiles1"></script>
+<script defer src="./atlas-route-core.js?v=58"></script>
+<script defer src="./atlas.js?v=58tiles1"></script>
 </head>
 <body data-start-world="6">
 <header class="topbar">
-  <a href="./index.html" class="brand"><span class="emblem">🍁❄️</span><span><b>TEAM JURA</b><small>ATLAS 5.7 · LOCATION EDITION</small></span></a>
+  <a href="./index.html" class="brand"><span class="emblem">🍁❄️</span><span><b>TEAM JURA</b><small>ATLAS 5.8 · MAP & ROUTES</small></span></a>
   <span class="season">Thanksgiving × Christmas · Unofficial fan project</span>
   <nav aria-label="Atlas pages"><a href="./atlas.html" class="navmap">GTA V</a><a href="./atlas-online.html" class="navmap">GTA Online</a><a href="./atlas-vi.html" class="navmap">GTA VI</a><a href="./atlas-checklist.html">Collectibles</a><a href="./atlas-verification.html">Verify Data</a><a href="./atlas-toolkit.html">Toolkit</a><a href="./atlas-catalog.html">Database</a><a href="./atlas-credits.html">Credits</a><a href="./project.html">Showcase</a><a href="./elario.html">Elario Studios</a></nav>
 </header>
@@ -31,6 +32,7 @@
     <input id="districtFilter" type="search" placeholder="Sandy Shores, Vespucci, Pillbox Hill…" autocomplete="off">
     <div class="sectionrow"><strong>LOCATION LEGEND · ON / OFF</strong><div><button id="allOn" class="link-btn" type="button">All on</button><button id="allOff" class="link-btn" type="button">All off</button></div></div>
     <div class="legend" id="legend" aria-label="Toggle marker groups"></div>
+    <section id="viRegions" class="offline vi-guide hidden" aria-label="Official Leonida regions"></section>
     <div class="filters"><label><input type="checkbox" id="showUnverified" checked> Include unverified / provisional</label><label><input type="checkbox" id="hideFound"> Hide found</label><label><input type="checkbox" id="favoritesOnly"> Favorites only</label></div>
     <div class="tabs" role="tablist" aria-label="Map tools">
       <button type="button" class="selected" id="tabFind" role="tab" aria-selected="true">Explore</button>
@@ -65,7 +67,10 @@
       <div class="results" id="vehicleList"></div>
     </section>
     <section class="tab-panel hidden" id="panelRoute" role="tabpanel">
-      <p class="hint">Tap <b>+ Route</b> beside locations to build a route. The line shows waypoint order—not actual road directions.</p>
+      <p class="hint">Tap any marker, then choose <b>Start here</b> or pick a starting point anywhere on the map. Tap <b>Smart route</b> to connect visible unfinished locations by nearby order.</p>
+      <div class="gridbuttons"><button id="pickRouteStart" type="button">⌖ Pick start on map</button><button id="routeVisible" type="button" class="accent">Smart route · visible unfinished</button></div>
+      <p id="routeStartStatus" class="hint" role="status">Pick your starting point, then generate a route.</p>
+      <p class="hint">Routes are geometric approximations, not GTA road navigation. Maximum 250 stops per automatic hunt; filter categories for more targeted routes.</p>
       <div id="routeList" class="results"></div>
       <div class="gridbuttons"><button id="optimize" type="button">Order nearest</button><button id="fitRoute" type="button">See route on map</button><button id="clearRoute" type="button">Clear route</button><button id="copyRoute" type="button">Copy stops</button></div>
     </section>
@@ -101,17 +106,17 @@
       <div id="nearbyResults" class="nearby-results"></div>
     </section>
     <section class="offline"><strong>📦 Offline maps</strong><p class="hint">The complete GTADB location database is saved after its first successful download. Save the current map's overview tiles for offline use. Zoomed-in areas need their own downloaded tiles for full detail.</p>
-      <button id="saveOffline" type="button" class="wide">Save this map's overview (z0–2)</button><p id="offlineStatus" role="status" class="hint">Choose a map style first. You can stop at any time.</p>
+      <button id="saveOffline" type="button" class="wide">Save this map's overview (z0–2)</button><p id="offlineStatus" role="status" class="hint">Choose a map style first. Current on-demand map tiles are sourced from GTADB GitHub; offline saving is optional.</p>
       <button id="stopOffline" type="button" class="hidden">Stop download</button>
     </section>
     <div class="bottomlinks"><button type="button" id="refresh">↻ Check for newer landmark data</button><small>GTAWeb used for functionality comparisons only. GTADB licensed landmarks & maps · See <a href="./atlas-credits.html">credits</a>. GTA VI positions and any inferred gameplay features are provisional. GTA VI locations are provisional; see Calibration & Sources.</small></div>
   </aside>
   <main class="map-wrap">
     <canvas id="atlasCanvas" tabindex="0" aria-label="GTA game map. Drag to move. Scroll or use plus and minus to zoom."></canvas>
-    <div class="maptop"><div class="maptitle"><strong id="mapTitle">GTA V · Los Santos</strong><small id="mapSubtitle">GTADB map and pins, all together</small></div><div class="mapcontrols"><label for="layer">Map view</label><select id="layer"><option>Loading views…</option></select><label for="density">Pins</label><select id="density" aria-label="Marker grouping"><option value="balanced">Balanced</option><option value="compact">Grouped</option><option value="individual">Individual</option></select><button id="resetView" type="button" title="Show whole map">⌖ Fit</button></div></div>
+    <div class="maptop"><div class="maptitle"><strong id="mapTitle">GTA V · Los Santos</strong><small id="mapSubtitle">GTADB map and pins, all together</small></div><div class="mapcontrols"><label for="layer">Map view</label><select id="layer" title="Licensed map tiles · UV and UV II are original color treatments of source map art"><option>Loading views…</option></select><label for="density">Pins</label><select id="density" aria-label="Marker grouping"><option value="balanced">Balanced</option><option value="compact">Grouped</option><option value="individual">Individual</option></select><button id="resetView" type="button" title="Show whole map">⌖ Fit</button></div></div>
     <div class="zoom" aria-label="Map zoom controls"><button id="zoomIn" type="button" aria-label="Zoom in">+</button><button id="zoomOut" type="button" aria-label="Zoom out">−</button></div>
     <div class="map-actions"><button id="togglePins" type="button" aria-pressed="true">📍 Pins on</button><button id="mobileTools" type="button">☰ Find places</button><button id="original" type="button">Source ↗</button></div>
-    <div class="selected-card hidden" id="selectedCard" role="region" aria-label="Selected map location"><button class="close" id="closeSelected" type="button" aria-label="Close marker detail">×</button><b id="selectedName"></b><small id="selectedInfo"></small><div class="selected-actions"><button type="button" id="selectedFound">Mark found</button><button type="button" id="selectedRoute">+ Route</button><a id="selectedSource" class="hidden" target="_blank" rel="noopener noreferrer" href="#">Source ↗</a><button type="button" id="shareSelected" title="Copy link to this GTADB landmark">Share</button></div></div>
+    <div class="selected-card hidden" id="selectedCard" role="region" aria-label="Selected map location"><button class="close" id="closeSelected" type="button" aria-label="Close marker detail">×</button><b id="selectedName"></b><small id="selectedInfo"></small><figure id="selectedPhotoFigure" class="selected-photo" hidden><img id="selectedPhoto" loading="eager" decoding="async" alt=""><figcaption>GTADB.org contributors · in-game source photo · CC BY 4.0</figcaption></figure><div class="selected-actions"><button type="button" id="selectedFound">Mark found</button><button type="button" id="selectedRoute">+ Route</button><button type="button" id="selectedStart">◎ Start here</button><a id="selectedSource" class="hidden" target="_blank" rel="noopener noreferrer" href="#">Source ↗</a><button type="button" id="shareSelected" title="Copy link to this GTADB landmark">Share</button></div></div>
     <div class="map-status" id="mapStatus" role="status">Preparing licensed map…</div>
     <div class="credits-line">Map tiles & landmarks: <a href="https://github.com/rolux/gtadb.org" target="_blank" rel="noopener noreferrer">GTADB.org</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> · Game worlds © Rockstar Games · Unofficial</div>
   </main>
