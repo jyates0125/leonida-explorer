@@ -1,0 +1,16 @@
+const assert = require('node:assert/strict');
+const {plan,length,MAX_STOPS}=require('./atlas-route-core.js');
+const S={x:0,y:0};
+const r=plan(S,[{id:'d',x:40,y:0},{id:'b',x:10,y:0},{id:'c',x:20,y:0}]);
+assert.deepEqual(r.stops.map(x=>x.id),['b','c','d']);
+assert.equal(r.units,40);
+assert.equal(length(S,r.stops),40);
+const n=plan({x:100,y:100},[{id:'a',x:0,y:0},{id:'b',x:90,y:100}]);
+assert.equal(n.stops[0].id,'b');
+assert.equal(plan(S,[{id:'x',x:1,y:1},{id:'x',x:1,y:1},{id:'bad',x:NaN,y:1}]).stops.length,1);
+const many=Array.from({length:500},(_,i)=>({id:'p'+i,x:i*10,y:0}));
+const capped=plan(S,many);assert.equal(capped.stops.length,MAX_STOPS);assert.equal(capped.omitted,250);
+const manual=plan(S,[{id:'a',x:20,y:0},{id:'b',x:0,y:10},{id:'c',x:20,y:10},{id:'d',x:0,y:20}]);
+assert.ok(manual.units<=100);
+assert.throws(()=>plan({x:NaN,y:0},[]));
+console.log('Atlas 5.8 route core: 8 assertions groups passed');

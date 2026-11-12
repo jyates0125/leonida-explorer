@@ -1,0 +1,10 @@
+TEAM JURA · ATLAS 6.3 COMPLETE SITE
+
+1. Use the GTA-maps DEVELOPMENT branch (not main). If the branch differs or is absent, verify your repository branches first.
+2. Extract this ZIP. Upload ALL EXTRACTED CONTENTS TO THE REPOSITORY ROOT (not the ZIP itself and not a nested atlas623next folder).
+3. Preserve existing .github/workflows/, data/, scripts/ folders and existing files; replacing matching file paths on the development branch is intended.
+4. Commit: "Atlas 6.3: Scaly/Loki dual legends, source layers and multi-stop route tools"
+5. Test the branch preview before merging to main. GitHub Pages may publish only main unless configured otherwise.
+6. Check RELEASE-ATLAS-6-3.md for smoke tests, caveats, source attribution and known limitations.
+
+TEAM JURA × ELARIO STUDIOS — independent unofficial fan project.

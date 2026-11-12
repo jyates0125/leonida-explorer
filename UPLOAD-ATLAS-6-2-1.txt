@@ -1,0 +1,27 @@
+Team Jura Atlas 6.2.1 — precise GitHub upload guide
+
+This update is NEWER than the earlier Atlas 6.2 ZIPs. Upload this package, not the old ones.
+
+WHICH BRANCH?
+Neither of the two existing branches. `main` is the deployed Atlas 6.1 website. `GTA-maps` is an older development branch. Create a NEW branch `atlas-6-2-preview` based on `main` to keep the live website safe. (The ChatGPT GitHub connector returned HTTP 403 when trying to create the branch; you must create it on GitHub.)
+
+In the repository Code tab: click branch selector currently saying `main` > View all branches > New branch > enter `atlas-6-2-preview` > choose source `main` > Create branch. GitHub's UI labels may differ. Confirm new branch is selected before uploading.
+
+EXACT UPLOAD:
+1. Extract Team_Jura_Atlas_6_2_1_UV_LAYERS_QUICK_UPDATE.zip.
+2. On branch `atlas-6-2-preview`, choose Add file > Upload files.
+3. Upload the individual extracted files from the folder (not the folder itself). All Quick Update files are intentionally ROOT level, with no subfolders.
+4. Commit: `Atlas 6.2.1 illustrated UV and layer filters`.
+5. Open repo `main` live Pages website to confirm it still shows 6.1 (it should). For an HTML preview without publishing the branch you may use a local HTTP server on Windows or ask Aura how to make a GitHub Pages preview. GitHub Pages usually publishes ONLY its configured branch; creating this preview branch does not auto-publish a second site.
+6. Only after actual acceptance testing: merge or upload the verified update to main. Make a JSON progress backup first.
+
+MANDATORY LIVE CHECKS:
+- GTA V and GTA Online radar illustration loads, not just pins; all five standard maps work.
+- UV/UV II show illustrated streets and geography under blue / warm filters.
+- VI Scaly, Loki, YANIS V17/V15, DUPZOR, CYBER and two UV styles draw map artwork.
+- Named layer toggles, clover/weapon/property and vehicle labels only when real coordinates are loaded; tap again hides.
+- Story collectibles stay in Story; Online pins stay Online; VI research stays VI.
+- 3D shows textured map if CORS/elevation permit; otherwise correct illustrated-map fallback. Any blank view is a defect to fix before release.
+- Source photos, per-place details, routes, progress and backup all still work.
+
+GTAWeb comparison notes are in FEATURE-COMPARISON-GTAWEB-GTADB.md, including known missing features.

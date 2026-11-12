@@ -94,3 +94,66 @@
 .jura-in-3d.jura-3d-texture-pending #atlasCanvas{visibility:visible;pointer-events:auto;transform:perspective(1050px) rotateX(19deg) scale(1.08);transform-origin:50% 60%;filter:saturate(1.12)}
 .jura-in-3d.jura-3d-texture-pending #jura3dCanvas{opacity:0;pointer-events:none}
 .jura-in-3d.jura-3d-texture-pending #jura3dMarkerOverlay{display:none!important}
+
+/* Atlas 6.2 · Elario Studios explorer: original visual hierarchy, readable photo detail. */
+:root{--bg:#09171e;--panel:#122b35;--gold:#f0c483;--aqua:#8ce0df;--muted:#c5d4d9}
+.topbar{background:linear-gradient(115deg,#091e2a,#204654 60%,#45332c);box-shadow:0 4px 18px #0005}
+.topbar .brand small{color:#f0c98a}.shell{grid-template-columns:minmax(330px,383px) minmax(0,1fr)}
+.sidebar{background:linear-gradient(180deg,#142f3b,#0e242e 65%);padding:17px 17px 30px}
+.atlas-explorer-head{padding:13px 3px 15px}.atlas-eyebrow{letter-spacing:1.6px;font-size:9px;font-weight:800;color:#d5ad76}.atlas-explorer-head h1{margin:6px 0 4px;font-size:27px;letter-spacing:-.65px;color:#f7f2e7;line-height:1.1}.atlas-explorer-head p{font-size:12px;color:#c0d0d4;margin:0}
+.worlds{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.world{border-radius:9px;padding:9px 7px;min-height:61px}.world small{font-size:8px;letter-spacing:0}.world b{font-size:13px}.world.active{background:linear-gradient(135deg,#ab6944,#754737)}
+.dataset{border-top:1px solid #45616a;padding:10px 2px 11px}
+.atlas-filter-drawer{margin:12px 0 16px;border:1px solid #456673;border-radius:11px;background:#112a35}
+.atlas-filter-drawer>summary{cursor:pointer;padding:12px;font-weight:750;color:#f4d7a8;list-style-position:inside;font-size:12px}.atlas-filter-drawer>summary span{float:right;font-size:10px;font-weight:500;color:#bcd4d9}.atlas-filter-drawer[open]{padding:0 12px 12px}.atlas-filter-drawer[open]>summary{padding:12px 0;border-bottom:1px solid #3a5661}
+.atlas-filter-drawer .sectionrow{margin:13px 0 8px}.atlas-filter-drawer .filters{display:grid;gap:5px}.atlas-filter-drawer .legend{max-height:290px;overflow:auto}
+.tabs{grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid #4b6d77}.tabs button{min-height:45px;border-radius:6px 6px 0 0}.tabs button.selected{background:#264653;border-bottom-width:3px}
+.atlas-list-tools{display:flex;gap:9px;align-items:end;justify-content:space-between;margin:8px 0 12px}.atlas-list-tools label{display:flex;gap:8px;align-items:center;color:#b9d1d6;font-size:11px}.atlas-list-tools select{min-height:33px;font-size:11px;width:auto;max-width:165px;padding:5px 24px 5px 8px}.atlas-list-tools button{min-height:33px;border:1px solid #608691;border-radius:8px;background:#234753;color:#f4eedf;padding:7px 12px;font-size:11px;font-weight:700}
+.results{gap:5px}.result{padding:9px 10px;border-radius:8px;background:#173541;border-color:#385f6b;transition:background .12s}.result.selected,.result:focus-within{background:#2e4545;border-color:#edc187}.result:hover{background:#254755}
+.result-head{align-items:center;gap:8px}.atlas-list-marker{width:12px;height:17px;flex:0 0 12px;border:1.2px solid #e7eff0;border-radius:65% 65% 65% 2%;transform:rotate(-45deg);box-shadow:0 1px 5px #0008}
+.result-head .atlas-list-title{background:none!important;border:0;color:#f5f4eb;cursor:pointer;text-align:left;font-size:12px;font-weight:750;line-height:1.32;flex:1;min-width:0;overflow-wrap:anywhere;padding:4px 0}.result-head .atlas-list-title:hover{text-decoration:underline;color:#ffdaaa}.result small{margin:2px 0 2px 21px;color:#c5d4d8;font-size:10px;line-height:1.4}.result .result-actions{display:none;margin-top:8px}.result.selected .result-actions,.result:focus-within .result-actions,.result:hover .result-actions{display:flex}.result .result-actions button{font-size:10px;padding:6px 4px;min-height:32px}
+.pagination{margin:14px 0}.maptitle,.mapcontrols{backdrop-filter:blur(12px);background:#0b2737f2;border-color:#4d7b87}.maptitle strong{color:#fce9cb}.mapcontrols{box-shadow:0 9px 27px #0007}
+.atlas-tile-health{position:absolute;right:12px;bottom:59px;z-index:10;background:#08232ecb;color:#dbefef;border:1px solid #4d7984;border-radius:8px;padding:5px 9px;pointer-events:none;font:10px system-ui;max-width:260px}.atlas-tile-health.atlas-tiles-error{color:#ffdda3;border-color:#c79a5a}
+.selected-card{background:linear-gradient(135deg,#092634f9,#163944fa);border-color:#8ab1b1;box-shadow:0 15px 55px #000b;max-width:360px}.selected-card #selectedName{font-size:16px;color:#ffdb9b}.atlas-selected-address{color:#deeee9;font-size:11px;line-height:1.45;margin:7px 0}.selected-photo{margin:9px 0}.selected-photo img{max-height:235px;object-fit:cover;width:100%}
+@media(max-width:1050px){.shell{grid-template-columns:minmax(305px,345px) minmax(0,1fr)}.sidebar{padding:12px}}
+@media(max-width:700px){.atlas-explorer-head{padding:5px 0 10px}.atlas-explorer-head h1{font-size:23px}.world b{font-size:12px}.atlas-tile-health{bottom:75px;max-width:180px;font-size:9px}.selected-card{max-width:min(340px,calc(100% - 26px))}.sidebar{padding:12px}.result .result-actions{display:flex}}
+
+/* Atlas 6.2 UV illustration + per-game named layer toggles */
+.named-layer-section{margin-top:12px;padding:9px;border:1px solid #45606a;border-radius:9px;background:#0b2630}
+.named-layer-section>strong{font-size:12px;color:#f3d09b}.named-layer-section>p{font-size:10px;color:#d0dfe0;margin:5px 0 8px}
+.named-layers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.named-layer-choice{border:1px solid #477781;background:#1f4751;color:#f0f4f1;font-size:10px;font-weight:650;text-align:left;border-radius:8px;padding:9px 7px;min-height:43px}
+.named-layer-choice[aria-pressed="false"]{background:#122d37;border-color:#32505b;color:#92adb5;text-decoration:line-through;opacity:.68}.named-layer-choice:focus-visible{outline:2px solid #f8cc82}
+
+/* 6.2.1 — visible, accurate game-specific map layer command deck */
+.named-layer-section{margin:11px 0 12px;overflow:hidden}
+.named-layer-head{display:flex;align-items:center;justify-content:space-between;gap:8px}.named-layer-head small{color:#d1e4e2;font-size:10px;text-align:right}
+.named-layer-actions{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0}.named-layer-actions input{flex:1 1 100%;min-height:36px;background:#173741;border:1px solid #6c9299;border-radius:7px;color:#fff;padding:8px}
+.named-layer-actions button{flex:1;background:#275360;color:#ffedcb;font-size:11px;border:1px solid #77999d;min-height:33px;border-radius:7px;font-weight:650}
+.named-layers{max-height:280px;overflow-y:auto;overscroll-behavior:contain;padding-right:3px;scrollbar-color:#7ba6a6 #102b32}
+.named-layer-choice{transition:background-color .12s ease,border-color .12s ease}
+.named-layer-choice:hover{border-color:#ffc982}.named-layer-choice:active{transform:translateY(1px)}
+
+/* Atlas 6.2.2 — two readable, independently scrollable map legends. */
+.jura-floating-legend[hidden]{display:none!important}
+.jura-floating-legend{position:absolute;top:205px;width:clamp(176px,20%,245px);max-height:calc(100% - 310px);z-index:24;background:#102732ef;border:1px solid #7caaa7;border-radius:11px;box-shadow:0 7px 28px #0009;color:#edf5f5;overflow:hidden;backdrop-filter:blur(10px)}
+.jura-floating-left{left:12px}.jura-floating-right{right:12px}
+.jura-floating-legend>summary{cursor:pointer;list-style:none;padding:11px 12px;display:flex;align-items:center;justify-content:space-between;gap:5px;font-weight:800;font-size:12px;background:#224351}
+.jura-floating-legend>summary::-webkit-details-marker{display:none}.jura-floating-legend>summary span{font-size:9px;font-weight:600;opacity:.72}
+.jura-floating-body{padding:9px;max-height:calc(100dvh - 390px);overflow:auto;scrollbar-color:#66868a #162e3a}
+.jura-floating-actions{display:flex;gap:5px;margin-bottom:7px}.jura-floating-actions button,.jura-floating-only,.jura-trailer-nav{background:#1e4654;border:1px solid #608f97;color:#ebf2ee;border-radius:7px;padding:5px 7px;font-size:10px}
+.jura-floating-scroll{display:grid;gap:5px;max-height:38vh;overflow:auto}.jura-floating-row{display:flex;align-items:center;gap:4px}.jura-floating-switch{display:flex;align-items:center;gap:5px;flex:1;min-width:0;background:#152f3b;border:1px solid #3e6876;border-radius:7px;color:#e6ebec;padding:7px 5px;text-align:left;font-size:10px;cursor:pointer}.jura-floating-switch[aria-pressed=false]{opacity:.52}.jura-floating-switch span:nth-child(2){flex:1;overflow-wrap:anywhere}.jura-floating-switch small{opacity:.75}.jura-floating-only{flex:none}
+.jura-floating-note{font-size:10px;color:#afccd2;line-height:1.45;margin:8px 0}.jura-floating-body input{font-size:10px;min-height:34px;padding:6px;margin:5px 0 8px}.jura-trailer-place{display:block;text-align:left;font-size:10px;padding:8px;border-radius:7px;border:1px solid #3d6672;background:#193744;color:white;width:100%}.jura-trailer-place small{display:block;opacity:.72;margin-top:4px}.jura-trailer-nav{margin-top:8px;width:100%}
+@media(max-width:850px){.jura-floating-legend{top:195px;width:42%;max-width:235px;max-height:47%;}.jura-floating-body{max-height:33vh}.jura-floating-scroll{max-height:22vh}}
+@media(max-width:520px){.jura-floating-legend{top:178px;width:42%;max-height:46%;}.jura-floating-left{left:5px}.jura-floating-right{right:5px}.jura-floating-legend>summary{padding:8px 5px;font-size:10px}.jura-floating-body{padding:5px}.jura-floating-only{font-size:9px;padding:4px}.jura-floating-switch{font-size:9px}.jura-floating-legend:not([open]){max-height:none}}
+
+/* Atlas 6.3 - richer on-map legend / route tools */
+.jura-floating-section{padding:7px 5px 4px;border-bottom:1px solid #557681;color:#b9f6e4;font-weight:800;font-size:10px;letter-spacing:.035em;text-transform:uppercase}
+.jura-trailer-item{padding:5px;border:1px solid #456974;border-radius:8px;background:#142d38;min-width:0}
+.jura-trailer-item .jura-trailer-place{background:transparent;border:0;padding:5px 2px;font-weight:750;overflow-wrap:anywhere}
+.jura-trailer-foot{display:block;padding:0 3px 3px;color:#b9d4d9;font-size:10px;line-height:1.3;overflow-wrap:anywhere}
+.jura-trailer-item .jura-floating-actions{margin:3px 0 0}
+.jura-trailer-item .jura-floating-actions button{flex:1;cursor:pointer}
+.jura-move-stop{border:1px solid #537481;background:#163d4e;color:#e5f5ef;border-radius:6px;padding:5px;cursor:pointer}
+.jura-move-stop:disabled{opacity:.3;cursor:default}
+.jura-nav-stop{flex-wrap:wrap}
+.jura-floating-switch:focus-visible,.jura-trailer-place:focus-visible,.jura-move-stop:focus-visible{outline:2px solid #c6ed80;outline-offset:2px}
+@media(max-width:520px){.jura-floating-legend{top:165px}.jura-floating-scroll{max-height:29vh}}

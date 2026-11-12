@@ -1,0 +1,30 @@
+TEAM JURA ATLAS 6.2 — BUILD AND TEST REPORT
+Date: 2026-11-12
+
+PASS — 37 Atlas 6.2 offline regression assertions (test-atlas-62.py)
+PASS — every included JavaScript (.js) file passes node --check
+PASS — Atlas 6.1 legacy static contract test scripts/test_atlas_static.py
+PASS — GTADB VI sync validation scripts/test_sync_gtadb_vi.py
+PASS — existing route engine tests test-route-58.cjs (8 test groups)
+PASS — three map pages have sorted/searchable landmark list, 6.2 script references, tool IDs and unique IDs
+PASS — source tile URL constructed against the same map server used upstream, plus repository mirror retry
+PASS — all source datasets and per-user progress keys preserved, independent data/workflow folders retained
+PASS — exported feature matrix and on-site feature parity audit page included
+
+LIMITATIONS / OPEN ACCEPTANCE TESTS:
+NOT VERIFIED — Live external map tile availability, CORS response, and full-scale tile rendering.
+NOT VERIFIED — Chromium/iPhone/Windows browser interactions and actual screenshots. Browser navigation in the sandbox was blocked with ERR_BLOCKED_BY_ADMINISTRATOR even for localhost; cannot claim UI E2E test passed.
+NOT VERIFIED — WebGL 3D art texture and true source elevation on actual devices.
+NOT VERIFIED — Current remote GTADB data sync action execution on GitHub after deploying the new files.
+NOT VERIFIED — Every GTADB photo endpoint and all external community dataset records.
+
+The new tile failover and perspective fallback are *code-level repairs*. A live browser visual check remains REQUIRED before replacing the public main branch. We did not publish this package to GitHub.
+
+SUGGESTED HUMAN TEST:
+1) Open GTA V and GTA Online and select In-game radar. Confirm map artwork, not just pins.
+2) Open GTA VI, switch Scaly and Loki, confirm different artwork and colors.
+3) Select landmarks from the left list, verify map movement + photo/reference text.
+4) Expand category drawer; hide/show categories. Search and sort list.
+5) Click 3D, then 2D. Confirm map never disappears while imagery downloads.
+6) Check tile-health badge; if zero artwork, capture a browser screenshot and network console.
+7) Confirm old saved progress, favorites, routes and pins still appear.

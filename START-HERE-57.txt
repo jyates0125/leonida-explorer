@@ -1,0 +1,18 @@
+TEAM JURA ATLAS 5.7 — COMPLETE ONE-PASS UPLOAD
+
+This release INCLUDES all Atlas 5.6 collectible functionality. Do NOT upload 5.6 separately.
+
+1. Extract the ZIP package to a folder on your computer.
+2. Open https://github.com/jyates0125/leonida-explorer , branch main.
+3. Select Add file > Upload files.
+4. Upload all files ending .html .js .css .json .csv, plus README.md from this folder, into the repository ROOT.
+5. Overwrite files with the same names; do NOT delete legacy files or the images already in GitHub.
+6. You may optionally upload the RELEASE .md and this START-HERE .txt.
+7. Commit with title: Team Jura Atlas 5.7 - World Data Upgrade
+8. Wait for GitHub Pages deployment green check.
+9. Open /atlas-test-center.html and click Run local checks, then Run online feed checks.
+10. Test /atlas-completion.html and GTA V/Online/VI maps, especially real image tiles, source feeds, progress sync and routes.
+
+NOTE: Data feeds are downloaded on demand; 33,912 means the publisher's published total, not 33,912 included bundled records.
+
+Location Edition: use Find nearby on the map sidebar to search around your marker or coordinates. You can also copy a direct coordinate link and filter by area.
