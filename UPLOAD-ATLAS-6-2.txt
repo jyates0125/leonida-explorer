@@ -1,0 +1,14 @@
+TEAM JURA ATLAS 6.2 — UPLOAD INSTRUCTIONS
+
+QUICK UPDATE = root-level files only. Preserve ALL your existing nested folder files.
+
+Recommended: test on a new branch, do not risk the live main site. From GitHub Web use your repo's branch selector > View all branches > New branch > preview-62. Then upload only the root files from the quick update at the repo root. Keep scripts/, data/, .github/workflows/ unchanged.
+
+Commit title: Atlas 6.2 Explorer Repair
+Description: Repair map tile loading and improve the landmark explorer
+
+Open pages on branch preview via repository files, or enable a separate branch preview site if available; GitHub Pages may still publish main. Confirm on laptop or phone before merging.
+
+The COMPLETE SITE ZIP preserves nested folders; DO NOT upload all 70+ files into repository root. GitHub Desktop safely preserves the folder structure.
+
+Browser verification: GTA V radar, Online radar, VI Scaly, VI Loki, each base style, visible tiles counter, 2D->3D->2D, color pins, select details, sort and CSV. A JS or green workflow check alone cannot verify art from external tile hosts.

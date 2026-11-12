@@ -1,0 +1,48 @@
+TEAM JURA ATLAS 5.5 — CALIBRATED MAP DATA & CONTROLS
+==============================================
+
+QUICK UPDATE (recommended if Atlas 5.4 is already installed):
+
+1. Download Team_Jura_Atlas_5_5_QUICK_UPDATE.zip.
+2. Extract / unzip the ZIP. DO NOT upload the ZIP itself.
+3. Open https://github.com/jyates0125/leonida-explorer
+4. Verify you are on the main branch.
+5. Choose Add file > Upload files.
+6. Select all 16 site files in the extracted folder (NOT this instruction text).
+7. If GitHub shows existing names, replace/update the existing files. Do not
+   delete any unrelated files or your GTADB database backups.
+8. Commit directly to main:
+
+   Title: Team Jura Atlas 5.5 – Calibrated Maps and Licensed Data Expansion
+   Description: Expand Story Mode collectible coordinates, provisional Leonida
+   research and optional GTA V/Online object layers. Add calibrated map controls,
+   coordinate finder, marker density and source documentation. Preserve 5.4
+   map views, route planner, progress storage and Elario Studios branding.
+
+9. Wait for the Pages workflow's green check in the Actions tab.
+10. Open https://jyates0125.github.io/leonida-explorer/?v=55
+11. Test the three maps and open Data & Calibration from the homepage.
+12. If the old build appears, do a hard refresh or add ?v=55 to its page URL.
+
+FULL DIRECT UPLOAD package (backup/install alternative):
+- Includes every original deployable Atlas 5.4 file PLUS 5.5 replacements and
+  index.html. Use if the current repo is missing other Atlas website files.
+- It does not remove legacy Explorer files automatically: they are no longer
+  linked from the new homepage.
+
+NOTE:
+- New external public JSON source layers depend on your internet connection,
+  upstream availability and browser CORS policies. If they fail, use Source
+  status / Refresh sources; the core GTADB map still functions independently.
+- GTADB, Mapheist, the GTA V community archive and FiveM data providers are
+  credited in the site and calibration report. GTAWeb is research/inspiration
+  only, not a source of copied icons or unpublished map databases.
+- Story Mode community locations have map-projection calibration, not item-by-
+  item gameplay verification. Leonida map positions remain PROVISIONAL.
+- All progress is in your own browser; keep an Export backup before deleting
+  browser data or switching devices.
+
+Do not upload the QA test scripts. They are available only in the full
+source package if you request a developer version later.
+
+Team Jura / Elario Studios — unofficial, noncommercial fan project.

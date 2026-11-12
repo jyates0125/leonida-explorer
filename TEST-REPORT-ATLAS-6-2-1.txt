@@ -1,0 +1,15 @@
+TEAM JURA ATLAS 6.2.1 — ACTUAL TEST REPORT, 2026-11-12
+
+PASS: 41 offline structural package regression assertions (test-atlas-62.py) including 14 JavaScript file parse checks.
+PASS: 12 behavioral assertions for real name/category classification, dynamic source collection groups, per-world hidden layer toggles (test-layer-deck-621.cjs).
+PASS: original Atlas 6.1 static regression (scripts/test_atlas_static.py) with six original GTA VI map styles preserved.
+PASS: GTADB VI sync static validation (scripts/test_sync_gtadb_vi.py).
+PASS: existing route core tests (test-route-58.cjs), 8 assertion groups.
+PASS: all three map pages have unique element IDs and file references; source code preserves existing user storage keys.
+PASS: package ZIP CRC checks and expected entries (to be verified after packaging).
+
+NOT VERIFIED: actual Internet map tiles and artwork, GTAWeb exact live VI view labels, CORS acceptance, GPU/WebGL rendering, iPhone/browser interactions, public GitHub Pages preview, external gallery image URLs, complete GTADB or GTAWeb data parity.
+
+SAFETY: Did NOT push any files to GitHub or modify main. GitHub connector branch creation was denied (HTTP 403). The user must create atlas-6-2-preview from main on the GitHub website.
+
+LIMITATION: GTAWeb copyright prevents importing its exact UV tiles or entire location database absent compatible permission; our UV views use original color treatments of licensed GTADB illustration art. No fabricated spawn, event, clover, collectible or buyable-property locations.

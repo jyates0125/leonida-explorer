@@ -1,0 +1,15 @@
+TEAM JURA ATLAS 5.6 — QUICK UPDATE
+
+Upload these SIX website files to the ROOT of the main branch:
+index.html
+atlas-checklist.html
+atlas-completion.html
+atlas-completion.js
+atlas-sources.js
+README.md
+
+Overwrite matching files; DO NOT delete the other Atlas 5.5 files.
+Commit title: Team Jura Atlas 5.6 - Collectibles Edition
+After Pages deployment, open /atlas-completion.html and verify the source records load.
+
+Known limitations: online source required on first visit; route uses straight-line proximity, not roads; community positions are not individually gameplay-verified; synchronized slot order may differ from other guides.

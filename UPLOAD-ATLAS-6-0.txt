@@ -1,0 +1,10 @@
+Team Jura Atlas 6.0 — upload ALL files from the QUICK UPDATE ZIP
+
+0. Open the CURRENT live Atlas and use My Pins > Export backup. Save that backup somewhere safe.
+1. Extract the QUICK UPDATE ZIP on your computer.
+2. In jyates0125/leonida-explorer, upload the extracted individual files to the repository root (not a ZIP file and not the parent folder). The quick ZIP includes scripts and page files necessary for the navigation update. Existing same-name files should be replaced.
+3. Keep all unrelated files in the repository intact. Do not use the 5.8.1 overlay-removal fix or 5.9 navigation update separately; this release supersedes them.
+4. Commit: Atlas 6.0 - GTADB style 2D 3D navigation and multi-stop routes
+5. After Pages deploys, open https://jyates0125.github.io/leonida-explorer/atlas-vi.html in a private tab. Check map art, markers, Directions, named-location suggestions, add stop, route preview, 2D/3D and all game modes.
+
+WHAT'S NOT BUNDLED: GTADB elevation binaries, driving-route graph, genuine 3D buildings, all remote tile payloads. Those are not in the public repo ready for redistribution and must be licensed and sourced separately. No passwords/sign-in added.

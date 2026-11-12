@@ -1,0 +1,27 @@
+TEAM JURA ATLAS 6.8 · GAME-SCOPED ACTIVITY CONDITIONS
+
+UPLOAD TO THE DEVELOPMENT BRANCH (GTA-maps) BEFORE MAIN.
+
+Option A — COMPLETE WEBSITE ZIP
+1. Extract ZIP on Windows.
+2. Open the extracted folder.
+3. GitHub Desktop (recommended for nested folders): copy extracted CONTENTS into your checked-out repository, including .github, data, scripts.
+4. Select branch GTA-maps; commit "Atlas 6.8 game scoped activity systems"; push origin.
+5. Inspect Github Pages preview. Do not upload the ZIP as a file.
+
+Option B — QUICK UPDATE ZIP
+Only use this if the repository ALREADY contains Atlas 6.7 and its complete folders. Extract and copy the included files and folders into the existing repository, keeping their directory paths.
+
+TEST URLs
+atlas.html — Story Mode map (no Online activity markers)
+atlas-activities.html?mode=story — Story-only challenges
+atlas-online.html — GTA Online map
+atlas-activities.html?mode=online — Online timers, ghosts, conditions
+atlas-cayo.html — Online Cayo heist schematic
+atlas-vi.html — Leonida map
+atlas-activities.html?mode=vi — GTA VI research rules
+
+SAFETY
+This package does NOT contain verified current active rotation locations or claim to connect to the game. Only explicit imported current dated snapshots can highlight matching mapped location IDs; ghost hours must be entered from the in-game clock and events manually confirmed. GTA VI gameplay remains provisional.
+
+If GitHub's web uploader omits folders, use GitHub Desktop instead of uploading partial files.

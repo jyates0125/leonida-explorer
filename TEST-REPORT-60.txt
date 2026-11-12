@@ -1,0 +1,9 @@
+TEAM JURA ATLAS 6.0 - VERIFICATION
+PASS: 14 JavaScript source files syntax (node --check)
+PASS: all 7 JSON files parse
+PASS: 3 HTML map pages, all unique IDs, all local JS/CSS refs resolve
+PASS: 2D/3D, navigation panel, legacy legend, attribution, 3D markers controls present
+PASS: GTA VI has no UV/UV II layer choices
+PASS: 8 navigation-graph unit assertions incl direct line disclaimers and Dijkstra roads
+PASS: ZIP CRC checks (see generated archives)
+NOT VERIFIED: rendered Chromium browser interaction (blocked by admin policy); actual live GTADB elevation API/CORS; map tile artwork network; GitHub Pages deployment; iPhone Safari.

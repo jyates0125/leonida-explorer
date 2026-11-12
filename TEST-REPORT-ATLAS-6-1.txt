@@ -1,0 +1,27 @@
+TEAM JURA ATLAS 6.1 — VERIFICATION REPORT
+
+Validated in current build:
+- Six GTA VI layer IDs and original-map-only policy checked.
+- GTA V/Online seven layer choices preserved by source inspection.
+- Ungrouped individual map markers, GTADB color read from landmark JSON at index 7.
+- 2D/3D integration markup, directions navigation bindings, and optional source elevation contract checked.
+- JavaScript syntax: all root JS files passed node --check.
+- Named route algorithm: 8 assertion groups passed (test-route-58.cjs).
+- GTA VI updater input validation tests: passed (synthetic valid/bad entries).
+- Root site internal resource links and required control IDs: passed.
+- Site JSON files: valid.
+- GitHub Actions YAML: parsed.
+- Quick Update and Full Site ZIP CRC/integrity tests: passed.
+
+NOT YET VERIFIED:
+- Live GitHub Pages deployment (user must upload; repository not changed by this package).
+- Real mobile Safari, GPU/WebGL output, original external GTADB tile rendering, and browser UI click test.
+- Browser visual test was attempted in container Chromium but navigation was blocked by administrator policy (ERR_BLOCKED_BY_ADMINISTRATOR); therefore NO claim of a passing live browser test.
+- GTA VI terrain heightfile unavailable for inclusion; WebGL flat 3D or explicit perspective fallback is included, not confirmed 3D topographic relief.
+- No verified GTA VI road-routing database was found; direct-line previews are labeled as such.
+- Scheduled GTA VI data sync needs GitHub Actions enabled and a first manual workflow run; the complete licensed data snapshot will not be included until that job succeeds.
+
+Data sources: GTADB.org contributors CC BY 4.0; source repository https://github.com/rolux/gtadb.org.
+No copied GTAWeb/MapGenie proprietary artwork, no invented GTADB road graph, no login or passwords.
+
+Recommendation: Backup pins, upload all 19 Quick Update files, run sync Action once, verify 2D/3D controls and pins on deployed Pages, then make preview/develop branches for subsequent work.

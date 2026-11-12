@@ -1,0 +1,14 @@
+TEAM JURA ATLAS 5.8 — LAST PUSH / CURRENT MAP DATA
+
+1. Before replacing your site, open the current Atlas and choose My Pins → Export backup (for existing saved route / progress / favorites). Keep that JSON file safe.
+2. Download the COMPLETE WEBSITE ZIP and extract it.
+3. Open your GitHub repository: https://github.com/jyates0125/leonida-explorer
+4. Choose Add file → Upload files on the main branch. Drag the *contents* of the extracted folder into the repository root, not the containing folder. Existing names should be overwritten by the uploaded replacements.
+5. Commit changes to main. GitHub Pages deployment may take a short time.
+6. Open https://jyates0125.github.io/leonida-explorer/ over HTTPS; hard refresh or reopen a private tab. Start with GTA VI: choose YANIS 17 + current overlays; switch to CYBER, UV or UV II; then check GTA V and Online.
+7. If data is missing, tap Check for newer landmark data. Community sources may not load offline or if a feed changes. Use Export backup / Import backup to move progress to another browser. Guest saving is local only.
+
+SAFE BY DESIGN: no passwords, HTTP sign-in, or fake cloud accounts. Future optional sign-in must be HTTPS-only and passwordless.
+Map sources: https://github.com/rolux/gtadb.org (CC BY 4.0 image + tile assets; attributed in the app).
+GTA VI map landmark positions are community reconstruction and provisional.
+We did not mirror entire GTADB map images in the ZIP. Map tiles and latest records are fetched on demand from published GitHub repository files.
