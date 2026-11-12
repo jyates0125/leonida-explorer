@@ -1,4 +1,4 @@
-# Team Jura Atlas 5.4 — GTA Map Explorer
+# Team Jura Atlas 5.5 — GTA Map Explorer
 
 **Unofficial, free, noncommercial fan project** by Team Jura / Elario Studios. Not affiliated with, endorsed by, or sponsored by Rockstar Games, Take-Two Interactive, GTADB.org, or GTAWeb.eu.
 
@@ -8,10 +8,20 @@
 - [GTA Online](https://jyates0125.github.io/leonida-explorer/atlas-online.html)
 - [GTA VI Leonida](https://jyates0125.github.io/leonida-explorer/atlas-vi.html)
 - [GTA Online toolkit](https://jyates0125.github.io/leonida-explorer/atlas-toolkit.html)
-- [Reference catalog and garage tracker](https://jyates0125.github.io/leonida-explorer/atlas-catalog.html) (5.4, after deployment)
+- [Reference catalog and garage tracker](https://jyates0125.github.io/leonida-explorer/atlas-catalog.html) (reference catalog from Atlas 5.4; unchanged in 5.5)
+- [Calibration and data sources](https://jyates0125.github.io/leonida-explorer/atlas-calibration.html)
 - [Credits](https://jyates0125.github.io/leonida-explorer/atlas-credits.html)
 - [Project Showcase](https://jyates0125.github.io/leonida-explorer/project.html)
 - [Elario Studios — Coming Soon](https://jyates0125.github.io/leonida-explorer/elario.html)
+
+## Version 5.5 additions — Map calibration and approved source overlays
+
+- **GTA V Story Mode:** automatically retrieves `danharper/GTAV`'s 276 public community locations (WTFPL) and transforms Leaflet pseudo-geo coordinates to actual game-world X/Y using an eight-anchor Web-Mercator fit. Six further holdout locations differed by about 0–2 world units from independent published coordinates. Individual pickups and challenge entry points still require gameplay verification.
+- **GTA VI:** optionally retrieves Mapheist's public CC BY 4.0 trailer research; 77 of 94 records had YANIS v16 pixel positions as of November 11, 2026. Converted to GTADB's centered 32,768-unit grid. All imported records remain **PROVISIONAL**, since differences between reconstructed map versions may shift features.
+- **GTA V/Online world objects:** four optional feeds from MiniMaps for FiveM, publisher-permitted JSON reuse: 121 ATMs, 157 gas pump/air-service objects, 49 bus stops and 125 radio masts (452 positions). Base-map objects are not automatically collectible locations or usable Online services.
+- **Controls:** source-by-source overlay switches, source status and refresh, configurable marker grouping, exact X/Y coordinate jump crosshair, source links, source-specific shareable locations and <a href="atlas-calibration.html">source/calibration report</a>.
+- **Safety and performance:** original Atlas 5.4 routes, bookmarks and progress keys are unchanged. Denser prop overlays default OFF. New feeds load only from explicitly published JSON endpoints and are cached after success; failures do not block GTADB maps. Not all external hosts' live CORS behavior is verified across browsers.
+- No GTAWeb database, artwork or tiles are copied; GTAWeb remains a feature-troubleshooting reference. Sources and rights holders are credited separately.
 
 ## Version 5.4 additions
 - [Collectibles checklist](https://jyates0125.github.io/leonida-explorer/atlas-checklist.html) — 20 checked set counts, 955 personal tracking slots, 100% Story Mode thresholds, separate Story/Online progress, export/import, daily resets for rotating sets. **Slots are not mapped game coordinates.**
@@ -38,7 +48,7 @@ Open GitHub issues for reproducible bugs, desired features, missing locations, a
 **Reuse:** Everyone can use and link to the free fan tool. Original Team Jura code is available under the separate [MIT source-code license](LICENSE-TEAM-JURA-CODE.md); third-party tiles/data/art retain their own rights. Names and logos are not licensed for unrelated branding. Read [contribution guidelines](CONTRIBUTING.md) and the [school/community portfolio](PROJECT-PORTFOLIO.md).
 
 ## Development and deployment
-GitHub Pages publishes from `main`; `GTA-maps` is the development branch. Extract and upload the deployable files to the repository root; never upload the ZIP itself. Atlas 5.4 does not include `index.html` and should not replace the existing homepage. Test map alignment, navigation, progress backups and credits after deployment.
+GitHub Pages publishes from `main`; `GTA-maps` is the development branch. Extract and upload the deployable files to the repository root; never upload the ZIP itself. The Atlas 5.5 direct-upload release includes the upgraded `index.html` and should replace the older 5.4 homepage. Files are uploaded unpacked into the root of `main`. Test map alignment, navigation, progress backups and credits after deployment.
 
 ## Limitations
 The bundled GTA V/VI GTADB JSON files contain only small offline starter subsets; full landmark records load from GitHub at runtime. These are **landmarks**, not a complete weapon, vehicle, collectible, business, or spawn-location database. The catalog is a reference/tracking foundation, not verified gameplay spawn data. As of this build GTA V has not been exhaustively verified item-by-item; a completed collection checklist counts toward user tracking, not map coverage. Some views require internet access. Last reviewed 2026-11-11.
@@ -46,4 +56,4 @@ The bundled GTA V/VI GTADB JSON files contain only small offline starter subsets
 **Current demo note:** A successful local simulated-browser test is not a production hosting test; verify the published GitHub Pages site before public showcase.
 
 ## Correctness / coverage policy
-There is no claim that GTA V is a 100% complete database. We have checked the selected collection counts against linked guides. Full GTA V/VI community landmarks can load from licensed GTADB GitHub at runtime; no GTA V per-item collectible coordinate database or comprehensive ~800+ vehicle catalog is bundled. On the 6 map, community landmarks and all 18 starter research records are **UNVERIFIED** until gameplay confirmation. See `atlas-verification.html`.
+There is no claim that GTA V is a 100% complete database. We have checked the selected collection counts against linked guides. Full GTA V/VI community landmarks can load from licensed GTADB GitHub at runtime; GTA V Story community locations now load from the independently licensed source at runtime; complete GTA Online coordinate coverage and a comprehensive ~800+ vehicle catalog are not yet verified. On the 6 map, community landmarks and all 18 starter research records are **UNVERIFIED** until gameplay confirmation. See `atlas-verification.html`.
