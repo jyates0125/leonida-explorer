@@ -5,19 +5,19 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#142b37">
 <meta name="description" content="Team Jura's unofficial GTA V and GTA VI map explorer. Separate licensed maps and landmarks, markers, routes and offline overview downloads.">
-<title>Team Jura Atlas 6.0 | GTA V · GTA Online · Leonida</title>
-<link rel="stylesheet" href="./atlas.css?v=60">
-<script defer src="./atlas-intelligence.js?v=55"></script>
-<script defer src="./atlas-sources.js?v=58tiles1"></script>
-<script defer src="./atlas-route-core.js?v=58"></script>
-<script defer src="./atlas-road-core.js?v=60"></script>
-<script defer src="./atlas-3d.js?v=60"></script>
-<script defer src="./atlas-navigation.js?v=60"></script>
-<script defer src="./atlas.js?v=60"></script>
+<title>Team Jura Atlas 6.1 | GTA V · GTA Online · Leonida</title>
+<link rel="stylesheet" href="./atlas.css?v=61">
+<script defer src="./atlas-intelligence.js?v=61"></script>
+<script defer src="./atlas-sources.js?v=61"></script>
+<script defer src="./atlas-route-core.js?v=61"></script>
+<script defer src="./atlas-road-core.js?v=61"></script>
+<script defer src="./atlas-3d.js?v=61"></script>
+<script defer src="./atlas-navigation.js?v=61"></script>
+<script defer src="./atlas.js?v=61"></script>
 </head>
 <body data-start-world="6">
 <header class="topbar">
-  <a href="./index.html" class="brand"><span class="emblem">🍁❄️</span><span><b>TEAM JURA</b><small>ATLAS 6.0 · 2D / 3D NAV</small></span></a>
+  <a href="./index.html" class="brand"><span class="emblem">🍁❄️</span><span><b>TEAM JURA</b><small>ATLAS 6.1 · SCALY / LOKI · 2D / 3D</small></span></a>
   <span class="season">Thanksgiving × Christmas · Unofficial fan project</span>
   <nav aria-label="Atlas pages"><a href="./atlas.html" class="navmap">GTA V</a><a href="./atlas-online.html" class="navmap">GTA Online</a><a href="./atlas-vi.html" class="navmap">GTA VI</a><a href="./atlas-checklist.html">Collectibles</a><a href="./atlas-verification.html">Verify Data</a><a href="./atlas-toolkit.html">Toolkit</a><a href="./atlas-catalog.html">Database</a><a href="./atlas-credits.html">Credits</a><a href="./project.html">Showcase</a><a href="./elario.html">Elario Studios</a></nav>
 </header>
@@ -34,7 +34,7 @@
     <label class="field-label" for="districtFilter">Area / neighborhood (optional)</label>
     <input id="districtFilter" type="search" placeholder="Sandy Shores, Vespucci, Pillbox Hill…" autocomplete="off">
     <div class="sectionrow"><strong>LOCATION LEGEND · ON / OFF</strong><div><button id="allOn" class="link-btn" type="button">All on</button><button id="allOff" class="link-btn" type="button">All off</button></div></div>
-    <div class="legend" id="legend" aria-label="Toggle marker groups"></div>
+    <p class="jura-legend-credit">🎮 GTA-style location categories · 📍 one marker per mapped place · GTA VI source coordinates remain provisional · <a href="./atlas-credits.html">GTADB CC BY 4.0 credits</a></p><div class="legend" id="legend" aria-label="Toggle location categories"></div>
     <section id="viRegions" class="offline vi-guide hidden" aria-label="Official Leonida regions"></section>
     <div class="filters"><label><input type="checkbox" id="showUnverified" checked> Include unverified / provisional</label><label><input type="checkbox" id="hideFound"> Hide found</label><label><input type="checkbox" id="favoritesOnly"> Favorites only</label></div>
     <div class="tabs" role="tablist" aria-label="Map tools">
@@ -82,7 +82,7 @@
       <div class="results" id="pinsList"></div><div class="gridbuttons"><button id="exportData" type="button">Export backup</button><button id="importData" type="button">Import backup</button></div><input type="file" id="importFile" class="hidden" accept=".json,application/json">
     </section>
     <section class="offline" id="datasets"><strong>🗂 Licensed location packs</strong>
-      <p class="hint">GTADB supplies the full live landmark feeds. New source overlays add calibrated GTA V Story collectibles, base-game world objects, and provisional GTA VI trailer research. The included offline starter is a smaller fallback. Named service sites are inferred, not confirmed gameplay features. Use the built-in overlays or import a documented, appropriately licensed JSON pack.</p>
+      <p class="hint">GTADB publishes licensed landmark data and tiles. GTA VI is synced to our GitHub snapshot daily when Actions is enabled; old releases can use GitHub raw fallback. New source overlays add calibrated GTA V Story collectibles, base-game world objects, and provisional GTA VI trailer research. The included offline starter is a smaller fallback. Named service sites are inferred, not confirmed gameplay features. Use the built-in overlays or import a documented, appropriately licensed JSON pack.</p>
       <p id="packCount" class="hint">0 imported locations</p>
       <button id="loadPack" type="button" class="wide">Import a licensed data pack</button>
       <input type="file" id="packFile" class="hidden" accept=".json,application/json">
@@ -112,12 +112,12 @@
       <button id="saveOffline" type="button" class="wide">Save this map's overview (z0–2)</button><p id="offlineStatus" role="status" class="hint">Choose a map style first. Current on-demand map tiles are sourced from GTADB GitHub; offline saving is optional.</p>
       <button id="stopOffline" type="button" class="hidden">Stop download</button>
     </section>
-    <div class="bottomlinks"><button type="button" id="refresh">↻ Check for newer landmark data</button><small>GTAWeb used for functionality comparisons only. GTADB licensed landmarks & maps · See <a href="./atlas-credits.html">credits</a>. GTA VI positions and any inferred gameplay features are provisional. GTA VI locations are provisional; see Calibration & Sources.</small></div>
+    <div class="bottomlinks"><button type="button" id="refresh">↻ Check GTA VI locations</button><small>GTAWeb used for functionality comparisons only. GTADB licensed landmarks & maps · See <a href="./atlas-credits.html">credits</a>. GTA VI positions and any inferred gameplay features are provisional. GTA VI locations are provisional; see Calibration & Sources.</small></div>
   </aside>
   <main class="map-wrap">
     
-    <!-- Team Jura Atlas 6.0 — GTADB-style workflow, independent Elario Studios implementation -->
-    <canvas id="jura3dCanvas" class="jura-3d-canvas" hidden aria-label="Interactive 3D GTA map perspective; accurate terrain requires elevation data. Drag to orbit, Shift drag to pan, scroll to zoom."></canvas>
+    <!-- Team Jura Atlas 6.1 — GTADB-style workflow, independent Elario Studios implementation -->
+    <canvas id="jura3dCanvas" class="jura-3d-canvas" hidden aria-label="Interactive 3D GTA terrain. Drag to orbit, Shift drag to pan, scroll to zoom."></canvas>
     <div id="jura3dMarkerOverlay" class="jura-3d-overlay" hidden></div>
     <div class="jura-nav-bar" role="group" aria-label="Navigate and change map dimension"><button type="button" id="juraOpenNav" aria-expanded="false" aria-controls="juraNavPanel">↗ Directions</button><button type="button" id="jura2d">2D</button><button type="button" id="jura3d">3D</button><span id="juraNavDimension">2D</span></div>
     <section id="juraNavPanel" class="jura-nav-panel" hidden aria-label="GTA route planner">
@@ -128,14 +128,14 @@
       <div class="jura-nav-row"><button type="button" id="juraNavGo" class="jura-nav-primary">↗ Generate route</button><button type="button" id="juraNavClear">Clear</button><button type="button" id="juraNavExport">Copy</button></div>
       <p id="juraNavStatus" class="jura-nav-caption" role="status">Choose locations to build a route.</p>
       <div id="juraNavResults" class="jura-nav-results" aria-live="polite"></div>
-      <details class="jura-nav-data"><summary>Optional licensed road-network data</summary><p>Import a properly licensed, validated GTA road graph in Team Jura format for road-following routes. Without one, routes are clearly labeled straight-line previews, not driving instructions.</p><input type="file" id="juraNavRoadFile" accept=".json,application/json"><a href="./road-graph-example.json" download>Road graph example</a><p>3D terrain geometry: a licensed local elevation binary can be loaded here. Without it, the 3D renderer shows a perspective map surface, not a height-accurate Leonida terrain.</p><label for="juraElevationFile">Import elevation.bin (optional)</label><input id="juraElevationFile" type="file" accept=".bin,application/octet-stream"></details>
+      <details class="jura-nav-data"><summary>Optional licensed road-network data</summary><p>Import a properly licensed, validated GTA road graph in Team Jura format for road-following routes. Without one, routes are clearly labeled straight-line previews, not driving instructions.</p><input type="file" id="juraNavRoadFile" accept=".json,application/json"><a href="./road-graph-example.json" download>Road graph example</a></details>
     </section>
     <div id="jura3dTools" class="jura-3d-tools" aria-label="3D navigation controls"><button type="button" id="juraToggle3d" aria-pressed="false">3D</button><button type="button" id="jura3dNorth">N ↑</button><button type="button" id="jura3dZoomIn">+</button><button type="button" id="jura3dZoomOut">−</button><small id="jura3dStatus">3D terrain inactive</small></div>
     <div class="jura-brand-map">ELARIO STUDIOS <span>× TEAM JURA</span> · UNOFFICIAL GTA MAP</div>
     <canvas id="atlasCanvas" tabindex="0" aria-label="GTA game map. Drag to move. Scroll or use plus and minus to zoom."></canvas>
-    <div class="maptop"><div class="maptitle"><strong id="mapTitle">GTA V · Los Santos</strong><small id="mapSubtitle">GTADB map and pins, all together</small></div><div class="mapcontrols"><label for="layer">Map view</label><select id="layer" title="Licensed map tiles · UV and UV II are original color treatments of source map art"><option>Loading views…</option></select><label for="overlayOpacity">Overlay</label><input type="range" min="0" max="100" step="5" id="overlayOpacity" aria-label="Community map overlay opacity"><span id="opacityValue">100%</span><label for="density">Pins</label><select id="density" aria-label="Marker grouping"><option value="balanced">Balanced</option><option value="compact">Grouped</option><option value="individual">Individual</option></select><button id="resetView" type="button" title="Show whole map">⌖ Fit</button></div></div>
+    <div class="maptop"><div class="maptitle"><strong id="mapTitle">GTA V · Los Santos</strong><small id="mapSubtitle">GTADB map and pins, all together</small></div><div class="mapcontrols"><label for="layer">Map view</label><select id="layer" title="GTADB CC BY 4.0 licensed map tiles. Scaly and Loki are Team Jura view names; original artwork is credited to its artists."><option>Loading views…</option></select><input type="range" min="0" max="100" step="5" id="overlayOpacity" aria-label="Unused legacy overlay opacity control" hidden><span id="opacityValue" hidden>100%</span><span class="jura-pin-mode" title="One marker per source location">📍 Individual pins</span><select id="density" aria-label="Individual markers only" disabled hidden><option value="individual">Individual</option></select><button id="resetView" type="button" title="Show whole map">⌖ Fit</button></div></div>
     <div class="zoom" aria-label="Map zoom controls"><button id="zoomIn" type="button" aria-label="Zoom in">+</button><button id="zoomOut" type="button" aria-label="Zoom out">−</button></div>
-    <div class="jura-quick-nav" role="group" aria-label="Map and navigation shortcuts"><button type="button" id="quickDirections">↗ Directions</button><button type="button" id="quickPhotos">▣ Source photos</button><button type="button" id="quickMap">▧ 2D overview</button><button type="button" id="threeDReference" title="In-app 3D perspective; terrain height requires a licensed elevation file">▨ 3D terrain</button></div>
+    <div class="jura-quick-nav" role="group" aria-label="Map and navigation shortcuts"><button type="button" id="quickDirections">↗ Directions</button><button type="button" id="quickPhotos">▣ Source photos</button><button type="button" id="quickMap">▧ 2D overview</button><button type="button" id="threeDReference" title="Interactive WebGL terrain view (elevation availability depends on source)">▨ 3D terrain</button></div>
     <div class="map-actions"><button id="togglePins" type="button" aria-pressed="true">📍 Pins on</button><button id="mobileTools" type="button">☰ Find places</button><button id="original" type="button">Source ↗</button></div>
     <div class="selected-card hidden" id="selectedCard" role="region" aria-label="Selected map location"><button class="close" id="closeSelected" type="button" aria-label="Close marker detail">×</button><b id="selectedName"></b><small id="selectedInfo"></small><figure id="selectedPhotoFigure" class="selected-photo" hidden><img id="selectedPhoto" loading="eager" decoding="async" alt=""><figcaption>GTADB.org contributors · in-game source photo · CC BY 4.0</figcaption></figure><div class="selected-actions"><button type="button" id="selectedFound">Mark found</button><button type="button" id="selectedRoute">+ Route</button><button type="button" id="selectedStart">◎ Start here</button><button type="button" id="selectedNavigate">↗ Navigate</button><a id="selectedSource" class="hidden" target="_blank" rel="noopener noreferrer" href="#">Source ↗</a><button type="button" id="shareSelected" title="Copy link to this GTADB landmark">Share</button></div></div>
     <div class="map-status" id="mapStatus" role="status">Preparing licensed map…</div>

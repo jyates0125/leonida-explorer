@@ -69,3 +69,28 @@
 #overlayOpacity{min-height:unset;width:66px;accent-color:#f1be7c}#opacityValue{color:#f3d19f;font-size:10px}.jura-nav-panel button:focus-visible{outline:2px solid #ffd08a}
 @media(max-width:1150px){.jura-nav-bar{top:113px}.jura-nav-panel{top:158px;max-height:calc(100% - 200px)}.jura-3d-tools{top:169px}.mapcontrols input#overlayOpacity{width:42px}.mapcontrols #opacityValue{display:none}}
 @media(max-width:700px){.jura-nav-bar{top:120px;right:8px;gap:2px;padding:3px}.jura-nav-bar button{font-size:10px;padding:5px;min-height:28px}.jura-nav-bar span{display:none}.jura-nav-panel{top:158px;left:8px;width:min(340px,calc(100% - 16px));bottom:25px;max-height:calc(100% - 185px);padding:10px}.jura-3d-tools{top:158px;right:8px;gap:3px}.jura-3d-tools button{min-height:28px;padding:5px 6px}.jura-3d-tools small{display:none}.jura-in-3d .jura-quick-nav{display:none}.mapcontrols #overlayOpacity,.mapcontrols #opacityValue{display:none}.jura-brand-map{bottom:21px;font-size:7px}}
+
+/* Compact navigation: one primary control group, expanded mobile directions canvas. */
+.jura-quick-nav #quickDirections,.jura-quick-nav #threeDReference{display:none!important}
+@media(max-width:700px){body.jura-nav-open .map-wrap{height:78dvh;min-height:630px}body.jura-nav-open .jura-nav-panel{max-height:calc(100% - 185px);bottom:26px}body.jura-nav-open .sidebar{order:2}}
+
+/* Atlas 6.1: GTADB-style ungrouped drops; source colors are per location. */
+.jura-3d-pin.jura-gtadb-pin{border-radius:58% 58% 58% 4%;width:19px;height:23px;border:1.5px solid #f5f6fc;box-shadow:0 2px 7px #001b2b9e;transform:translate(-50%,-100%) rotate(-45deg)}
+/* Only if native WebGL is unavailable. This is perspective, not real GTA terrain relief. */
+.jura-perspective-fallback #atlasCanvas{visibility:visible;pointer-events:auto;transform:perspective(1100px) rotateX(22deg) scale(1.08);transform-origin:50% 60%;filter:saturate(1.08);}
+.jura-perspective-fallback #jura3dCanvas,.jura-perspective-fallback #jura3dMarkerOverlay{display:none!important}
+.jura-perspective-fallback .jura-3d-tools{display:flex}
+.jura-perspective-fallback .jura-3d-tools button:not(#juraToggle3d){display:none}
+.jura-3d-canvas{background:#183e54}
+.jura-legend-credit{margin:6px 0 10px;color:#b3d6d0;font-size:10px;line-height:1.45}
+.jura-data-chip{display:inline-block;border:1px solid #6a97a1;border-radius:9px;padding:5px 7px;background:#1b3849;color:#edf6ee;font-size:10px;margin:3px 0}
+
+
+/* Atlas 6.1 stabilized: hide retired community overlay controls; keep world selection visible. */
+#overlayOpacity,#opacityValue{display:none!important}.jura-pin-mode{white-space:nowrap;font-size:10px;color:#f4dcae}.jura-nav-bar{box-shadow:0 3px 16px #0007} .jura-gtadb-pin{color:transparent!important}
+@media(max-width:700px){.jura-pin-mode{display:none}}
+
+/* Never show an empty 3D canvas while awaiting/denied map imagery. */
+.jura-in-3d.jura-3d-texture-pending #atlasCanvas{visibility:visible;pointer-events:auto;transform:perspective(1050px) rotateX(19deg) scale(1.08);transform-origin:50% 60%;filter:saturate(1.12)}
+.jura-in-3d.jura-3d-texture-pending #jura3dCanvas{opacity:0;pointer-events:none}
+.jura-in-3d.jura-3d-texture-pending #jura3dMarkerOverlay{display:none!important}

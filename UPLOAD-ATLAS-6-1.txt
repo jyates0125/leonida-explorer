@@ -1,0 +1,14 @@
+TEAM JURA ATLAS 6.1 | SINGLE FINAL MAIN UPDATE
+
+1. Export current pin progress backup first from My Pins.
+2. Extract Team_Jura_Atlas_6_1_SCALY_LOKI_QUICK_UPDATE.zip.
+3. Upload **all contents** into repo jyates0125/leonida-explorer root, preserving nested .github/workflows/ and scripts/ directories.
+4. Commit title: Atlas 6.1 Scaly Loki 2D 3D
+5. Description: Original GTA VI maps and licensed pin sync
+6. Open github Pages URL with cache bust ?v=61; choose GTA VI. Check 6 views, pins, 2D/3D, multi-stop directions.
+7. GitHub Actions > Refresh licensed GTA VI landmarks > Run workflow (if permitted); verify snapshot data/gtadb-6.json committed.
+8. Hard-refresh. Check legend, status, and saved progress; do not upload a ZIP as a file to host.
+
+If nested folder upload is difficult on iPhone, use GitHub Desktop on Windows instead. Uploads via GitHub web UI into root do not always preserve hidden directory paths.
+
+IMPORTANT: No validated VI road graph / true elevation binary bundled. Straight-line route and flat 3D fallbacks are explicitly labeled.
