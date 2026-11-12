@@ -1,0 +1,396 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Team Jura Atlas 6.2 feature parity audit for GTAWeb and GTADB: implemented, partial, and planned capabilities."><title>Feature parity audit | Team Jura Atlas 6.2</title><link rel="stylesheet" href="./jura-pages.css"><style>body{background:#0a202a;color:#e6efef}main{max-width:1080px;margin:0 auto;padding:24px 18px 70px}h1,h2{color:#f5d39a}h1{font-size:clamp(24px,3vw,36px)}h2{margin-top:32px}a{color:#fbd49a}p,li{line-height:1.6}table{width:100%;border-collapse:collapse;font-size:12px;line-height:1.5;display:block;overflow-x:auto;margin:18px 0}th,td{padding:10px 11px;text-align:left;vertical-align:top;border-bottom:1px solid #466673;min-width:130px}th{background:#183c49;color:#fff0cc;position:sticky;top:0}tr:nth-child(even){background:#12303b}code{background:#1b4650;border-radius:5px;padding:2px 4px}blockquote{border-left:3px solid #eac183;padding:6px 14px;background:#1b3944}.toplinks{display:flex;gap:12px;flex-wrap:wrap;margin:0 0 24px}.toplinks a{border:1px solid #638b90;padding:9px 12px;text-decoration:none;border-radius:8px;background:#1a3e49;font-size:12px}.note{border-left:3px solid #e9b968;background:#163540;padding:12px;font-size:12px}</style></head><body><main><nav class="toplinks" aria-label="Return to maps"><a href="./index.html">← Home</a><a href="./atlas.html">GTA V</a><a href="./atlas-online.html">GTA Online</a><a href="./atlas-vi.html">GTA VI</a><a href="./elario.html">Elario Studios</a></nav><p class="note">Feature matrix based on accessible source code and public documentation. Status does not replace live browser testing; GTA VI data remains provisional.</p><h1>Atlas 6.2 — Tool-by-tool parity audit</h1>
+<p class="note"><strong>Atlas 6.2.1 update:</strong> all three worlds now have a directly visible layer deck with 27 source-grounded named category types, plus mapped source collectible sets where available. GTA V / Online use illustrated UV-blueprint and paper treatments; GTA VI adds two separately named illustrated UV styles using licensed YANIS/DUPZOR artwork. This is not a claim of GTAWeb UV tile ownership or full feature parity. Read <a href="./MAP-VIEWS-AND-LAYERS-6-2-1.md">the map-view comparison (Markdown)</a> or <a href="./RELEASE-ATLAS-6-2.md">release notes</a>.</p>
+<p><strong>Prepared 12 November 2026 · Team Jura × Elario Studios</strong></p>
+<p>This is a comparison of publicly observable functionality, NOT permission to copy a competitor's software or database. “Atlas” statuses reflect the packaged code and basic static tests; <strong>actual browser rendering against live external tile hosts remains unverified in this environment</strong>. GTADB.org and GTADB.net are different destinations; data/license permissions are not interchangeable. GTA VI reference coordinates remain provisional.</p>
+<h2>Primary public references</h2>
+<ul>
+<li>GTADB.org original map: https://map.gtadb.org/ (user-supplied screenshot shows 920 locations and the list/photo presentation)</li>
+<li>GTADB open map implementation: https://github.com/rolux/gtadb.org/blob/main/maps/maps.js (2D tiles, layering, source map styles, landmark navigation)</li>
+<li>GTADB 3D: https://github.com/rolux/gtadb.org/blob/main/maps/maps3d.js and https://github.com/rolux/gtadb.org/blob/main/maps/maps3dflat.js</li>
+<li>GTADB data license: https://github.com/rolux/gtadb.org/blob/main/LICENSE-DATA ; exceptions and game IP remain applicable.</li>
+<li>GTADB tool overview: https://gtadb.org/ (original GTA IV/V/VI map, experimental Leonida, local markers editor, guessr)</li>
+<li>GTAWeb main map/tool navigation: https://gtaweb.eu/ ; GTA Online Toolkit: https://gtaweb.eu/gtao-toolkit ; maps: https://gtaweb.eu/gtao-map/ls/0 and https://gtaweb.eu/gtao-map/cp/-/cayo-perico-heist</li>
+<li>GTAWeb settings policy provides evidence of crossed-off map markers and synced settings: https://gtaweb.eu/policy</li>
+</ul>
+<h2>Map and explorer parity</h2>
+<table>
+<thead>
+<tr>
+  <th>Tool / behavior</th>
+  <th>Source</th>
+  <th>Atlas 6.2 package</th>
+  <th>Next work / qualification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>GTA V Story map</td>
+  <td>Both</td>
+  <td>Implemented</td>
+  <td>Confirm live radar/satellite imagery after deployment</td>
+</tr>
+<tr>
+  <td>GTA Online Los Santos map</td>
+  <td>GTAWeb</td>
+  <td>Implemented</td>
+  <td>Same map tiles, separate progress; confirm live image</td>
+</tr>
+<tr>
+  <td>GTA VI Leonida map</td>
+  <td>GTADB + GTAWeb</td>
+  <td>Implemented</td>
+  <td>Provisional community reconstruction</td>
+</tr>
+<tr>
+  <td>GTA Online Cayo Perico separate map</td>
+  <td>GTAWeb</td>
+  <td><strong>Not implemented</strong></td>
+  <td>Requires authorized artwork and calibrated coordinates</td>
+</tr>
+<tr>
+  <td>Other GTA game maps (IV, VC, SA, etc.)</td>
+  <td>GTAWeb / GTADB</td>
+  <td><strong>Not implemented</strong></td>
+  <td>Out of V/Online/VI scope, rights/data review needed</td>
+</tr>
+<tr>
+  <td>GTA V satellite / terrain / roadmap / hybrid</td>
+  <td>GTADB</td>
+  <td>Implemented</td>
+  <td>Live host test pending</td>
+</tr>
+<tr>
+  <td>GTA V in-game radar</td>
+  <td>GTADB</td>
+  <td>Repair in 6.2: main tile host + repository fallback</td>
+  <td>Requires live verification of fix</td>
+</tr>
+<tr>
+  <td>GTA VI Yanis V15 / V17</td>
+  <td>GTADB</td>
+  <td>Implemented</td>
+  <td>Original credited artwork</td>
+</tr>
+<tr>
+  <td>GTA VI Dupzor V51 / Cyber</td>
+  <td>GTADB</td>
+  <td>Implemented</td>
+  <td>Legacy Cyber falls back to Yanis where needed</td>
+</tr>
+<tr>
+  <td>Scaly and Loki illustrated views</td>
+  <td>Atlas original presets</td>
+  <td>Implemented</td>
+  <td>Team Jura names are style presets, <strong>not</strong> separate third-party maps</td>
+</tr>
+<tr>
+  <td>Source map overlays / patchwork</td>
+  <td>GTADB</td>
+  <td>Partial</td>
+  <td>Certain patches were intentionally retired in 6.1; restore only when verified</td>
+</tr>
+<tr>
+  <td>Interactive pan, zoom, touch, reset</td>
+  <td>Both</td>
+  <td>Implemented</td>
+  <td>Browser smoke test pending</td>
+</tr>
+<tr>
+  <td>All individual color-coded landmark pins</td>
+  <td>GTADB</td>
+  <td>Implemented</td>
+  <td>Source colors where supplied, otherwise Atlas category colors</td>
+</tr>
+<tr>
+  <td>Always visible landmark directory</td>
+  <td>GTADB</td>
+  <td><strong>Improved in 6.2</strong></td>
+  <td>Search + sorted paginated list in main sidebar</td>
+</tr>
+<tr>
+  <td>Name / reference-address search</td>
+  <td>GTADB</td>
+  <td>Implemented</td>
+  <td>Filters accessible in all game worlds</td>
+</tr>
+<tr>
+  <td>Region / area filter</td>
+  <td>GTADB</td>
+  <td>Implemented</td>
+  <td>Based on name/district/tags, not geocoded polygons</td>
+</tr>
+<tr>
+  <td>Sort by name</td>
+  <td>GTADB</td>
+  <td>Implemented</td>
+  <td>A–Z</td>
+</tr>
+<tr>
+  <td>Sort by in-game address / region</td>
+  <td>GTADB</td>
+  <td>Approximate</td>
+  <td>Region/name grouping; true standardized game street address not in all records</td>
+</tr>
+<tr>
+  <td>Sort by proximity to map center</td>
+  <td>Atlas addition</td>
+  <td><strong>Added in 6.2</strong></td>
+  <td>World-unit proximity only</td>
+</tr>
+<tr>
+  <td>Location count and pagination</td>
+  <td>GTADB</td>
+  <td><strong>Improved in 6.2</strong></td>
+  <td>40 results/page, retains entire filtered dataset</td>
+</tr>
+<tr>
+  <td>Toggle all or per-category pins</td>
+  <td>GTAWeb / GTADB</td>
+  <td>Implemented</td>
+  <td>Expand “Map categories &amp; filters” drawer</td>
+</tr>
+<tr>
+  <td>Confirmed vs unverified filter</td>
+  <td>GTADB</td>
+  <td>Partial</td>
+  <td>Atlas marks VI provisional until external confirmation</td>
+</tr>
+<tr>
+  <td>Favorites / hide visited</td>
+  <td>GTAWeb-style completion</td>
+  <td>Implemented</td>
+  <td>Local browser storage</td>
+</tr>
+<tr>
+  <td>Searchable collection categories</td>
+  <td>GTAWeb</td>
+  <td>Implemented when data exists</td>
+  <td>Source coverage is not complete for every collectible</td>
+</tr>
+<tr>
+  <td>Location photo pane</td>
+  <td>GTADB</td>
+  <td>Implemented</td>
+  <td>Per-landmark photo loads only where upstream image is published</td>
+</tr>
+<tr>
+  <td>Full photo gallery / before-after carousel</td>
+  <td>GTADB</td>
+  <td><strong>Not implemented</strong></td>
+  <td>Need licensed, indexed multi-image data and UI</td>
+</tr>
+<tr>
+  <td>In-game/real-world coordinates and reference address</td>
+  <td>GTADB</td>
+  <td>Implemented</td>
+  <td>Reference does not imply Rockstar game address</td>
+</tr>
+<tr>
+  <td>Map coordinate finder &amp; sharable coordinates</td>
+  <td>GTADB / GTAWeb-inspired</td>
+  <td>Implemented</td>
+  <td>Game-space X/Y; not Google lat/long navigation</td>
+</tr>
+<tr>
+  <td>Nearby places and radius</td>
+  <td>Atlas original</td>
+  <td>Implemented</td>
+  <td>Unit radius; no travel-time promise</td>
+</tr>
+<tr>
+  <td>Copy/share direct place link</td>
+  <td>Both</td>
+  <td>Implemented</td>
+  <td>Source-based linked IDs, no account needed</td>
+</tr>
+<tr>
+  <td>Custom markers</td>
+  <td>GTAWeb / GTADB markers</td>
+  <td>Implemented</td>
+  <td>Local pins and backups</td>
+</tr>
+<tr>
+  <td>Marker tags, photos and cloud sharing</td>
+  <td>GTADB markers editor</td>
+  <td>Partial / missing</td>
+  <td>Imported packs support tags, personal images/sharing not yet</td>
+</tr>
+<tr>
+  <td>Offline starter records</td>
+  <td>Atlas original</td>
+  <td>Implemented</td>
+  <td>Small starter only; full dataset requires first online fetch</td>
+</tr>
+<tr>
+  <td>Save tile overview offline</td>
+  <td>Atlas original</td>
+  <td>Implemented</td>
+  <td>Low zoom only, quota and CORS limits apply</td>
+</tr>
+<tr>
+  <td>Download matching records as CSV</td>
+  <td>Atlas addition</td>
+  <td><strong>Added in 6.2</strong></td>
+  <td>Includes source/uncertainty labels</td>
+</tr>
+<tr>
+  <td>Import licensed map data packs</td>
+  <td>Atlas original</td>
+  <td>Implemented</td>
+  <td>Validates attribution/license, reject unauthorized packs</td>
+</tr>
+<tr>
+  <td>Visible tile network health</td>
+  <td>Atlas addition</td>
+  <td><strong>Added in 6.2</strong></td>
+  <td>Health cannot establish image quality or data license by itself</td>
+</tr>
+</tbody>
+</table>
+<h2>Navigation, 3D and game utilities</h2>
+<table>
+<thead>
+<tr>
+  <th>Tool / behavior</th>
+  <th>Source</th>
+  <th>Atlas 6.2</th>
+  <th>Qualification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>2D GTA map</td>
+  <td>Both</td>
+  <td>Implemented</td>
+  <td>Map artwork still needs live verification</td>
+</tr>
+<tr>
+  <td>3D tilt / perspective / orbit</td>
+  <td>GTADB</td>
+  <td>Partial</td>
+  <td>Native WebGL engine + visible 2D-perspective fallback</td>
+</tr>
+<tr>
+  <td>True elevation terrain</td>
+  <td>GTADB</td>
+  <td>Conditional</td>
+  <td>Needs validated/licensed height data; importing local heightfield supported</td>
+</tr>
+<tr>
+  <td>GTA V/VI Google Maps geographic comparison</td>
+  <td>GTADB</td>
+  <td><strong>Not integrated</strong></td>
+  <td>Requires independent Google Maps key, terms, quota and proper transforms</td>
+</tr>
+<tr>
+  <td>Multi-stop directions interface</td>
+  <td>GTADB</td>
+  <td>Implemented</td>
+  <td>Up to 12 stops in named-navigation UI</td>
+</tr>
+<tr>
+  <td>Direct-line route preview</td>
+  <td>Atlas original</td>
+  <td>Implemented</td>
+  <td>Not a driving route</td>
+</tr>
+<tr>
+  <td>Road-following directions &amp; ETA</td>
+  <td>GTADB experiment / requested</td>
+  <td><strong>Not verified</strong></td>
+  <td>Requires licensed road graph; do not claim without data</td>
+</tr>
+<tr>
+  <td>Reverse and nearest-next stop</td>
+  <td>GTADB-inspired / Atlas</td>
+  <td>Implemented</td>
+  <td>Greedy ordering, no network optimization guarantee</td>
+</tr>
+<tr>
+  <td>100+ collectible tour</td>
+  <td>GTAWeb-style / Atlas</td>
+  <td>Implemented</td>
+  <td>Auto route can order up to 250, direct-line only</td>
+</tr>
+<tr>
+  <td>In-game compass/coordinates</td>
+  <td>Atlas original</td>
+  <td>Partial</td>
+  <td>Coordinates and north/3D controls available</td>
+</tr>
+<tr>
+  <td>GTA Online sale high-demand bonus calculator</td>
+  <td>GTAWeb Toolkit</td>
+  <td><strong>Not implemented</strong></td>
+  <td>Dedicated business logic and testing needed</td>
+</tr>
+<tr>
+  <td>GTA Online timers, alarm and cycle tools</td>
+  <td>GTAWeb Toolkit</td>
+  <td><strong>Not implemented</strong></td>
+  <td>Dedicated toolkit; cannot claim parity</td>
+</tr>
+<tr>
+  <td>Daily/weekly challenge tracking</td>
+  <td>GTAWeb Toolkit</td>
+  <td>Partial / missing</td>
+  <td>Separate checklists exist, not synchronized challenges</td>
+</tr>
+<tr>
+  <td>Casino wheel timer</td>
+  <td>GTAWeb Toolkit</td>
+  <td><strong>Not implemented</strong></td>
+  <td>Future toolkit</td>
+</tr>
+<tr>
+  <td>MC business / nightclub / bunker stock &amp; safes</td>
+  <td>GTAWeb Toolkit</td>
+  <td><strong>Not implemented</strong></td>
+  <td>Source of timers/profit formulas required</td>
+</tr>
+<tr>
+  <td>GTA Online business guide and checklists</td>
+  <td>GTAWeb Toolkit</td>
+  <td>Partial</td>
+  <td>Existing Atlas toolkit, catalog, and completion pages</td>
+</tr>
+<tr>
+  <td>GTAWeb cloud account progress sync</td>
+  <td>GTAWeb</td>
+  <td><strong>Not implemented</strong></td>
+  <td>Intentional guest-only app; local JSON export/import instead</td>
+</tr>
+<tr>
+  <td>GTADB marker editor import/export/share</td>
+  <td>GTADB.org</td>
+  <td>Partial</td>
+  <td>Local export/import, not a full graphical marker studio</td>
+</tr>
+<tr>
+  <td>GTADB screenshot guessing game</td>
+  <td>GTADB.org</td>
+  <td><strong>Not implemented</strong></td>
+  <td>Different project, optional future expansion</td>
+</tr>
+</tbody>
+</table>
+<h2>Accuracy and legal boundaries</h2>
+<ul>
+<li>Do not ingest GTAWeb's copyrighted map/database; its public pages are used as user-experience references only.</li>
+<li>GTADB.org's <code>LICENSE-DATA</code> covers published data/image files under CC BY 4.0 <strong>subject to stated exceptions</strong>; credit GTADB contributors and the individual map artists. Rockstar trademarks and game assets belong to their owners.</li>
+<li>Community map reconstructions and identified real-world reference addresses are not official GTA VI confirmations.</li>
+<li><code>gtadb.net</code> is a separately operated site. Its impressive searchable maps and game-specific collectible counts do not imply permission to copy its dataset.</li>
+<li>Any tile server may fail, rate-limit, change its CORS rules or change its address. Atlas now tries the publisher map server first and its published GitHub repository mirror second, then reports unavailable tiles.</li>
+<li>Verified browser rendering on GitHub Pages, photo availability, exact source counts, modern collector completeness, and 3D elevation still need on-device testing.</li>
+</ul>
+<h2>Priorities for Atlas 6.3 / later</h2>
+<ol>
+<li>Verify live V radar and VI Scaly/Loki tile requests and CORS; capture screenshots from Windows and iPhone.</li>
+<li>Confirm 3D WebGL textured map loads on devices; obtain validated licensed heightfield before advertising true relief.</li>
+<li>Full documented collectible coverage for GTA V/Online, Cayo Perico, event and seasonal packs; source/license review for each.</li>
+<li>Complete per-location photos and additional photo metadata.</li>
+<li>Licensed GTA road graph for drivable routes; only then publish turn-by-turn road instructions.</li>
+<li>Expand Atlas Toolkit into tested GTA Online earnings and timer modules, without copying GTAWeb code.</li>
+<li>Add optional user-created marker images/tags and group sharing with safe export/import.</li>
+</ol>
+</main></body></html>

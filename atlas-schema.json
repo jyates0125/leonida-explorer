@@ -1,0 +1,235 @@
+{
+  "schemaVersion": "5.4",
+  "checkedAt": "2026-11-11",
+  "verificationValues": {
+    "source-checked-count": "Count checked against cited public documentation; individual coordinates not verified",
+    "reference-index": "Index-only / source category linked; individual attributes not independently verified",
+    "source-attributed-landmark": "GTADB community coordinate with CC BY 4.0 provenance; not gameplay interaction",
+    "unverified-community-reconstruction": "Unverified GTA VI pre-release position; not final gameplay confirmation",
+    "individually-verified": "Reserved for a record with a direct evidence link and manual review, NOT used for these index records"
+  },
+  "tables": {
+    "catalog": {
+      "required": [
+        "id",
+        "kind",
+        "game",
+        "mode",
+        "name",
+        "verification",
+        "coordinateStatus",
+        "sourceUrl",
+        "sourceCheckedAt",
+        "attributes"
+      ],
+      "optional": [
+        "group",
+        "x",
+        "y",
+        "notes",
+        "modelCode",
+        "price",
+        "spawnId",
+        "platforms",
+        "unlockRequirements",
+        "lastReviewed"
+      ],
+      "uniqueKey": "id"
+    },
+    "collections": {
+      "required": [
+        "id",
+        "game",
+        "mode",
+        "name",
+        "total",
+        "cycle",
+        "sourceUrl",
+        "verification",
+        "locationVerification"
+      ],
+      "optional": [
+        "requiredFor100Percent",
+        "note",
+        "sourceCheckedAt"
+      ],
+      "uniqueKey": "id"
+    },
+    "locations": {
+      "required": [
+        "id",
+        "game",
+        "name",
+        "x",
+        "y",
+        "sourceUrl",
+        "verification"
+      ],
+      "optional": [
+        "category",
+        "tags",
+        "entrance",
+        "area",
+        "unlockRequirements",
+        "dateVerified",
+        "mode",
+        "coordinatesSpace",
+        "license"
+      ],
+      "uniqueKey": "game+id"
+    },
+    "inventory": {
+      "required": [
+        "id",
+        "name",
+        "garage"
+      ],
+      "optional": [
+        "note",
+        "color",
+        "plate",
+        "acquiredAt",
+        "favorite"
+      ],
+      "privacy": "localStorage only: team-jura-catalog-v51"
+    },
+    "garages": {
+      "required": [
+        "id",
+        "name"
+      ],
+      "optional": [
+        "capacity",
+        "owner",
+        "propertyId",
+        "notes"
+      ],
+      "capacity": "only user-entered, never invented"
+    },
+    "missions": {
+      "required": [
+        "id",
+        "game",
+        "mode",
+        "name",
+        "sourceUrl",
+        "verification"
+      ],
+      "optional": [
+        "prerequisites",
+        "reward",
+        "character",
+        "chapter",
+        "coordinates",
+        "lastReviewed"
+      ],
+      "population": "schema ready; no verified list imported"
+    },
+    "events": {
+      "required": [
+        "id",
+        "game",
+        "mode",
+        "name",
+        "sourceUrl",
+        "verification"
+      ],
+      "optional": [
+        "startDate",
+        "endDate",
+        "frequency",
+        "activityId",
+        "locationId"
+      ],
+      "population": "schema ready; no live event feed"
+    },
+    "vehicles": {
+      "extends": "catalog",
+      "attributes": [
+        "manufacturer",
+        "vehicleClass",
+        "modelCode",
+        "price",
+        "unlockRequirements",
+        "acquisition",
+        "platforms",
+        "storage",
+        "spawnVerified"
+      ],
+      "missingValues": null
+    },
+    "weapons": {
+      "extends": "catalog",
+      "attributes": [
+        "weaponClass",
+        "ammoType",
+        "damage",
+        "price",
+        "unlockRequirements",
+        "acquisition"
+      ],
+      "missingValues": null
+    },
+    "businesses": {
+      "extends": "catalog",
+      "attributes": [
+        "businessType",
+        "purchasePrice",
+        "production",
+        "location",
+        "requiredUnlock"
+      ],
+      "missingValues": null
+    },
+    "properties": {
+      "extends": "catalog",
+      "attributes": [
+        "propertyType",
+        "purchasePrice",
+        "capacity",
+        "location"
+      ],
+      "missingValues": null
+    },
+    "collectibles": {
+      "extends": "catalog",
+      "attributes": [
+        "setName",
+        "total",
+        "requiredFor100Percent",
+        "repeatCycle",
+        "coordinatesAvailable"
+      ],
+      "missingValues": null
+    }
+  },
+  "sources": {
+    "gtadb": {
+      "url": "https://github.com/rolux/gtadb.org",
+      "license": "CC BY 4.0 for landmarks and stated data, asset rights vary",
+      "purpose": "map landmarks and repository tile routes",
+      "mode": "browser fetch from GitHub, offline starter bundled"
+    },
+    "gtaweb": {
+      "url": "https://github.com/PLTytus/GTAWeb",
+      "license": "issues and suggestion hub; NOT data reuse grant",
+      "purpose": "feature benchmark ONLY"
+    },
+    "gtabase": {
+      "url": "https://www.gtabase.com/grand-theft-auto-v/vehicles/",
+      "license": "no permission to redistribute a complete proprietary dataset assumed",
+      "purpose": "manual verification reference and links; no bulk content copied"
+    },
+    "powerpyx": {
+      "url": "https://www.powerpyx.com/gta-v-collectibles-guide-all-collectible-locations/",
+      "license": "guide links only",
+      "purpose": "story collection counts and 100% thresholds"
+    },
+    "gta-wiki": {
+      "url": "https://gta.wiki/w/Collectibles",
+      "license": "external guide; see website terms",
+      "purpose": "GTA Online collection counts"
+    }
+  },
+  "releaseNotes": "This build has cross-checked collection COUNT coverage but it has NOT confirmed every vehicle, weapon, mission, garage or per-collectible spawn coordinate. Never equate the public count with imported mapped pins."
+}
