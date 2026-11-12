@@ -1,0 +1,1351 @@
+{
+  "schema": 1,
+  "release": "6.7",
+  "lastCompared": "2026-11-12",
+  "note": "Coverage blueprint only. Names are not marker coordinates, images, copied databases, or guarantees. Counts calculated only from licensed records actually loaded. Names attributed to public comparison catalogs, not source permission.",
+  "categories": [
+    {
+      "id": "action-figures",
+      "name": "Action Figures",
+      "family": "Collectibles",
+      "aliases": [
+        "action figures",
+        "action figure"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "playing-cards",
+      "name": "Playing Cards",
+      "family": "Collectibles",
+      "aliases": [
+        "playing card"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "signal-jammers",
+      "name": "Signal Jammers",
+      "family": "Collectibles",
+      "aliases": [
+        "signal jammer"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "movie-props",
+      "name": "Movie Props",
+      "family": "Collectibles",
+      "aliases": [
+        "solomon movie prop",
+        "movie prop"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "ld-organics",
+      "name": "LD Organics",
+      "family": "Collectibles",
+      "aliases": [
+        "ld organics",
+        "ld organic"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "peyote-plants",
+      "name": "Peyote Plants",
+      "family": "Collectibles",
+      "aliases": [
+        "peyote plants",
+        "peyote plant"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "media-sticks",
+      "name": "Media Sticks",
+      "family": "Collectibles",
+      "aliases": [
+        "media sticks",
+        "media stick"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "ls-tags",
+      "name": "LS Tags",
+      "family": "Collectibles",
+      "aliases": [
+        "ls tags",
+        "graffiti poster"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "shipwrecks",
+      "name": "Shipwrecks",
+      "family": "Collectibles",
+      "aliases": [
+        "shipwrecks",
+        "shipwreck"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "hidden-caches",
+      "name": "Hidden Caches",
+      "family": "Collectibles",
+      "aliases": [
+        "hidden caches",
+        "hidden cache"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "buried-stashes",
+      "name": "Buried Stashes",
+      "family": "Collectibles",
+      "aliases": [
+        "buried stashes",
+        "buried stashe"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "cayo-perico-treasure-chests",
+      "name": "Cayo Perico Treasure Chests",
+      "family": "Collectibles",
+      "aliases": [
+        "cayo perico treasure chests",
+        "cayo perico treasure chest"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "treasure-hunt",
+      "name": "Treasure Hunt",
+      "family": "Collectibles",
+      "aliases": [
+        "treasure hunt"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "snowmen",
+      "name": "Snowmen",
+      "family": "Collectibles",
+      "aliases": [
+        "snowmen"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "jack-o-lanterns",
+      "name": "Jack O Lanterns",
+      "family": "Collectibles",
+      "aliases": [
+        "jack o lantern",
+        "jack-o-lantern",
+        "pumpkin"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "ghosts-exposed",
+      "name": "Ghosts Exposed",
+      "family": "Collectibles",
+      "aliases": [
+        "ghosts exposed"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "treasure-hunt-first-clues",
+      "name": "Treasure Hunt First Clues",
+      "family": "Collectibles",
+      "aliases": [
+        "treasure hunt first clues",
+        "treasure hunt first clue"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "radio-antennas",
+      "name": "Radio Antennas",
+      "family": "Collectibles",
+      "aliases": [
+        "radio antennas",
+        "radio antenna"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "lucky-clovers",
+      "name": "Lucky Clovers",
+      "family": "Collectibles",
+      "aliases": [
+        "lucky clovers",
+        "lucky clover"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "golden-clovers",
+      "name": "Golden Clovers",
+      "family": "Collectibles",
+      "aliases": [
+        "golden clovers",
+        "golden clover"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "yuanbao",
+      "name": "Yuanbao",
+      "family": "Collectibles",
+      "aliases": [
+        "yuanbao"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "smoke-on-the-water-products",
+      "name": "Smoke on the Water Products",
+      "family": "Collectibles",
+      "aliases": [
+        "smoke on the water products",
+        "smoke on the water product"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "contacts",
+      "name": "Contacts",
+      "family": "Missions",
+      "aliases": [
+        "contacts",
+        "contact"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "heists",
+      "name": "Heists",
+      "family": "Missions",
+      "aliases": [
+        "heists",
+        "heist"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "detective-work-car-spots",
+      "name": "Detective Work Car Spots",
+      "family": "Missions",
+      "aliases": [
+        "detective work car spots",
+        "detective work car spot"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "bunker-dune-fav-drop-offs",
+      "name": "Bunker Dune FAV Drop-offs",
+      "family": "Missions",
+      "aliases": [
+        "bunker dune fav drop-offs",
+        "bunker dune fav drop-off"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "cayo-perico-heist-equipment",
+      "name": "Cayo Perico Heist Equipment",
+      "family": "Missions",
+      "aliases": [
+        "cayo perico heist equipment"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "cayo-perico-heist-points",
+      "name": "Cayo Perico Heist Points",
+      "family": "Missions",
+      "aliases": [
+        "cayo perico heist points",
+        "cayo perico heist point"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "cayo-perico-secondary-loot",
+      "name": "Cayo Perico Secondary Loot",
+      "family": "Missions",
+      "aliases": [
+        "cayo perico secondary loot"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "payphone-hits",
+      "name": "Payphone Hits",
+      "family": "Missions",
+      "aliases": [
+        "payphone hits",
+        "payphone hit"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "madrazo-hits",
+      "name": "Madrazo Hits",
+      "family": "Missions",
+      "aliases": [
+        "madrazo hits",
+        "madrazo hit"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "getaway-driver",
+      "name": "Getaway Driver",
+      "family": "Missions",
+      "aliases": [
+        "getaway driver"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "simeon-export-vehicles",
+      "name": "Simeon Export Vehicles",
+      "family": "Missions",
+      "aliases": [
+        "simeon",
+        "requested vehicle",
+        "export vehicle"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "simeon-dealership",
+      "name": "Simeon Dealership",
+      "family": "Missions",
+      "aliases": [
+        "premium deluxe motorsport",
+        "simeon"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "street-dealers",
+      "name": "Street Dealers",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "street dealer"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "gun-van",
+      "name": "Gun Van",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "gun van"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "stash-houses",
+      "name": "Stash Houses",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "stash houses",
+        "stash house"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "g-cache",
+      "name": "G Cache",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "g's cache",
+        "gs cache"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "junk-energy-skydives",
+      "name": "Junk Energy Skydives",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "junk energy skydives",
+        "junk energy skydive"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "murder-mystery",
+      "name": "Murder Mystery",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "murder mystery"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "time-trials",
+      "name": "Time Trials",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "time trials",
+        "time trial"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "rc-time-trials",
+      "name": "RC Time Trials",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "rc time trials",
+        "rc time trial"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "junk-energy-time-trials",
+      "name": "Junk Energy Time Trials",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "junk energy time trials",
+        "junk energy time trial"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "hsw-time-trials",
+      "name": "HSW Time Trials",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "hsw time trials",
+        "hsw time trial"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "g-cache-spots",
+      "name": "G Cache Spots",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "g's cache",
+        "gs cache"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "stunt-jumps",
+      "name": "Stunt Jumps",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "stunt jumps",
+        "stunt jump"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "ufo-sightings",
+      "name": "UFO Sightings",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "ufo sightings",
+        "ufo sighting"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "possessed-animals",
+      "name": "Possessed Animals",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "possessed animals",
+        "possessed animal"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "yeti-hunt",
+      "name": "Yeti Hunt",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "yeti hunt"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "valentines-cheater",
+      "name": "Valentines Cheater",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "valentines cheater"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "drug-vehicles",
+      "name": "Drug Vehicles",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "drug vehicles",
+        "drug vehicle"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "smuggler-caches",
+      "name": "Smuggler Caches",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "smuggler caches",
+        "smuggler cache"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "shop-robberies",
+      "name": "Shop Robberies",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "shop robberies",
+        "shop robberie"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "crime-scenes",
+      "name": "Crime Scenes",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "crime scenes",
+        "crime scene"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "finders-keepers",
+      "name": "Finders Keepers",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "finders keepers",
+        "finders keeper"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "cinemas",
+      "name": "Cinemas",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "cinemas",
+        "cinema"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "fairground-rides",
+      "name": "Fairground Rides",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "fairground rides",
+        "fairground ride"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "golf",
+      "name": "Golf",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "golf"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "tennis-courts",
+      "name": "Tennis Courts",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "tennis courts",
+        "tennis court"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "darts",
+      "name": "Darts",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "darts",
+        "dart"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "arm-wrestling",
+      "name": "Arm Wrestling",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "arm wrestling"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "flight-school",
+      "name": "Flight School",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "flight school"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "cayo-perico-beach-party",
+      "name": "Cayo Perico Beach Party",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "cayo perico beach party"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "odd-jobs",
+      "name": "Odd Jobs",
+      "family": "Activities and Dailies",
+      "aliases": [
+        "odd jobs",
+        "odd job"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "apartments",
+      "name": "Apartments",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "apartments",
+        "apartment"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "garages",
+      "name": "Garages",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "garages",
+        "garage"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "offices",
+      "name": "Offices",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "offices",
+        "office"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "cargo-warehouses",
+      "name": "Cargo Warehouses",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "cargo warehouse",
+        "special cargo"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "vehicle-warehouses",
+      "name": "Vehicle Warehouses",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "vehicle warehouse",
+        "import export warehouse"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "clubhouses",
+      "name": "Clubhouses",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "clubhouses",
+        "clubhouse"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "mc-businesses",
+      "name": "MC Businesses",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "motorcycle club business",
+        "mc business",
+        "cocaine lockup",
+        "meth lab",
+        "counterfeit cash",
+        "weed farm",
+        "document forgery"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "bunkers",
+      "name": "Bunkers",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "bunker"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "hangars",
+      "name": "Hangars",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "hangar"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "facilities",
+      "name": "Facilities",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "facilities",
+        "facilitie"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "nightclubs",
+      "name": "Nightclubs",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "nightclub"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "arcades",
+      "name": "Arcades",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "arcade"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "auto-shops",
+      "name": "Auto Shops",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "auto shop"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "agencies",
+      "name": "Agencies",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "agency"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "bail-offices",
+      "name": "Bail Offices",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "bail office"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "salvage-yards",
+      "name": "Salvage Yards",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "salvage yard"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "venues",
+      "name": "Venues",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "venues",
+        "venue"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "super-yacht-moorings",
+      "name": "Super Yacht Moorings",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "super yacht moorings",
+        "super yacht mooring"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "quick-travel-drop-offs",
+      "name": "Quick-Travel Drop-offs",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "quick-travel drop-offs",
+        "quick-travel drop-off"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "garment-factory-fast-travel",
+      "name": "Garment Factory Fast Travel",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "garment factory fast travel"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "convenience-stores",
+      "name": "Convenience Stores",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "convenience stores",
+        "convenience store"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "gas-stations",
+      "name": "Gas Stations",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "gas stations",
+        "gas station"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "vending-machines",
+      "name": "Vending Machines",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "vending machines",
+        "vending machine"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "atms",
+      "name": "ATMs",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "atms",
+        "atm"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "clothing-stores",
+      "name": "Clothing Stores",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "clothing stores",
+        "clothing store"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "mod-shops",
+      "name": "Mod Shops",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "mod shops",
+        "mod shop"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "car-washes",
+      "name": "Car Washes",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "car washes",
+        "car washe"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "vehicle-dealerships",
+      "name": "Vehicle Dealerships",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "vehicle dealerships",
+        "vehicle dealership"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "strip-club",
+      "name": "Strip Club",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "strip club"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "record-a-studios",
+      "name": "Record A Studios",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "record a studios",
+        "record a studio"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "arena-war",
+      "name": "Arena War",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "arena war"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "police-stations",
+      "name": "Police Stations",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "police stations",
+        "police station"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "hospitals",
+      "name": "Hospitals",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "hospitals",
+        "hospital"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "fire-stations",
+      "name": "Fire Stations",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "fire stations",
+        "fire station"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "police-impound",
+      "name": "Police Impound",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "police impound"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "telescopes",
+      "name": "Telescopes",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "telescopes",
+        "telescope"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "money-fronts",
+      "name": "Money Fronts",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "money fronts",
+        "money front"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "vinewood-club-garage",
+      "name": "Vinewood Club Garage",
+      "family": "Businesses Properties and Services",
+      "aliases": [
+        "vinewood club garage"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "exotic-exports",
+      "name": "Exotic Exports",
+      "family": "Vehicles and Spawns",
+      "aliases": [
+        "exotic export"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "pegasus-delivery-points",
+      "name": "Pegasus Delivery Points",
+      "family": "Vehicles and Spawns",
+      "aliases": [
+        "pegasus delivery points",
+        "pegasus delivery point"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "kosatka-locations",
+      "name": "Kosatka Locations",
+      "family": "Vehicles and Spawns",
+      "aliases": [
+        "kosatka locations",
+        "kosatka location"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "moc-delivery-points",
+      "name": "MOC Delivery Points",
+      "family": "Vehicles and Spawns",
+      "aliases": [
+        "moc delivery points",
+        "moc delivery point"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "avenger-delivery-points",
+      "name": "Avenger Delivery Points",
+      "family": "Vehicles and Spawns",
+      "aliases": [
+        "avenger delivery points",
+        "avenger delivery point"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "terrorbyte-and-acid-lab-delivery-points",
+      "name": "Terrorbyte and Acid Lab Delivery Points",
+      "family": "Vehicles and Spawns",
+      "aliases": [
+        "terrorbyte and acid lab delivery points",
+        "terrorbyte and acid lab delivery point"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "imani-motorcycle-spots",
+      "name": "Imani Motorcycle Spots",
+      "family": "Vehicles and Spawns",
+      "aliases": [
+        "imani motorcycle spots",
+        "imani motorcycle spot"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "cayo-perico-vehicles",
+      "name": "Cayo Perico Vehicles",
+      "family": "Vehicles and Spawns",
+      "aliases": [
+        "cayo perico vehicles",
+        "cayo perico vehicle"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "random-vehicle-spawns",
+      "name": "Random Vehicle Spawns",
+      "family": "Vehicles and Spawns",
+      "aliases": [
+        "random vehicle spawns",
+        "random vehicle spawn"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "simeon-requested-vehicles",
+      "name": "Simeon Requested Vehicles",
+      "family": "Vehicles and Spawns",
+      "aliases": [
+        "simeon",
+        "requested vehicle"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "parachute-pickups",
+      "name": "Parachute Pickups",
+      "family": "Weapons",
+      "aliases": [
+        "parachute pickups",
+        "parachute pickup"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    },
+    {
+      "id": "weapon-pickups",
+      "name": "Weapon Pickups",
+      "family": "Weapons",
+      "aliases": [
+        "weapon pickups",
+        "weapon pickup"
+      ],
+      "scope": "online",
+      "status": "needs-source",
+      "sourceReference": "https://gtamap.io/gta-online-map/"
+    }
+  ]
+}

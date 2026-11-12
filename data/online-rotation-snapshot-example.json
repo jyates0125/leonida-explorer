@@ -1,0 +1,5 @@
+{
+  "schema": 1,
+  "rotations": {},
+  "_instructions": "Copy source-validated location IDs into rotations after checking validUntilUtc and checkedAtUtc. Empty sample never claims active locations."
+}

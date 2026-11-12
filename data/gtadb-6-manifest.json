@@ -1,0 +1,8 @@
+{
+  "game": "6",
+  "status": "not-yet-synced",
+  "count": 0,
+  "sourceUrl": "https://github.com/rolux/gtadb.org/tree/main/map/data/6",
+  "license": "CC BY 4.0",
+  "note": "Enable the included GitHub Actions workflow once to populate actual licensed GTA VI records."
+}
