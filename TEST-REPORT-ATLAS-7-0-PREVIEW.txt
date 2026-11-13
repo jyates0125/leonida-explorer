@@ -1,0 +1,18 @@
+TEAM JURA ATLAS 7.0 — PREVIEW PACKAGING TEST REPORT
+Date: 2026-11-13
+Target: atlas-7-dev (NO GitHub deployment performed)
+Source: Team-Jura-Atlas-Preview(1).zip, functional baseline through 6.8
+
+PASS 26 HTML pages: 7.0 Preview browser title, page-specific SEO description, internal link resolution
+PASS Existing Atlas static regression: 5 GTA VI views and expected map navigation / storage contracts
+PASS GTADB VI snapshot unit validation
+PASS node --check for all root JS files
+PASS Chromium offline layout rendering, desktop (1280 px) + mobile (390 px), Home and Project Showcase (4 cases)
+PASS No horizontal overflow in these four rendered cases
+PASS No private research-lab directory or unlicensed 3D heightfield data bundled
+PASS ZIP integrity (checked at packaging)
+
+UNVERIFIED: Full hosted navigation, real tile downloads/imagery, real 3D terrain, Cloudflare preview, Chrome mobile device, Cloudflare Access configuration, GitHub security dashboard toggles.
+BLOCKED: Local headless Chromium page navigation to 127.0.0.1 received ERR_BLOCKED_BY_ADMINISTRATOR in this execution environment; therefore no false live-map claim is made.
+
+This is a 7.0 branding, documentation, security and CI upgrade atop the supplied functional baseline, not a verified import of an independently completed 6.9 engine.

@@ -1,0 +1,22 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.token
+**/.DS_Store
+**/__pycache__/
+*.pyc
+node_modules/
+.venv/
+venv/
+# Never check in unpublished/private research and user exports
+private-lab/
+atlas-lab-private/
+research-private/
+my-progress-*.json
+user-exports/
+*.zip

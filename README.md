@@ -1,70 +1,51 @@
-# Atlas 6.8 — Game-specific condition systems
+# Team Jura Atlas 7.0 — Development Preview
 
-**New:** [Story-only tasks](./atlas-activities.html?mode=story) · [GTA Online activity tracker](./atlas-activities.html?mode=online) · [GTA VI research rules](./atlas-activities.html?mode=vi).
+**An Elario Studios project** · unofficial Grand Theft Auto map companion · GTA V Story, GTA Online, and provisional GTA VI Leonida research.
 
-The Story Mode map now filters GTA Online-only event records. Online progress and timed rotations remain separate from GTA V Story; GTA VI research receives no copied Online event rules. Activity rules can color imported pins *only when coordinate records have an explicit compatible `activityId` and `rotationMarkerId`*. See [mode separation notes](./ACTIVITY-MODE-SEPARATION-6-8.md). No locations are invented and imported daily positions are unverified unless checked independently.
+> **Status — 13 November 2026:** This is an Atlas **7.0 preview preparation**, with the functional map/data baseline from the **6.8** development ZIP supplied in this conversation. The complete 6.9 source build was **not** present in the supplied archive. Version labels, page descriptions, deployment instructions and security checks have been refreshed; this alone does **not** mean the entire proposed 7.0 feature set is implemented or live-tested. Do not merge to production until browser acceptance is complete.
 
----
-# Team Jura Atlas 6.4 — Cayo Perico and route-truth update
+## Open the Atlas
 
-**Complete branch-upload package:** upload the extracted contents to the `GTA-maps` development branch root, replacing prior files. Test on Pages before merging into `main`.
+| Experience | Page | Notes |
+| --- | --- | --- |
+| Home / world selection | [index.html](./index.html) | Browser-local guest progress; no account signup |
+| GTA V Story | [atlas.html](./atlas.html) | 2D layers, filters, pins and coordinate tools |
+| GTA Online | [atlas-online.html](./atlas-online.html) | Separate progress and activity labels |
+| GTA VI Leonida | [atlas-vi.html](./atlas-vi.html) | Scaly/YANIS + Loki/DUPZOR reconstructions, unverified |
+| Cayo Perico | [atlas-cayo.html](./atlas-cayo.html) | Illustrative, non-calibrated research schematic |
+| Research | [atlas-research.html](./atlas-research.html) | Public source-aware workspace; **not** the private lab |
+| Collectibles | [atlas-checklist.html](./atlas-checklist.html) | Tracking counts are not verified map coordinates |
+| Activities | [atlas-activities.html](./atlas-activities.html) | Story / Online / VI have separate rules |
+| Catalog | [atlas-catalog.html](./atlas-catalog.html) | Vehicle and garage workspace |
+| Showcase | [project.html](./project.html) | Current 7.0 preview description and roadmap |
+| Test Center | [atlas-test-center.html](./atlas-test-center.html) | Browser-side checks |
+| Credits | [atlas-credits.html](./atlas-credits.html) | Attribution and rights limitations |
 
-- Dedicated `atlas-cayo.html` island schematic with original vector artwork, searchable/category-toggled markers, scope progress, island-specific local storage, heist route previews and CSV export. All diagram coordinates are ILLUSTRATIVE, not game-world positions. This is not a calibrated collectible map or tile-based satellite map.
-- Preserves GTA V, GTA Online Los Santos, GTA VI Scaly (one) and Loki (one), dual legends, backups, existing routes and tools.
-- GTA VI imported road graphs are **unverified** and are never automatically called verified driving directions. Actual verified directions require released-game road and turn/access testing.
-- Sources: https://gtalens.com/map/cayo-infiltration-points , https://gtalens.com/map/cayo-compound-entry-points , https://thegtamap.com/map?g=gta5&r=cayo , https://www.rockstargames.com/VI .
+## Architecture and feature honesty
 
-See RELEASE-ATLAS-6-4.md for quality checks and limitations.
+- Responsive static HTML/CSS/JavaScript, data-driven category and marker controls, browser-local save/export, and optional experimental WebGL perspective components. No backend, passwords, or Rockstar account link.
+- GTA V and GTA Online share some underlying map imagery but maintain game-specific progress. GTA VI reconstructions are third-party/community-sourced estimates; they are **not** Rockstar-certified coordinates.
+- Current UV / UV II appearances may be stylized map treatments rather than independently verified illustrated source layers. Straight-line routes are **not** guaranteed road directions. Do not label potential spawns, daily rotations or collection slots as verified positions without evidence.
+- Full functional 3D terrain for all views, additional nested menus, complete marker datasets, live account synchronization and private Cloudflare research deployment remain **planned/in verification**.
+- Source links and licenses belong in [atlas-credits.html](./atlas-credits.html). Do not republish anything from a third-party server solely on the basis of a credit label. Respect source-specific exceptions.
 
----
-# Team Jura Atlas 6.3 — Next development upload
+## Safe deployment
 
-**Latest:** [Release and upload test instructions](RELEASE-ATLAS-6-3.md). Scaly & Loki now have one named view each, left searchable Map Legend, right source-tagged Trailer Legend, and multi-stop route reorder/CSV tools. See release notes for source and browser-verification limitations.
+Current branch plan:
 
-> **Atlas 6.2.1 Explorer Repair (12 November 2026):** The new Team Jura map explorer includes sortable location directories, compact GTADB-attributed pin lists, CSV export, a 2-source licensed tile loader, and image-loading diagnostics. All existing game routes, collectible progress, personal pins and GTA VI Scaly/Loki presets are preserved. See [release notes](RELEASE-ATLAS-6-2.md) and [full GTAWeb/GTADB feature comparison](FEATURE-COMPARISON-GTAWEB-GTADB.md). Live map artwork and WebGL rendering still need verification in a real browser.
+1. Keep **`main`** as the production branch; do not force-merge it with `GTA-maps` (the histories diverged at the last GitHub inspection).
+2. Develop on **`atlas-7-dev`**, created from `GTA-maps`; upload **both extracted browser-upload batches** (GitHub permits a maximum of 100 files per web upload), not the ZIP files. Review each overwrite before committing.
+3. Ensure the site runs locally and `python scripts/test_site_release_70.py`, `python scripts/test_atlas_static.py` and `python scripts/test_sync_gtadb_vi.py` pass. JavaScript files must pass `node --check`.
+4. Connect **Cloudflare Pages → GitHub** to `jyates0125/leonida-explorer`: production branch `main`; enable development branch preview. For this static site use framework **None**, no build command (or `exit 0` if required), output directory `.`. Verify the Cloudflare user interface matches these settings.
+5. Cloudflare Pages previews are generally public unless protected. Set **Cloudflare Access** before sharing private URLs or uploading restricted data. **Never put unreleased/private datasets in a public GitHub repository**, even in a hidden route or branch.
+6. Open the preview in Edge and mobile; check map tiles, pan/zoom, switchers, marker layers, routes, backups, credits, service-worker cache freshness and console errors. Only then consider a reviewed PR to `main`.
 
-# Team Jura Atlas 6.2.1 — GTA V, GTA Online & GTA VI Leonida
+Detailed workflow: [DEPLOY-AND-SHOWCASE.md](./DEPLOY-AND-SHOWCASE.md).
 
-**Team Jura · Elario Studios** — an independent, unofficial GTA community map explorer and software engineering showcase. We are not affiliated with Rockstar, Take-Two, or GTADB.
+## Security and contribution
 
-## The final original-view update
+See [SECURITY.md](./SECURITY.md) to report vulnerabilities privately, [CONTRIBUTING.md](./CONTRIBUTING.md) for public issues, and [RELEASE-ATLAS-7-0-PREVIEW.md](./RELEASE-ATLAS-7-0-PREVIEW.md) for changes and test boundaries.
 
-- **GTA VI (Atlas 6.5)**: one Scaly view (YANIS V17), one Loki view (DUPZOR V51), a Research view on YANIS V17, and separate clearly labelled archival/original artwork views. CYBER was renamed/reworked to Research; the first VI UV view was removed. Existing source credits remain. Only source-supported community locations are rendered as pins.
-- **Individual GTA-style source pins**, no clustering. Where the GTADB landmark data publishes a marker color it is used directly; otherwise original category icons/emoji are shown. Categories, filtering, research records, addresses and reference photos stay available.
-- **GTADB-style in-app 2D/3D**: WebGL perspective terrain, camera orbit and 2D toggle. Without an installed licensed local heightfield (`elevation-6.bin`, 5,369,856 bytes), the renderer presents an interactive flat 3D map instead of inventing buildings/terrain. When WebGL is not supported, a **clearly labeled 2D perspective fallback** is used, not misrepresented as true 3D relief. 3D map textures depend on browser CORS and tile availability.
-- **Named multi-stop navigation**: add up to 12 stops, reverse, order, route previews, local import of an independently licensed road graph. **No validated GTA VI driving road database has been found**, so a disconnected direct-line preview is labeled accordingly; never claim invented directions.
-- **Daily GTA VI licensed database sync**: optional `.github/workflows/gtadb-vi-sync.yml` checks `map/data/6/landmarks.json` from GTADB GitHub **once per day**, validates and snapshots to `data/gtadb-6.json`, writes update history and commits *only when records change*. GitHub Actions must be enabled with `contents: write`; deployment alone does not activate it. Prior to first run, Atlas can load from GTADB's public **GitHub repository** (not their live website). **GTA V remains a slower-refresh legacy resource.** Data is attributed CC BY 4.0.
-- **Safety**: No sign-in on HTTP and no passwords in Atlas; maps are guest only, user progress saved on-device. Always export a backup before replacing older files.
+Historical release documents (`RELEASE-ATLAS-*.md`, `ACTIVITY-MODE-SEPARATION-6-8.md`, etc.) are retained as **archives**, not current deployment instructions. The earlier cumulative README is archived at [docs/README-HISTORY-THROUGH-6-8.md](./docs/README-HISTORY-THROUGH-6-8.md).
 
-**Attribution:** GTADB.org and contributors; map tiles, eligible photos and data licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) except where noted. Team Jura adapts records, visual presentation and category mapping. GTA characters and game IP belong to Rockstar Games/Take-Two; no endorsement implied. Source: https://github.com/rolux/gtadb.org . Do not reproduce GTAWeb or MapGenie protected assets without permission. Public real-world addresses are inspirations/prototypes, not verified GTA VI street addresses.
-
-## Getting started
-
-1. Upload the **quick-update contents** to the repository root. Preserve `.github/workflows/` and `scripts/` paths. For a simple root-only browser uploader, use GitHub's folder upload feature or GitHub Desktop to preserve nested folder paths.
-2. Visit `atlas-vi.html`. Choose Scaly or Loki view; select pins and test 2D/3D.
-3. In GitHub repository Actions tab, enable workflows if needed; run **Refresh licensed GTA VI landmarks** manually once. If GitHub Pages uses a custom deploy process, check Pages after that commit.
-4. In Atlas, click **Check GTA VI locations** to reload the new local snapshot. GTA V records will not be overwritten.
-5. Test on desktop and iPhone, export your user progress backup.
-
-## Prior releases and engineering notes
-
-Earlier releases remain documented in `RELEASE-ATLAS-5-4.md`, `RELEASE-ATLAS-5-5.md`, `RELEASE-ATLAS-5-7.md`, `RELEASE-ATLAS-5-8.md`, `RELEASE-ATLAS-5-9.md`, and `RELEASE-ATLAS-6-0.md`. This 6.1 section supersedes older navigation and view statements.
-
-For future contributions, use a feature/develop branch and see `PREVIEW-BRANCH-WORKFLOW.md`.
-
-
-### Atlas 6.2.1 illustrated UV and live layers
-
-- GTA V Story and GTA Online: five licensed basemap options plus original illustrated UV Blueprint and UV II Paper treatments.
-- GTA VI: six licensed/original map selections, plus two **Team Jura-styled** illustrated UV options. The source map and coordinates remain unchanged; GTA VI geography is provisional.
-- All three modes: directly visible mapped-only category toggles, dynamic collectible sets, search, show/hide, sorted source-grounded directory, place photos when available, personal pins, and 2D/3D fallback.
-- **Deployment:** create an `atlas-6-2-preview` branch **from `main`**, then upload the root-level Quick Update ZIP contents into the branch root. Do not upload the complete site folder through GitHub's web upload since GitHub may flatten subfolders. The assistant's GitHub integration did not permit creating the branch (403); use the GitHub website for that one step.
-- See `MAP-VIEWS-AND-LAYERS-6-2-1.md` and `TEST-REPORT-ATLAS-6-2-1.txt`. Do not move the preview to `main` until you confirm actual artwork and pin/filter behavior in a browser.
-
-## Atlas 6.5 research mode and source update
-Open `atlas-vi.html` and select **Research** to use the licensed YANIS V17 illustrated base with Atlas categories, source records, filtering and source metadata. This is our own research UI, not a copy of GTADB code or the GTADB website. The first GTA VI UV view and legacy CYBER tile layer are not selectable. Scaly and Loki remain separate single entries. The two on-map legend tabs are collapsed by default (left: Map Legend; right: Trailer Legend). Their data tools are retained inside each expandable panel.
-
-The current local starter is not asserted to have the full GTADB data feed. Run the included GitHub Action **Refresh licensed GTA VI landmarks** (`workflow_dispatch`) to create `data/gtadb-6.json` from the public CC BY 4.0 source. The loader supports the GitHub snapshot dictionary format. Make sure Actions has repository write permission. The public dataset and art can change; source feed verification and in-game validation remain independent.
-
-## Atlas 6.6 Research workspace
-Open [GTA VI Research](./atlas-research.html) for a GTADB-inspired, independently implemented landmark search and mapping dashboard. See [release notes](./RELEASE-ATLAS-6-6.md) for licensing and limitations.
+**Team Jura × Elario Studios** — Build it · Package it · Test it · Refine it · Deliver it.
