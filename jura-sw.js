@@ -1,5 +1,5 @@
 /* Team Jura controlled, same-origin-only offline shell. No cross-origin tiles or iframe caching. */
-const VERSION='team-jura-shell-rc1-20261111';
+const VERSION='team-jura-shell-70-preview-20261113';
 const SHELL=['./','./index.html','./jura-refresh.css','./jura-refresh.js'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(VERSION).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',event=>{event.waitUntil((async()=>{for(const k of await caches.keys())if(k.startsWith('team-jura-shell-')&&k!==VERSION)await caches.delete(k);await self.clients.claim();})());});
