@@ -1,63 +1,41 @@
-
-name: Atlas development preview
-
+name: Atlas development preview ZIP
 on:
   push:
-    branches:
-      - GTA-maps
+    branches: [GTA-maps, atlas-7-dev]
   workflow_dispatch:
-
 permissions:
   contents: read
-
 jobs:
-  preview:
-    name: Package Atlas preview
+  package:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-
     steps:
-      - name: Checkout development branch
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '22'
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
-      - name: Validate JavaScript
+      - name: Validate before packaging
         shell: bash
         run: |
           shopt -s nullglob
-          for file in *.js; do
-            node --check "$file"
-          done
-
-      - name: Run Atlas tests
-        run: |
+          for f in ./*.js; do node --check "$f"; done
+          python scripts/test_site_release_70.py
           python scripts/test_atlas_static.py
           python scripts/test_sync_gtadb_vi.py
-
-      - name: Package development website
+      - name: Assemble static site without private files
         shell: bash
         run: |
-          mkdir -p preview
-          tar -cf - \
-            --exclude=.git \
-            --exclude=.github \
-            --exclude=preview \
-            --exclude='*.pyc' \
-            . | tar -xf - -C preview
-
-      - name: Upload preview ZIP artifact
+          mkdir -p public
+          tar -cf - --exclude=.git --exclude=.github --exclude=public --exclude=docs \
+            --exclude='*.pyc' --exclude='private-lab' --exclude='atlas-lab-private' \
+            --exclude='*.zip' . | tar -xf - -C public
+      - name: Upload site artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Team-Jura-Atlas-Preview
-          path: preview/
+          name: Team-Jura-Atlas-7-Preview
+          path: public/
           if-no-files-found: error
           retention-days: 14
