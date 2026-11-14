@@ -1,0 +1,1 @@
+(()=>{'use strict';const nav=document.querySelectorAll('a[href]');for(const a of nav){try{const u=new URL(a.href,location.href);if(u.origin===location.origin&&u.pathname===location.pathname)a.setAttribute('aria-current','page')}catch{}}})();

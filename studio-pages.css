@@ -1,0 +1,18 @@
+@import url('./portal-theme.css');.studio-shell{max-width:1400px;margin:auto}.studio-page .studio-card{padding:20px;border:1px solid var(--line);border-radius:15px;background:#241d32}.studio-page .muted{color:var(--muted)}.studio-page h1{font-size:clamp(30px,4vw,56px)}.studio-page .page-section{padding:23px 0}
+
+/* Bring secondary tools and legacy reference pages into the same calm holiday shell.
+   Their original data engines, grids and business controls remain intact. */
+body:not(.portal-home):not(.community-page){background:#12101f;color:#f7f0f6}
+body:not(.portal-home) :is(.topbar,.head){background:linear-gradient(110deg,#231625,#302039 75%,#4d3042);border-bottom:2px solid #d99c65;color:#fff2ee}
+body:not(.portal-home) :is(.topbar,.head) nav{display:flex;flex-wrap:wrap;gap:9px;align-items:center;max-width:100%}
+body:not(.portal-home) :is(.topbar,.head) nav a{color:#ffdcab;text-decoration:none}
+body:not(.portal-home) :is(.topbar,.head) nav a:hover{color:white}
+body:not(.portal-home) :is(.topbar,.head) :is(.brand,.wordmark){color:#fff5ec}
+body:not(.portal-home) :is(h1,h2,h3){text-wrap:balance}
+body:not(.portal-home) :is(input,select,textarea){max-width:100%;box-sizing:border-box}
+.studio-quickbar{display:flex;align-items:center;flex-wrap:wrap;gap:7px 16px;padding:9px max(13px,calc((100% - 1300px)/2));background:#21182c;border-bottom:1px solid #55415f;font-size:12px;position:relative;z-index:20}
+.studio-quickbar a{color:#e9c6aa;padding:5px 3px}
+.studio-quickbar a[aria-current=page]{color:#ffd59d;font-weight:800;text-decoration:underline;text-underline-offset:5px}
+.studio-site-note{text-align:center;background:#1e1829;border-top:1px solid #54445e;color:#b9a6b9;padding:12px 15px;font-size:11px;line-height:1.6}
+.studio-page .studio-card{background:#221b30;border-color:#65506a}
+@media(max-width:760px){.studio-quickbar{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;scrollbar-width:thin;gap:15px}.studio-quickbar a{flex:none}body:not(.portal-home) :is(.topbar,.head) nav{overflow-x:auto;flex-wrap:nowrap;white-space:nowrap;scrollbar-width:thin}body:not(.portal-home) :is(.topbar,.head) nav a{flex:none}body:not(.portal-home) :is(.tk-shell,.wide,.main,.shell){min-width:0;max-width:100%}}

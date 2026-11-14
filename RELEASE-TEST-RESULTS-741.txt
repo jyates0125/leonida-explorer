@@ -1,0 +1,12 @@
+Team Jura Atlas 7.4.1 — combined website + One Last Ride preview
+Local release verification, 2026-11-13
+
+PASS — scripts/test_site_release_70.py: 33 HTML pages, titles, descriptions, local references and standard required files.
+PASS — scripts/test_atlas_static.py: 5 unique GTA VI views, navigation, legacy map keys, links and sync plumbing static regression.
+PASS — node --check film/one-last-ride.js and site-unified.js: valid JavaScript syntax.
+PASS — ffprobe checked film/assets/one-last-ride-motion-preview.mp4: 36.0 seconds.
+PASS — zip archive CRC integrity test (documented after build).
+
+NOT VERIFIED — full desktop + mobile interactive browser acceptance, live map tiles/APIs, third-party source licensing, end-to-end route functionality, performance on real hardware, service-worker production caching.
+The film asset is a 36-second original motion-poster preview, not a fully animated film or authentic trailer footage.
+Preview on atlas-7-dev only. Do not modify the live main branch without user approval.
