@@ -1,0 +1,33 @@
+/* ATLAS 7.4.1 — compact holiday UI alignment for existing interactive map engines.
+   Map rendering and coordinates are untouched. */
+:root{--bg:#11101f;--panel:#1d1a2c;--gold:#ffbf71;--border:#705479;--muted:#c1b7ca;--tile:#152438}
+body{background:#100e1e;color:#f7f0f6}
+.topbar{background:linear-gradient(110deg,#211423,#261b36 58%,#473047);border-bottom:2px solid #d69a60;color:#fbf4f5}
+.topbar .brand small,.topbar .season{color:#ffc78b}
+.topbar nav a{color:#f7e8ef}
+.topbar nav a:hover,.topbar nav a[aria-current=page]{color:#ffca8b}
+.shell{min-width:0}
+.sidebar{min-width:0;background:linear-gradient(180deg,#211a31,#151225 88%);border-right:1px solid #704a72}
+.sidebar h1,.sidebar h2,.sidebar h3{color:#fff6f6}
+.sidebar input,.sidebar select{max-width:100%;min-width:0}
+.world{background:#2b2139;border-color:#71546d;color:#f4edf3}
+.world.active{background:#543448;border-color:#f0ad65}
+.tabs button.selected,[aria-pressed=true].jura-floating-switch{border-color:#f6b76d}
+.jura-nav-bar,.jura-quick-nav{max-width:calc(100% - 18px)}
+.jura-nav-bar button,.jura-quick-nav button{background:#2d2040;border-color:#886586;color:#f7eaf7}
+.jura-nav-bar button:hover,.jura-quick-nav button:hover{border-color:#ffc17b}
+.jura-nav-panel{background:#1e192efa;border-color:#8d6390}
+.jura-floating-legend{background:#1d192cf4;border-color:#71547f}
+.jura-floating-legend>summary{background:#382847;color:#fff1e7}
+.jura-floating-body{background:#1c1a2b}
+#selectedCard,.selected-card{max-width:min(360px,calc(100% - 20px))}
+@media(max-width:760px){
+  .topbar{gap:5px;max-width:100%;align-items:center}
+  .topbar nav{max-width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:thin;white-space:nowrap}
+  .topbar nav a{flex:none;min-height:34px;padding:7px 5px}
+  .sidebar{min-width:0;width:100%}
+  .map-wrap{min-width:0}
+  .jura-nav-panel{max-width:calc(100% - 16px)}
+  .jura-floating-legend[open]{width:min(240px,44%)}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.001ms!important;transition-duration:.001ms!important}}

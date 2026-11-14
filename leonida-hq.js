@@ -1,0 +1,2 @@
+/* Visitor-local date-only countdown; official release date linked on the page. */
+(()=>{'use strict';const el=document.getElementById('launchCountdown');if(!el)return;function update(){const now=new Date(),today=new Date(now.getFullYear(),now.getMonth(),now.getDate()),target=new Date(2026,10,19);const days=Math.round((target-today)/86400000);el.textContent=days>1?`${days} days until November 19`:days===1?'Tomorrow · November 19':days===0?'Launch day · November 19, 2026':'The announced November 19, 2026 date has passed. Check Rockstar for current availability.'}update()})();

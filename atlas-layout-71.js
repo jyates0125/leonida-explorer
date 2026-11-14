@@ -1,0 +1,1 @@
+/* The atlas.js engine owns map state. Layout layer reserved for tested responsive adjustments. */

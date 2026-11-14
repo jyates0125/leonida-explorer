@@ -1,3 +1,15 @@
+# Atlas 7.4.1 · Polished combined preview (Nov 13, 2026)
+
+**Team Jura / Elario Studios · GTA map portal + One Last Ride studio preview.** This snapshot combines the holiday homepage / map browser design, existing maps and research tools, Atlas Passport, Leonida HQ, One Last Ride 36-second motion-poster MP4, original score, 9-scene interactive storyboard and [production master](film/production/README.md).
+
+**What is verified here:** valid local file and asset references, JavaScript syntax, HTML parse, included preview MP4 stream, production document and CSV integrity, working source file paths, ZIP CRC. **What still requires browser and real-device review:** third-party map tile availability, dynamic map usability, service worker behavior, 3D support, all game-data coordinates, accessibility layout on every phone/browser and legal clearance of any eventual full animated film. Never claim feature parity or a completed feature film without QA.
+
+**Upload preview to `atlas-7-dev` only. Do not merge over `main` until the new site is checked on phone and laptop.** Place the ZIP contents at repository root; never upload the enclosing parent folder itself. The site entry is `index.html`; film entry is `one-last-ride.html`.
+
+Research provenance: Official Rockstar / Take-Two information, attributed **Community Research & Development**, and **Fan-made / Unverified** are deliberately different categories. Read [attribution](ATTRIBUTION-AND-COMMUNITY-RD.md), [all credits](atlas-credits.html), and [release QA](RELEASE-QA-741.md) before release. Community map tiles and original Rockstar footage remain subject to their individual rights and policies. **A fan project and an attribution statement are not themselves permissions.**
+
+---
+
 # Team Jura Atlas 7.0 — Development Preview
 
 **An Elario Studios project** · unofficial Grand Theft Auto map companion · GTA V Story, GTA Online, and provisional GTA VI Leonida research.

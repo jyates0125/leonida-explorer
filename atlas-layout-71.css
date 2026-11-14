@@ -1,0 +1,2 @@
+/* Existing atlas.css remains authoritative; this is a non-destructive viewport polish layer. */
+@media(max-width:850px){.jura-nav-bar{max-width:100%;flex-wrap:wrap}.jura-quick-nav{max-width:100%}}
