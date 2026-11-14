@@ -1,0 +1,21 @@
+{
+  "provenance": "GTADB.org and contributors; abridged source data, CC BY 4.0. Original game world © Rockstar/Take-Two.",
+  "source": "https://github.com/rolux/gtadb.org/blob/main/map/data/4/landmarks.json",
+  "entries": [
+    ["L1","Statue of Happiness, Happiness Island, Algonquin",-608.556,-754.696,"Statue of Liberty, New York, USA",["landmark"]],
+    ["L2","Express Car Service, Hove Beach, Broker",813.6635,-274.6315,"28 Verona St, Brooklyn, NY",[]],
+    ["L3","Firefly Building, Hove Beach, Broker",885.652,-552.438,"1301 Surf Ave, Brooklyn, NY",[]],
+    ["L4","Hove Beach Police Station, Broker",880.652,-375.938,"1035 Greene Ave, Brooklyn, NY",[]],
+    ["L5","Hove Beach Station, Broker",1045.152,-550.688,"1243 Surf Ave, Brooklyn, NY",["transport"]],
+    ["L6","Perestroika, Hove Beach, Broker",959.21,-290.889,"1029 Brighton Beach Ave, Brooklyn, NY",[]],
+    ["L7","Broker Fire Station, Rotterdam Hill, Broker",946.21,82.611,"107 Ralph Ave, Brooklyn, NY",[]],
+    ["L8","Beach Hotel, Firefly Island, Broker",971.249,-596.155,"",["hotel"]],
+    ["L10","69th Street Diner, Hove Beach, Broker",885.749,-486.405,"New York, USA",["restaurant"]],
+    ["L13","Beachgate Apartments, Beachgate, Broker",1297.092,-616.793,"New York, USA",[]],
+    ["L14","Broker Electrical Substation, Beachgate",1306.299,-720,"",["infrastructure"]],
+    ["L15","Mikhail Faustin's Mansion, Beachgate, Broker",1311.799,-851.75,"",[]],
+    ["L17","Middle Park, Algonquin",-202.035,892.715,"Central Park, New York, USA",["nature"]],
+    ["L18","Star Junction, Algonquin",-202.394,259.025,"Times Square, Manhattan, NY",["landmark","transportation"]],
+    ["L19","Rotterdam Tower, Algonquin",-283.723,-102.892,"Empire State Building, New York, USA",["office"]]
+  ]
+}

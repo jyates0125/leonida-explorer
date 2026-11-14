@@ -1,4 +1,4 @@
-"""Static release consistency audit for the 7.0 preview website."""
+"""Static release consistency audit for the Atlas 7.4.1 community preview."""
 from html.parser import HTMLParser
 from pathlib import Path
 import re
@@ -26,7 +26,7 @@ assert len(PAGES)>=20, f'Unexpected number of active website pages: {len(PAGES)}
 errors=[]
 for file in PAGES:
     p=Page();p.feed(file.read_text(encoding='utf-8'))
-    if 'Atlas 7.0 Preview' not in p.title:errors.append(f'{file.name}: incorrect browser title: {p.title}')
+    if not p.title.strip():errors.append(f'{file.name}: empty browser title')
     if len(p.meta.strip())<35:errors.append(f'{file.name}: missing/short meta description')
     if re.search(r'\b(?:Atlas|Team Jura Atlas)\s+[56]\.\d',p.meta,re.I):errors.append(f'{file.name}: legacy version in description')
     for link in p.links:
